@@ -2,7 +2,7 @@
 
 Resumo das workflows de CI e deploy e como configurar os secrets para deploy na Vercel.  
 **Arquivos:** `.github/workflows/ci.yml`, `.github/workflows/deploy.yml`, `.github/workflows/release.yml`.  
-**Ver também:** `docs/DEPLOY_INFRA.md` (infra e variáveis de ambiente).
+**Ver também:** `docs/DEPLOY_INFRA.md` (infra e variáveis de ambiente), **`docs/VERSIONING_AND_DEPLOY.md`** (versionamento e deploy por mudança de versão).
 
 ---
 
@@ -12,7 +12,7 @@ Resumo das workflows de CI e deploy e como configurar os secrets para deploy na 
 |------------|-------------------|----------------------------|-----------|
 | **CI**     | `ci.yml`          | Push e PR em `main`/`master` | Lint, test, build; upload do artefato `build/` (1 dia). |
 | **Deploy** | `deploy.yml`      | Push em `main`/`master` e `workflow_dispatch` | Verifica secrets → build → deploy **produção** na Vercel. Falha se secrets ausentes. |
-| **Release**| `release.yml`     | Release publicado ou tag `v*` | Build, bundle artefato, upload; deploy opcional (se secrets configurados). |
+| **Release**| `release.yml`     | Release publicado ou tag `v*` | Build, bundle, **GitHub Release** (tag push), deploy opcional (se secrets configurados). Versão derivada da tag. Ver `docs/VERSIONING_AND_DEPLOY.md`. |
 
 ---
 
@@ -58,8 +58,11 @@ vercel link
 ### Release (`release.yml`)
 
 - Roda ao **publicar uma release** ou ao dar **push em tag `v*`** (ex.: `v0.1.0`).
-- Sempre: build, geração do artefato (bundle) e upload do artefato.
-- Deploy na Vercel **só roda** se os três secrets estiverem configurados; caso contrário, o deploy é ignorado e a workflow termina em sucesso (artefato fica disponível).
+- **Versão:** obtida da tag (ex.: `v0.1.1` → `0.1.1`); em push de tag, verifica se coincide com `package.json`.
+- Sempre: build (com cache Next.js), bundle do artefato, upload do artefato.
+- **Push de tag:** cria **GitHub Release** para a tag e anexa o tarball.
+- Deploy na Vercel **só roda** se os três secrets estiverem configurados; caso contrário, o deploy é ignorado e a workflow termina em sucesso (artefato e release ficam disponíveis).
+- **Deploy por mudança de versão:** ver `docs/VERSIONING_AND_DEPLOY.md`.
 
 ---
 
@@ -87,10 +90,10 @@ vercel link
 2. **Ver execuções**  
    Aba **Actions** do repositório: cada push/PR em `main` dispara **CI**; cada push em `main` dispara **Deploy** (se os secrets estiverem configurados).
 
-3. **Disparar Release**  
-   Crie uma tag `v*` (ex.: `v0.1.0`) e dê push, ou publique uma **Release** em **Releases**. A esteira **Release** gera o artefato e, se os secrets existirem, faz deploy na Vercel.
+3. **Disparar Release (deploy por versão)**  
+   Bump + tag: `npm run version:patch:tag` (ou minor/major), depois `git push origin main` e `git push origin vX.Y.Z`. A esteira **Release** gera o artefato, cria a GitHub Release e, se os secrets existirem, faz deploy na Vercel. Ver **`docs/VERSIONING_AND_DEPLOY.md`**.
 
 4. **Deploy manual**  
    Em **Actions → Deploy → Run workflow** você pode rodar a esteira de deploy sem dar push em `main`.
 
-Ver também: `docs/DEPLOY_INFRA.md`, `docs/BUILD_RELEASE.md`.
+Ver também: `docs/DEPLOY_INFRA.md`, `docs/BUILD_RELEASE.md`, `docs/VERSIONING_AND_DEPLOY.md`.

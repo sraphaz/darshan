@@ -1,33 +1,35 @@
 # Contributing to Darshan
 
-Thank you for your interest in Darshan.
+Obrigado pelo interesse no Darshan.
 
-Darshan is not just code — it is a ritual product.
+Darshan não é só código — é um produto ritual.
 
-## Principles
+## Princípios
 
-- Simplicity always
-- Presence over features
-- No addictive UX
-- Ethical, calm language
-- Governed by the 12 Petals
+- Simplicidade sempre
+- Presença em vez de mais recursos
+- UX não viciante
+- Linguagem ética e calma
+- Governado pelos 12 Pétalas
 
-## How to contribute
+## Como contribuir
 
-1. Fork the repository
-2. Create a feature branch
-3. Keep changes minimal and clean
-4. Open a Pull Request with clear explanation
+1. Dê fork no repositório
+2. Crie uma branch de feature (`feature/nome` ou `fix/nome`)
+3. Mantenha as mudanças mínimas e limpas
+4. Abra um Pull Request com explicação clara
 
-## Code Style
+## Estilo de código
 
-- Minimal components
-- One-screen philosophy
-- Responses always follow the 7-step schema
+- Componentes mínimos
+- Filosofia de uma tela
+- Respostas alinhadas ao fluxo de revelação (ver `docs/FLUXO_E_REGRAS.md`)
 
-## Respect the Constitution
+## Documentação
 
-Before contributing, read:
+Antes de contribuir, leia:
 
-- docs/ORACLE_CONSTITUTION.md
-- docs/TWELVE_PETALS_GOVERNANCE.md
+- [docs/README.md](docs/README.md) — **índice completo da documentação** (por tema)
+- [docs/ORACLE_CONSTITUTION.md](docs/ORACLE_CONSTITUTION.md) — constituição do oráculo
+- [docs/TWELVE_PETALS_GOVERNANCE.md](docs/TWELVE_PETALS_GOVERNANCE.md) — governança
+- [docs/FLUXO_E_REGRAS.md](docs/FLUXO_E_REGRAS.md) — fluxo e regras da aplicação

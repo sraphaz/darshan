@@ -1,5 +1,7 @@
 # Infraestrutura e deploy — Darshan
 
+**Índice geral da documentação:** [docs/README.md](README.md).
+
 ## É serverless?
 
 **Depende de onde você faz o deploy:**
@@ -97,13 +99,13 @@ Com isso, a aplicação sobe **serverless** na Vercel: cada chamada a `app/api/*
 
 ## Esteiras de deploy (CI/CD)
 
-As esteiras de **GitHub Actions** estão em `.github/workflows/`. Configuração detalhada e secrets: **`docs/DEPLOY_WORKFLOWS.md`**.
+As esteiras de **GitHub Actions** estão em `.github/workflows/`. Configuração detalhada e secrets: **`docs/DEPLOY_WORKFLOWS.md`**. **Versionamento e deploy por mudança de versão:** **`docs/VERSIONING_AND_DEPLOY.md`**.
 
 | Esteira   | Arquivo       | Gatilho                         | O que faz |
 |-----------|---------------|----------------------------------|-----------|
 | **CI**    | `ci.yml`      | Push e PR em `main`/`master`    | Lint, test, build; artefato do build (1 dia). |
 | **Deploy**| `deploy.yml`  | Push em `main`/`master` ou manual | Build + deploy **produção** na Vercel. Exige secrets (ver doc). |
-| **Release** | `release.yml` | Release publicada ou tag `v*`  | Build, bundle do artefato, upload; deploy opcional na Vercel. |
+| **Release** | `release.yml` | Release publicada ou tag `v*`  | Versão da tag; build, bundle, GitHub Release (push tag), deploy opcional na Vercel. Ver `docs/VERSIONING_AND_DEPLOY.md`. |
 
 Para deploy automático na Vercel, configure no repositório (**Settings → Secrets and variables → Actions**) os secrets **VERCEL_TOKEN**, **VERCEL_ORG_ID** e **VERCEL_PROJECT_ID** (ver `docs/DEPLOY_WORKFLOWS.md`).
 
@@ -160,4 +162,4 @@ Para gerar o artefato, fazer bump de versão e publicar nas lojas, use os script
 | O app é serverless? | **Sim**, se você fizer deploy na Vercel (ou Netlify, etc.). **Não**, se rodar `next start` em VPS/container. |
 | Infra mínima para subir? | Hospedagem (ex.: Vercel) + variáveis de ambiente (pelo menos uma API de IA; auth e Stripe conforme uso). |
 | Processo de deploy recomendado? | Repo no GitHub → Vercel → configurar env vars → Deploy. Opcional: Supabase, Stripe, Resend, Google OAuth conforme necessidade. |
-| Esteiras de deploy (CI/CD)? | **CI** (lint/test/build) e **Deploy** (push em `main` → Vercel) e **Release** (tag/release → artefato + deploy opcional). Ver `docs/DEPLOY_WORKFLOWS.md`. |
+| Esteiras de deploy (CI/CD)? | **CI** (lint/test/build), **Deploy** (push em `main` → Vercel) e **Release** (tag `v*` → artefato + GitHub Release + deploy). Versionamento: `docs/VERSIONING_AND_DEPLOY.md`, workflows: `docs/DEPLOY_WORKFLOWS.md`. |
