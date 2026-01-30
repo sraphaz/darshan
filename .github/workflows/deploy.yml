@@ -1,0 +1,86 @@
+# Esteira Deploy: push em main → build + deploy Vercel (produção)
+name: Deploy
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: .
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy:
+    name: Build & Deploy (Vercel)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check secrets
+        id: secrets
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
+            echo "::error title=Secret ausente::VERCEL_TOKEN não configurado. Em Settings > Secrets and variables > Actions, adicione VERCEL_TOKEN (token em https://vercel.com/account/tokens)."
+            echo "ok=false" >> $GITHUB_OUTPUT
+          elif [ -z "${{ secrets.VERCEL_ORG_ID }}" ]; then
+            echo "::error title=Secret ausente::VERCEL_ORG_ID não configurado. Obtenha em Vercel Dashboard > Settings do projeto (ou vercel link)."
+            echo "ok=false" >> $GITHUB_OUTPUT
+          elif [ -z "${{ secrets.VERCEL_PROJECT_ID }}" ]; then
+            echo "::error title=Secret ausente::VERCEL_PROJECT_ID não configurado. Obtenha em Vercel Dashboard > Settings do projeto."
+            echo "ok=false" >> $GITHUB_OUTPUT
+          else
+            echo "ok=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout
+        if: steps.secrets.outputs.ok == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        if: steps.secrets.outputs.ok == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Restore Next.js cache
+        if: steps.secrets.outputs.ok == 'true'
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.ts', '**/*.tsx', '!node_modules/**') }}
+          restore-keys: |
+            next-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: Install
+        if: steps.secrets.outputs.ok == 'true'
+        run: npm ci
+
+      - name: Build
+        if: steps.secrets.outputs.ok == 'true'
+        run: npm run build
+        env:
+          NEXT_PUBLIC_VERCEL_URL: ""
+
+      - name: Deploy to Vercel (production)
+        if: steps.secrets.outputs.ok == 'true'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
+          vercel-args: "--prod"
+
+      - name: Fail (secrets ausentes)
+        if: steps.secrets.outputs.ok != 'true'
+        run: |
+          echo "Configure os secrets do repositório (Settings > Secrets and variables > Actions):"
+          echo "  - VERCEL_TOKEN"
+          echo "  - VERCEL_ORG_ID"
+          echo "  - VERCEL_PROJECT_ID"
+          echo "Ver docs/DEPLOY_WORKFLOWS.md para obter os valores."
+          exit 1
