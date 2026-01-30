@@ -1,5 +1,7 @@
 # Infraestrutura e deploy — Darshan
 
+**Índice geral da documentação:** [docs/README.md](README.md).
+
 ## É serverless?
 
 **Depende de onde você faz o deploy:**

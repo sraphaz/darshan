@@ -49,25 +49,25 @@ export default function SupportModal({ isOpen, onClose, creditsPerRevelation }: 
                 <div>
                   <p className="text-moon-grey/70 text-xs font-light mb-1">Créditos e consumo</p>
                   <p className="text-moon-grey/80 text-xs font-light leading-relaxed">
-                    Cada revelação com IA consome <strong className="text-mist/80">{creditsPerRevelation} créditos</strong>. O valor cobre o custo do uso da IA e uma margem para o app. O modo “AI desligada” usa o oráculo offline e não consome créditos.
+                    Cada revelação com IA consome <strong className="text-mist/80">{creditsPerRevelation} crédito{creditsPerRevelation !== 1 ? "s" : ""}</strong>. O valor cobre o custo do uso da IA e uma margem para o app. O modo “oráculo offline” (IA desligada) não consome créditos.
                   </p>
                 </div>
                 <div>
                   <p className="text-moon-grey/70 text-xs font-light mb-1">Como adicionar créditos</p>
                   <p className="text-moon-grey/80 text-xs font-light leading-relaxed">
-                    Toque no ícone de créditos no topo da tela. Escolha a quantidade de créditos. Pagamento seguro: cartão, Google Pay ou Stripe Link (Stripe); ou PIX/cartão (Mercado Pago).
+                    Toque no ícone de créditos no topo. Escolha o pacote e pague com: <strong className="text-mist/80">cartão, Google Pay ou Stripe Link</strong> (Stripe), ou <strong className="text-mist/80">PIX e cartão</strong> (Mercado Pago). Pagamento seguro; os créditos entram na hora após a confirmação.
                   </p>
                 </div>
                 <div>
-                  <p className="text-moon-grey/70 text-xs font-light mb-1">Login sem senha</p>
+                  <p className="text-moon-grey/70 text-xs font-light mb-1">Login</p>
                   <p className="text-moon-grey/80 text-xs font-light leading-relaxed">
-                    Seu acesso é pelo e-mail (código de uso único) ou com conta Google. Não guardamos senha. Em breve: login por biometria.
+                    Acesso por <strong className="text-mist/80">código por e-mail</strong> (uso único) ou <strong className="text-mist/80">conta Google</strong>. Não armazenamos senha.
                   </p>
                 </div>
                 <div>
-                  <p className="text-moon-grey/70 text-xs font-light mb-1">Contato</p>
+                  <p className="text-moon-grey/70 text-xs font-light mb-1">Suporte e contato</p>
                   <p className="text-moon-grey/80 text-xs font-light leading-relaxed">
-                    Dúvidas ou problemas: envie um e-mail para suporte indicado nas configurações do app ou na página de divulgação.
+                    Dúvidas sobre créditos, pagamento ou uso: use o <strong className="text-mist/80">e-mail de suporte</strong> indicado na página do app (configurações ou divulgação). Respondemos em até 48h úteis.
                   </p>
                 </div>
               </div>
