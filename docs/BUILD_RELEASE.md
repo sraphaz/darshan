@@ -188,14 +188,15 @@ Parâmetros iguais ao do Android.
 
 ## 7. CI/CD (GitHub Actions)
 
-As esteiras estão em `.github/workflows/`:
+As esteiras estão em `.github/workflows/`. **Versionamento e deploy por mudança de versão:** ver **`docs/VERSIONING_AND_DEPLOY.md`**.
 
 | Workflow   | Gatilho              | O que faz |
 |------------|----------------------|-----------|
 | **CI**     | Push e PR em `main`   | Lint, test, build; upload do `build/` (1 dia). |
-| **Release**| Release publicado ou tag `v*` | Build, bundle artefato, upload do artefato; **Deploy** falha se `VERCEL_TOKEN`, `VERCEL_ORG_ID` e `VERCEL_PROJECT_ID` não estiverem nos secrets. |
+| **Deploy** | Push em `main` ou manual | Build + deploy produção na Vercel (secrets configurados). |
+| **Release**| Release publicado ou tag `v*` | Versão da tag; build, bundle, **GitHub Release** (em push de tag), deploy opcional na Vercel. |
 
-### Habilitar deploy automático (Release)
+### Habilitar deploy automático (Release / Deploy)
 
 Em **Settings > Secrets and variables > Actions** do repositório, crie:
 
@@ -203,10 +204,16 @@ Em **Settings > Secrets and variables > Actions** do repositório, crie:
 - `VERCEL_ORG_ID` — ID da organização (Vercel dashboard).
 - `VERCEL_PROJECT_ID` — ID do projeto (Settings do projeto).
 
-Sem esses secrets, o job **Deploy** da esteira Release falha de propósito (mensagem clara no log).
+Sem esses secrets, o job **Deploy** da esteira Release é ignorado (sucesso sem deploy); a esteira Deploy falha com mensagem clara.
+
+### Fluxo de release (deploy por versão)
+
+1. `npm run version:patch:tag` (ou minor/major) — atualiza `package.json`, commit e tag `vX.Y.Z`.
+2. `git push origin main` e `git push origin vX.Y.Z` — dispara a esteira **Release**: build, artefato, GitHub Release com o tarball e deploy na Vercel.
+
+Detalhes: **`docs/VERSIONING_AND_DEPLOY.md`**, **`docs/DEPLOY_WORKFLOWS.md`**.
 
 ### Outros (sugestão)
 
-- **Bump:** rodar `bump-version.js` em branch de release (ou tag manual).
 - **Android:** em CI com Bubblewrap ou Capacitor, gerar o AAB e enviar para Play Console.
 - **Apple:** build e upload do IPA no macOS (Xcode Cloud ou Fastlane).

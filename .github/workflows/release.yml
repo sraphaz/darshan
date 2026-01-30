@@ -1,4 +1,4 @@
-# Esteira Release: build + artefato + deploy (falha se config ausente)
+# Esteira Release: build + artefato + GitHub Release + deploy (por mudança de versão / tag v*)
 name: Release
 
 on:
@@ -8,6 +8,10 @@ on:
     tags:
       - "v*"
 
+defaults:
+  run:
+    working-directory: .
+
 jobs:
   build-and-bundle:
     name: Build & Bundle
@@ -16,6 +20,8 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'release' && github.event.release.tag_name || github.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,9 +32,34 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Get version
+      - name: Get version from tag
         id: version
-        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+        env:
+          TAG_OR_REF: ${{ github.event_name == 'push' && github.ref_name || github.event.release.tag_name }}
+        run: |
+          if [ -n "$TAG_OR_REF" ]; then
+            echo "version=${TAG_OR_REF#v}" >> $GITHUB_OUTPUT
+          else
+            echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+          fi
+          echo "Version: ${{ steps.version.outputs.version }}"
+
+      - name: Verify version matches package.json (tag push)
+        if: github.event_name == 'push'
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          if [ "$PKG_VERSION" != "${{ steps.version.outputs.version }}" ]; then
+            echo "::error title=Versão divergente::A tag (${{ steps.version.outputs.version }}) não coincide com package.json ($PKG_VERSION). Use npm run version:patch:tag (ou minor/major) e faça push da branch e da tag."
+            exit 1
+          fi
+
+      - name: Restore Next.js cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: next-release-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.ts', '**/*.tsx', '!node_modules/**') }}
+          restore-keys: |
+            next-release-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Build
         run: npm run build
@@ -53,6 +84,33 @@ jobs:
           name: release-artifact
           path: dist/darshan-*.tar.gz
           retention-days: 30
+
+  # Cria GitHub Release com o artefato (apenas em push de tag v*)
+  create-release:
+    name: Create GitHub Release
+    if: github.event_name == 'push'
+    needs: build-and-bundle
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-artifact
+
+      - name: Place artifact in workspace root
+        run: |
+          f=$(find . -name "darshan-*.tar.gz" | head -1)
+          [ -n "$f" ] && cp "$f" . || exit 1
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: "darshan-*.tar.gz"
+          generate_release_notes: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   # Deploy opcional: só roda se VERCEL_* estiverem configurados (release/tag)
   deploy:
