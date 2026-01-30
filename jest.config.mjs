@@ -32,6 +32,8 @@ const config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
   },
+  // Garante rootDir explícito para CI (evita $1 literal no path)
+  rootDir: ".",
 };
 
 export default createJestConfig(config);
