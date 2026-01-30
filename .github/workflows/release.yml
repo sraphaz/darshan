@@ -100,8 +100,10 @@ jobs:
 
       - name: Place artifact in workspace root
         run: |
-          f=$(find . -name "darshan-*.tar.gz" | head -1)
-          [ -n "$f" ] && cp "$f" . || exit 1
+          f=$(find . -name "darshan-*.tar.gz" -type f | head -1)
+          [ -z "$f" ] && exit 1
+          dir=$(dirname "$f")
+          [ "$dir" != "." ] && cp "$f" .
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
