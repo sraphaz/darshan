@@ -167,7 +167,7 @@ export default function ConfigPage() {
         {RECAPTCHA_SITE_KEY && (
           <Script
             src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit"
-            strategy="lazyOnLoad"
+            strategy="lazyOnload"
           />
         )}
         <div className="mb-6">
