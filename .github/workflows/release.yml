@@ -97,13 +97,16 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: release-artifact
+          path: release-artifact
 
       - name: Place artifact in workspace root
         run: |
-          f=$(find . -name "darshan-*.tar.gz" -type f | head -1)
-          [ -z "$f" ] && exit 1
-          dir=$(dirname "$f")
-          [ "$dir" != "." ] && cp "$f" .
+          cp release-artifact/darshan-*.tar.gz . 2>/dev/null || cp release-artifact/dist/darshan-*.tar.gz . 2>/dev/null || true
+          if ! ls darshan-*.tar.gz 1>/dev/null 2>&1; then
+            echo "Arquivo darshan-*.tar.gz não encontrado. Conteúdo:"
+            find release-artifact -type f
+            exit 1
+          fi
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
