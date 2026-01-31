@@ -23,9 +23,7 @@ Este documento mapeia os **gaps** apontados na avaliação do PR #3 com o **esta
 **Estado atual:**
 
 - **`/api/darshan`** (modo mock) e **GET `/api/instant-light`** importam e usam **apenas** `composeInstantLight` de **`@/lib/sacredRemedy`**.
-- **`lib/instantLight`** é um **wrapper de compatibilidade**: reexporta `composeInstantLight` que delega para `lib/sacredRemedy`; retorno legado `{ message, sacredId }` para quem ainda importar daqui.
-- **`lib/diagnosis`** e **`lib/sacred`** estão marcados como **@deprecated** / “Para Instant Light medicinal use lib/sacredRemedy”; **nenhum** import do fluxo Instant Light usa esses módulos.
-
+- **`lib/instantLight`**, **`lib/sacred`** e **`lib/diagnosis`** foram **removidos**; não há mais duplicação.
 **Conclusão:** **Resolvido.** Pipeline oficial é `lib/sacredRemedy`. Cliente único para diagnóstico + texto + prática + pergunta.
 
 ---
@@ -92,8 +90,8 @@ Este documento mapeia os **gaps** apontados na avaliação do PR #3 com o **esta
 | 3 | Numerologia completa implementada | ✅ Feito |
 | 4 | Cooldown autônomo server-side | ✅ Feito |
 | 5 | Ayurveda Action Selector completo (20 qualities) | ✅ Feito (shlakshna/sthula preenchidos) |
-| 6 | Corpus expandido (Sutras completos + Puranas excerpts) | ⏳ Backlog (atual ~100/80/52) |
-| 7 | Testes (deterministic, cooldown, universal vs personal, numerology) | ⏳ Pendente |
+| 6 | Corpus expandido (Sutras 196 ✅; Puranas 300–500, Upanishads ~200) | ⏳ Backlog editorial (atual ~80 puranas, ~52 upanishads) |
+| 7 | Testes (deterministic, cooldown, universal vs personal, numerology + integração GET /api/instant-light) | ✅ Feito |
 
 ---
 

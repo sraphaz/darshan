@@ -68,24 +68,48 @@ Este documento registra o que foi **realmente** fechado em resposta aos gaps e p
 
 ---
 
-## P3 — Puranas como remedy excerpts (backlog)
+## P2 — Puranas 500 (backlog)
 
-**Meta premium:** 300–500 trechos medicinais/arquetípicos, altamente taggeados (kleshaTargets, ayurvedicQualities, themes).
+**Meta premium:** 300–500 trechos medicinais/arquetípicos, altamente taggeados (kleshaTargets, qualities, themes).
 
 **Situação atual:** `puranas.json` tem ~80 entradas. A expansão para 300–500 é **trabalho editorial** (conteúdo + curadoria).
 
-**Recomendação:** Tratar em PR ou sprint dedicado; manter estrutura atual (kleshaTargets, qualities; themes opcional) e ir ampliando o arquivo aos poucos.
+**Recomendação:** Tratar em PR ou sprint dedicado; manter estrutura atual e ir ampliando o arquivo aos poucos.
 
 ---
 
-## Resumo
+## P3 — Ayurveda high-end ✅ (20/20 + múltiplas qualities + dosha; sono/rotina adicionados)
+
+**O que está feito:**
+
+- **20/20 qualities** com antídotos reais (QUALITY_TO_PRACTICE, QUALITY_TO_FOOD).
+- **Múltiplas qualities:** `getActionsForQualitiesWithDosha(qualities, dosha, { maxSuggestions: 3 })` combina até 3 práticas e 3 alimentos.
+- **Prioridade por dosha:** ordenação por DOSHA_QUALITIES_PRIORITY (vata/pitta/kapha).
+- **Sono e rotina:** QUALITY_TO_SLEEP e QUALITY_TO_ROUTINE; `getFullActionsForQualitiesWithDosha()` retorna practice, food, sleep, routine (opcionais para UI).
+
+**Extensão futura (opcional):** prioridade por estação/hora — tipo `GetActionsWithDoshaOptions` já preparado para `season?` e `hour?` quando o composer passar contexto.
+
+---
+
+## P4 — Cooldown autônomo server-side ✅
+
+**O que está feito:**
+
+- **GET `/api/instant-light`:** com sessão (cookie), chama `getRecentInstantLightIds(session.email, 20)` e sobrescreve `recentSacredIds` / `recentStateKeys`; após responder, chama `recordInstantLightUse(session.email, { sacredId, stateKey })`.
+- O cliente **não** precisa enviar recentIds; o servidor preenche e registra uso sozinho quando o usuário está logado.
+- Query params são fallback apenas para usuário não logado.
+
+---
+
+## Resumo (Engine 2.1 Premium Final)
 
 | Item | Status |
 |------|--------|
-| P0 — Unificar engines (remover instantLight, sacred, diagnosis) | ✅ Feito |
-| P1 — Numerologia completa (life path, soul urge, personality, expression) | ✅ Feito (knowledge + engines) |
-| P2 — Yoga Sutras 196 (yoga_sutras_full.json + selector) | ✅ Feito |
-| P3 — Puranas 300–500 excerpts | ⏳ Backlog editorial |
+| P0 — Unificar pipeline (apenas sacredRemedy) | ✅ Feito |
+| P1 — Numerologia completa (life path, expression, soul urge, personality) | ✅ Feito |
+| P2 — Corpus premium (Yoga Sutras 196; Puranas ~500) | ✅ Yoga 196; Puranas 500 ⏳ backlog |
+| P3 — Ayurveda high-end (20/20, múltiplas, dosha, sono, rotina) | ✅ Feito |
+| P4 — Cooldown autônomo server-side | ✅ Feito |
 
 ---
 
@@ -95,3 +119,5 @@ Este documento registra o que foi **realmente** fechado em resposta aos gaps e p
 - Numerologia: `lib/knowledge/numerology.ts`, `lib/engines/numerologyEngine.ts`
 - Corpus Yoga Sutras completo: `lib/dictionaries/sacred/yoga_sutras_full.json`
 - Geração do corpus: `node scripts/generate-yoga-sutras-full.js`
+- Ayurveda high-end: `lib/sacredRemedy/ayurvedaActionSelector.ts` (QUALITY_TO_SLEEP, QUALITY_TO_ROUTINE, getFullActionsForQualitiesWithDosha)
+- Cooldown: `lib/historyStorage.ts` (getRecentInstantLightIds, recordInstantLightUse), GET `/api/instant-light`

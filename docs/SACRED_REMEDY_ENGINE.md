@@ -44,6 +44,9 @@ Motor **paralelo** ao fluxo atual do Darshan. Não substitui `/api/darshan`; adi
   "sacredText": "...",
   "insight": "...",
   "practice": "...",
+  "food": "...",
+  "sleep": "...",
+  "routine": "...",
   "question": "...",
   "sacredId": "yoga_sutras.YS.1.33",
   "stateKey": "anxiety"
@@ -51,6 +54,7 @@ Motor **paralelo** ao fluxo atual do Darshan. Não substitui `/api/darshan`; adi
 ```
 
 - `insight` só vem quando há perfil (personal).
+- `food`, `sleep`, `routine` (Ayurveda high-end) vêm quando há qualidades em excesso e dosha; opcionais.
 - `sacredId` e `stateKey` para o cliente enviar em `recentSacredIds` / `recentStateKeys` e reduzir repetição.
 
 ---
@@ -100,18 +104,18 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 - **Diagnosis** retorna `ayurvedicQualities.excess` e `deficient`; **prakriti/dosha** do mapa enriquece o diagnóstico (dosha → qualidades típicas em excesso).
 - **Ayurveda Action Selector** (`ayurvedaActionSelector.ts`): prática e alimento concretos por qualidade (ruksha → oleação, chala → grounding, tikshna → cooling, etc.).
 - **remedyMatrix.json**: 50 estados (incl. burnout, solitude, grief, jealousy, numbness, hypercontrol, shame, impatience, despair, envy, restlessness, boredom, overwhelm, isolation, perfectionism, avoidance, irritability, self_doubt, longing, acceptance).
-- **Corpus sagrado**: yoga_sutras ~60 entradas, puranas ~40, upanishads ~30, todas com `kleshaTargets` e `qualities`.
+- **Corpus sagrado:** Yoga Sutras 196 (`yoga_sutras_full.json`), puranas ~80, upanishads ~52; todas com `kleshaTargets` e `qualities` (e `themes` opcional).
 
 ## 8. Engine 2.1 — Unificação e cooldown (pós-PR #3)
 
-- **P0 — Engine único:** `/api/darshan` (mock) e GET `/api/instant-light` usam apenas `lib/sacredRemedy`. `lib/instantLight` virou re-export/adaptador para compatibilidade.
+- **P0 — Engine único:** `/api/darshan` (mock) e GET `/api/instant-light` usam apenas `lib/sacredRemedy`. `lib/instantLight`, `lib/sacred` e `lib/diagnosis` foram removidos.
 - **P1 — Cooldown autônomo:** Quando o usuário está logado, o servidor busca `recentSacredIds` e `recentStateKeys` em `getRecentInstantLightIds(userEmail)` e registra uso em `recordInstantLightUse(userEmail, { sacredId, stateKey })`. Tabela `instant_light_uses` (migração `20250129110000_instant_light_uses.sql`).
 - **P2 — Numerologia completa:** `getSoulUrgeNumber(fullName)` (vogais) e `getPersonalityNumber(fullName)` (consoantes) em `lib/knowledge/numerology.ts`. SymbolicMap inclui `soulUrgeNumber` e `personalityNumber`.
 
 ## 9. Engine 2.1 — Concluído (P3, P4, numerologia, cooldown instant-light)
 
 - **Numerologia no diagnóstico:** `ConsciousDiagnosis.numerologyFromMap` (lifePath, soulUrge, expression, personality); seed em `diagnosisPersonal` influenciado por lifePath/soulUrge para coerência.
-- **Ayurveda high-end:** `getActionsForQualitiesWithDosha(qualities, dosha, { maxSuggestions: 3 })` — prioridade por dosha (vata/pitta/kapha), combina até 3 práticas e 3 alimentos; usado no composer quando há prakriti.
+- **Ayurveda high-end:** `getFullActionsForQualitiesWithDosha(qualities, dosha, { maxSuggestions: 3 })` — prioridade por dosha (vata/pitta/kapha), combina prática, alimento, sono e rotina; resposta Instant Light inclui `food`, `sleep`, `routine` quando aplicável.
 - **Cooldown GET /api/instant-light:** Com sessão (cookie), o servidor busca `getRecentInstantLightIds(session.email)` e registra uso com `recordInstantLightUse`; query params são fallback para anônimos.
 - **Corpus expandido:** Yoga Sutras 100+ (YS.2.51–YS.3.10 adicionados), Puranas 80+, Upanishads 50+.
 
@@ -121,7 +125,23 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 - **Campo themes:** `SacredCorpusEntry.themes?: string[]` opcional para matching futuro (corpus premium).
 - **Nakshatra → klesha:** mapa `NAKSHATRA_KLESHA_TENDENCY` em diagnosisEngine; diagnóstico personal prefere remédios cujo klesha coincide com a tendência da nakshatra lunar.
 
-## 11. Próximos passos (editorial)
+## 11. Testes de integração
 
-- Corpus premium (196 Sutras, 300+ Puranas, 200 Upanishads) com themes em todas as entradas.
-- Testes de integração para GET `/api/instant-light` (cooldown com sessão mock).
+- **`__tests__/api/instant-light.route.test.ts`:** GET `/api/instant-light` — modo anônimo, modo personal (query), cooldown server-side com sessão mock (getRecentInstantLightIds, recordInstantLightUse), formato da resposta (food, sleep, routine opcionais). Executar: `npx jest __tests__/api/instant-light.route.test`.
+
+## 12. Próximos passos (editorial)
+
+- Corpus premium (196 Sutras já concluído; 300+ Puranas, 200 Upanishads) com themes em todas as entradas.
+
+---
+
+## 13. O que falta (resumo)
+
+| Área | Item | Status |
+|------|------|--------|
+| **Engine 2.1** | Pipeline único, numerologia, cooldown, Ayurveda 20/20 + sono/rotina, testes unit + integração | ✅ Concluído |
+| **Corpus** | Yoga Sutras 196 | ✅ Concluído |
+| **Corpus** | Puranas 300–500 trechos medicinais | ⏳ Em progresso (~106 entradas, **todas com themes**; backlog editorial para 300+) |
+| **Corpus** | Upanishads ~200 + themes em entradas | ✅ **Todas as ~64 entradas com themes**; backlog editorial para 200 |
+| **Ayurveda** | Prioridade por estação (`season`) e hora (`hour`) em `GetActionsWithDoshaOptions` | ✅ Implementado (getSeasonFromDate, getHourPeriodFromDate; composer passa ao getFullActionsForQualitiesWithDosha) |
+| **Doc** | PR3_ENGINE_21_STATUS: atualizar se ainda citar lib/instantLight como wrapper | Pequena correção |

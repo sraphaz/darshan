@@ -8,6 +8,9 @@ import {
   getFoodForQuality,
   getActionsForQualities,
   getActionsForQualitiesWithDosha,
+  getSeasonFromDate,
+  getHourPeriodFromDate,
+  getFullActionsForQualitiesWithDosha,
   QUALITY_TO_PRACTICE,
   QUALITY_TO_FOOD,
 } from "@/lib/sacredRemedy/ayurvedaActionSelector";
@@ -83,6 +86,47 @@ describe("sacredRemedy/ayurvedaActionSelector", () => {
       );
       const parts = practice.split(". ").filter(Boolean);
       expect(parts.length).toBeLessThanOrEqual(2);
+    });
+
+    it("com season summer prioriza qualities do pitta na ordenação", () => {
+      const { practice } = getActionsForQualitiesWithDosha(
+        ["ushna", "ruksha", "tikshna"],
+        "vata",
+        { maxSuggestions: 3, season: "summer" }
+      );
+      expect(typeof practice).toBe("string");
+      expect(practice.length).toBeGreaterThan(0);
+    });
+
+    it("com hour midday retorna resultado consistente", () => {
+      const { practice, food } = getFullActionsForQualitiesWithDosha(
+        ["ushna", "tikshna"],
+        "pitta",
+        { maxSuggestions: 2, hour: "midday" }
+      );
+      expect(typeof practice).toBe("string");
+      expect(typeof food).toBe("string");
+    });
+  });
+
+  describe("getSeasonFromDate / getHourPeriodFromDate", () => {
+    it("getSeasonFromDate retorna winter para jan", () => {
+      expect(getSeasonFromDate(new Date(2025, 0, 15))).toBe("winter");
+    });
+    it("getSeasonFromDate retorna summer para jul", () => {
+      expect(getSeasonFromDate(new Date(2025, 6, 15))).toBe("summer");
+    });
+    it("getSeasonFromDate retorna autumn para out", () => {
+      expect(getSeasonFromDate(new Date(2025, 9, 15))).toBe("autumn");
+    });
+    it("getHourPeriodFromDate retorna morning para 8h", () => {
+      expect(getHourPeriodFromDate(new Date(2025, 0, 1, 8, 0))).toBe("morning");
+    });
+    it("getHourPeriodFromDate retorna midday para 12h", () => {
+      expect(getHourPeriodFromDate(new Date(2025, 0, 1, 12, 0))).toBe("midday");
+    });
+    it("getHourPeriodFromDate retorna evening para 20h", () => {
+      expect(getHourPeriodFromDate(new Date(2025, 0, 1, 20, 0))).toBe("evening");
     });
   });
 

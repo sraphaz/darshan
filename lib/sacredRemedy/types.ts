@@ -87,6 +87,10 @@ export type InstantLightResponse = {
   practice: string;
   /** Recomendação alimentar simples (Ayurveda) */
   food?: string;
+  /** Sugestão de sono/descanso (Ayurveda high-end) */
+  sleep?: string;
+  /** Sugestão de rotina diária mínima (Ayurveda high-end) */
+  routine?: string;
   question: string;
   sacredId?: string;
   stateKey?: string;

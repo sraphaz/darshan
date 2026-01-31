@@ -12,7 +12,12 @@ import {
   getRemedyForDiagnosis,
 } from "./diagnosisEngine";
 import { selectSacredText } from "./sacredSelector";
-import { getActionsForQualities, getActionsForQualitiesWithDosha } from "./ayurvedaActionSelector";
+import {
+  getFullActionsForQualitiesWithDosha,
+  getActionsForQualities,
+  getSeasonFromDate,
+  getHourPeriodFromDate,
+} from "./ayurvedaActionSelector";
 import type { UserProfileForOracle } from "@/lib/knowledge/types";
 import type { InstantLightResponse } from "./types";
 
@@ -69,11 +74,21 @@ export function composeInstantLight(
   const sacredId = sacredEntry ? `${sacredEntry.corpus}.${sacredEntry.id}` : `${remedy.sacred?.corpus ?? "remedy"}.${remedy.sacred?.id ?? remedy.state}`;
 
   const dosha = diagnosis.prakritiFromJyotish?.dosha;
-  const ayurvedaActions = dosha && diagnosis.ayurvedicQualities.excess.length > 0
-    ? getActionsForQualitiesWithDosha(diagnosis.ayurvedicQualities.excess, dosha, { maxSuggestions: 3 })
-    : getActionsForQualities(diagnosis.ayurvedicQualities.excess);
-  const practice = (ayurvedaActions.practice || remedy.practice || "").trim();
-  const food = (ayurvedaActions.food || remedy.food || "").trim();
+  const hasQualities = diagnosis.ayurvedicQualities.excess.length > 0;
+  const now = new Date();
+  const ayurvedaOptions = {
+    maxSuggestions: 3,
+    season: getSeasonFromDate(now),
+    hour: getHourPeriodFromDate(now),
+  };
+  const ayurvedaFull = dosha && hasQualities
+    ? getFullActionsForQualitiesWithDosha(diagnosis.ayurvedicQualities.excess, dosha, ayurvedaOptions)
+    : null;
+  const ayurvedaFallback = hasQualities ? getActionsForQualities(diagnosis.ayurvedicQualities.excess) : { practice: "", food: "" };
+  const practice = (ayurvedaFull?.practice ?? ayurvedaFallback.practice ?? remedy.practice ?? "").trim();
+  const food = (ayurvedaFull?.food ?? ayurvedaFallback.food ?? remedy.food ?? "").trim();
+  const sleep = ayurvedaFull?.sleep?.trim();
+  const routine = ayurvedaFull?.routine?.trim();
   const question = (remedy.question || "O que em você já sabe?").trim();
 
   const result: InstantLightResponse = {
@@ -84,6 +99,8 @@ export function composeInstantLight(
     stateKey: diagnosis.stateKey ?? remedy.state,
   };
   if (food) result.food = food;
+  if (sleep) result.sleep = sleep;
+  if (routine) result.routine = routine;
 
   if (hasProfile && profile) {
     const map = buildSymbolicMap(profile);

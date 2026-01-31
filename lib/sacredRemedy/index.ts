@@ -15,6 +15,8 @@ export {
   getPracticeForQuality,
   getFoodForQuality,
   getActionsForQualities,
+  getSeasonFromDate,
+  getHourPeriodFromDate,
 } from "./ayurvedaActionSelector";
 export { composeInstantLight } from "./instantLightComposer";
 export type { ComposeInstantLightOptions } from "./instantLightComposer";
