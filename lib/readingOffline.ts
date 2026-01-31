@@ -1,113 +1,63 @@
 /**
- * Leitura (mapa pessoal) offline — monta um texto a partir do conhecimento local
- * (Jyotish, numerologia, arquétipos), sem chamar a IA.
- * Usa interpretação Jyotish para leitura (temas e efeitos narrativos), não as frases do oráculo.
+ * Leitura (mapa pessoal) offline — SymbolicMap → Insights → Composer → Readings modulares.
+ * getOfflineReading é apenas um wrapper: monta o mapa e devolve general + love + career + year + action.
+ * Sem IA; motor determinístico e extensível (pronto para Swiss Ephemeris e Human Design).
  */
 
-import { computeVedicChartSimplified } from "@/lib/knowledge/vedic";
-import { getRulingNumberFromName, getNumberTraits } from "@/lib/knowledge/numerology";
-import { getArchetypeTraits } from "@/lib/knowledge/archetypeTraits";
-import { getRandomClassicTextForArchetype } from "@/lib/knowledge/classicTexts";
+import { buildSymbolicMap } from "@/lib/symbolic/builder";
 import {
-  getJyotishReadingInterpretation,
-  RASHI_MEANINGS,
-  NAKSHATRA_MEANINGS,
-} from "@/lib/knowledge/jyotishMeanings";
-import type { RashiKey, NakshatraKey } from "@/lib/knowledge/types";
+  getGeneral,
+  getLove,
+  getCareer,
+  getYear,
+  getAction,
+  type StructuredOfflineReading,
+} from "@/lib/readings/symbolicReadings";
 
-function getSeedFromProfile(profile: { fullName?: string; birthDate?: string; birthTime?: string }, offset: number): number {
-  const str = [
-    profile.fullName ?? "",
-    profile.birthDate ?? "",
-    profile.birthTime ?? "",
-    String(offset),
-  ].join("|");
-  let h = 0;
-  for (let i = 0; i < str.length; i++) {
-    h = ((h << 5) - h) + str.charCodeAt(i);
-    h |= 0;
-  }
-  return Math.abs(h);
-}
-
-function rashiName(key: RashiKey): string {
-  const e = RASHI_MEANINGS.find((x) => x.key === key);
-  return e?.namePt ?? key;
-}
-
-function nakshatraName(key: NakshatraKey): string {
-  const e = NAKSHATRA_MEANINGS.find((x) => x.key === key);
-  return e?.namePt ?? key;
-}
+export type { StructuredOfflineReading };
 
 /**
- * Gera uma leitura pessoal (mapa) totalmente offline, sem IA.
- * Usa interpretação Jyotish (temas + efeitos), descrição de arquétipo e numerologia,
- * e um texto clássico; evita as frases prontas do oráculo Darshan.
+ * Wrapper: map = buildSymbolicMap(profile) → return { general, love, career, year, action }.
  */
 export function getOfflineReading(profile: {
   fullName?: string;
   birthDate?: string;
   birthPlace?: string;
   birthTime?: string;
-}): string {
-  const seed3 = (getSeedFromProfile(profile, 3) + Date.now()) >>> 0;
-
-  const chart = computeVedicChartSimplified({
+}): StructuredOfflineReading {
+  const map = buildSymbolicMap({
+    fullName: profile.fullName,
     birthDate: profile.birthDate,
+    birthPlace: profile.birthPlace,
     birthTime: profile.birthTime,
   });
-  const rulingNumber = getRulingNumberFromName(profile.fullName ?? "");
-  const numberTraits = getNumberTraits(rulingNumber);
-  const archetypeKey = chart.archetypeKeys?.[0];
-  const archetypeEntry = archetypeKey ? getArchetypeTraits(archetypeKey) : undefined;
+  return {
+    general: getGeneral(map),
+    love: getLove(map),
+    career: getCareer(map),
+    year: getYear(map),
+    action: getAction(map),
+  };
+}
 
-  const sections: string[] = [];
-
-  // Introdução
-  sections.push(
-    "Esta leitura integra o mapa védico (Lua, signo e estação lunar), numerologia e arquétipos em uma síntese interpretativa."
-  );
-
-  // Lua e Jyotish (interpretação narrativa, não frases do oráculo)
-  if (chart.moonRashi || chart.moonNakshatra) {
-    const rashi = chart.moonRashi ? rashiName(chart.moonRashi as RashiKey) : "";
-    const naks = chart.moonNakshatra ? nakshatraName(chart.moonNakshatra as NakshatraKey) : "";
-    const line: string[] = [];
-    if (rashi) line.push(`Sua Lua está no signo de ${rashi}`);
-    if (naks) line.push(`na estação lunar ${naks}`);
-    if (line.length) {
-      sections.push(line.join(" e ") + ".");
-      const interpretation = getJyotishReadingInterpretation(chart);
-      if (interpretation) sections.push(interpretation);
-    }
-  }
-
-  // Arquétipo (descrição a partir de traits, sem frase pronta)
-  if (archetypeKey && archetypeEntry) {
-    sections.push("");
-    sections.push(`Arquétipo: ${archetypeEntry.name} — ${archetypeEntry.shortTrait}`);
-    const personality = archetypeEntry.personality?.slice(0, 3).join(", ") ?? "";
-    const tendencies = archetypeEntry.tendencies?.slice(0, 3).join("; ") ?? "";
-    const challenges = archetypeEntry.challenges?.slice(0, 2).join("; ") ?? "";
-    if (personality) sections.push(`Traços: ${personality}.`);
-    if (tendencies) sections.push(`Tendências: ${tendencies}.`);
-    if (challenges) sections.push(`Desafios possíveis: ${challenges}.`);
-  }
-
-  // Numerologia (descrição a partir de traits, sem frase pronta)
-  sections.push("");
-  sections.push(`Numerologia (Pitágoras) — Número regente ${rulingNumber}: ${numberTraits.name}.`);
-  sections.push(numberTraits.shortTrait + ".");
-  sections.push(`Tendências: ${numberTraits.tendencies.join("; ")}.`);
-  sections.push(`Desafios: ${numberTraits.challenges.join("; ")}.`);
-
-  // Um texto clássico (reflexão, não oráculo)
-  const classic = getRandomClassicTextForArchetype(archetypeKey ?? "sábio", seed3);
-  if (classic?.text) {
-    sections.push("");
-    sections.push(classic.text);
-  }
-
-  return sections.join("\n\n").trim();
+/**
+ * Retorna o texto completo da leitura (todas as seções unidas).
+ * Útil para compatibilidade com APIs que esperam uma única string (message).
+ */
+export function getOfflineReadingFullText(profile: {
+  fullName?: string;
+  birthDate?: string;
+  birthPlace?: string;
+  birthTime?: string;
+}): string {
+  const s = getOfflineReading(profile);
+  const parts: string[] = [];
+  const intro = "Esta leitura integra o mapa védico (Lua, signo e estação lunar), numerologia e arquétipos.";
+  parts.push(intro);
+  if (s.general.trim()) parts.push(s.general.trim());
+  if (s.love.trim()) parts.push(s.love.trim());
+  if (s.career.trim()) parts.push(s.career.trim());
+  if (s.year.trim()) parts.push(s.year.trim());
+  if (s.action.trim()) parts.push(s.action.trim());
+  return parts.join("\n\n").trim();
 }

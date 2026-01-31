@@ -48,6 +48,28 @@ export function getRulingNumberFromName(fullName: string): RulingNumber {
   return reduceToDigit(sum) as RulingNumber;
 }
 
+/**
+ * Life Path Number (data de nascimento) — soma dos dígitos da data reduzida a 1–9 ou 11/22.
+ * Ex.: 1990-05-15 → 1+9+9+0+0+5+1+5 = 30 → 3.
+ */
+export function getLifePathNumber(birthDate: string): RulingNumber {
+  const digits = (birthDate || "").replace(/\D/g, "");
+  if (!digits.length) return 7;
+  let sum = 0;
+  for (const d of digits) sum += parseInt(d, 10);
+  if (sum === 0) return 7;
+  while (sum > 99) {
+    sum = String(sum).split("").reduce((s, d) => s + parseInt(d, 10), 0);
+  }
+  if (sum === 11 || sum === 22) return sum as 11 | 22;
+  return reduceToDigit(sum) as RulingNumber;
+}
+
+/** Expression/Destiny Number = número regente do nome (alias semântico). */
+export function getExpressionNumber(fullName: string): RulingNumber {
+  return getRulingNumberFromName(fullName);
+}
+
 /** Entrada do dicionário por número: tendências e frases para o oráculo */
 export type NumberTraitsEntry = {
   number: RulingNumber;

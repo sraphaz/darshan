@@ -1,0 +1,8 @@
+[
+  { "id": "BP.bhakti", "text": "A entrega ao divino dissolve o apego; quem oferece o coração encontra leveza.", "kleshaTargets": ["raga"], "qualities": ["snigdha", "guru"] },
+  { "id": "BP.forgiveness", "text": "O perdão é libertação; quem solta o ressentimento abre a porta do coração.", "kleshaTargets": ["dvesha"], "qualities": ["picchila", "sthira"] },
+  { "id": "BP.compassion", "text": "A compaixão divina acolhe quem sofre; você pode ser sustentado.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"] },
+  { "id": "BP.protection", "text": "Proteger o coração não é fechar; é escolher o que entra.", "kleshaTargets": ["abhinivesha"], "qualities": ["sukshma", "chala"] },
+  { "id": "BP.rest", "text": "O descanso é dharma; quem se entrega ao repouso se renova.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"] },
+  { "id": "BP.heart", "text": "Abrir o coração não é fraqueza; é coragem de sentir.", "kleshaTargets": ["dvesha"], "qualities": ["sita", "kathina"] }
+]

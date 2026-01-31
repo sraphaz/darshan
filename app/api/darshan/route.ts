@@ -4,7 +4,7 @@ import { getConnector } from "@/lib/ai";
 import { loadMasterPrompt } from "@/lib/darshanPrompt";
 import { getConfig } from "@/lib/configStore";
 import { PHASE_NAMES } from "@/lib/darshan";
-import { getOfflineRevelation } from "@/lib/oracleOffline";
+import { composeInstantLight } from "@/lib/instantLight/instantLightComposer";
 import { getSessionFromCookie } from "@/lib/auth";
 import {
   getCreditsFromCookie,
@@ -22,6 +22,7 @@ import {
 import { logger } from "@/lib/logger";
 import { checkAndRecordRateLimit, checkDailyLimit, recordDailyRequest } from "@/lib/usageLimits";
 import { isSupabaseConfigured } from "@/lib/supabase";
+import { saveRevelation } from "@/lib/historyStorage";
 
 export const dynamic = "force-dynamic";
 
@@ -107,6 +108,9 @@ export async function POST(req: Request) {
         birthTime: typeof body.userProfile.birthTime === "string" ? body.userProfile.birthTime : undefined,
       }
     : {};
+  const recentSacredIds = Array.isArray(body.recentSacredIds)
+    ? body.recentSacredIds.filter((id: unknown) => typeof id === "string")
+    : [];
 
   const config = getConfig();
   const mockMessages =
@@ -116,17 +120,17 @@ export async function POST(req: Request) {
         : [...MOCK_MESSAGES, ...config.mockMessagesOverride]
     : MOCK_MESSAGES;
 
-  // IA desativada (mock): 100% offline — NÃO chama getConnector() nem APIs externas.
+  // IA desativada (mock): Instant Light híbrido — Sacred Library + Personal Insight (se houver mapa).
+  // Sem perfil → Universal Light (texto sagrado + prática + pergunta). Com perfil → Personal Light (+ insight e prática do mapa).
   if (useMock) {
-    const lastRevelations = history.slice(-5).map((t) => t.darshanMessage);
-    const phrases = lastRevelations.flatMap((msg) =>
-      msg.split(/\n\n/).map((s) => s.trim()).filter(Boolean)
-    );
-    const recentlyUsedPhrases = phrases.flatMap((p) =>
-      /o que em você já sabe/i.test(p) ? [p, "O que em você já sabe?"] : [p]
-    );
-    const message = getOfflineRevelation(userProfile, userMessage, recentlyUsedPhrases);
-    return NextResponse.json({ message: message || getMockMessage(mockMessages), phase: 1 } satisfies { message: string; phase: number });
+    const { message, sacredId } = composeInstantLight(userProfile, {
+      recentSacredIds,
+    });
+    return NextResponse.json({
+      message: message || getMockMessage(mockMessages),
+      phase: 1,
+      sacredId,
+    } satisfies { message: string; phase: number; sacredId?: string });
   }
 
   const cookieStore = await cookies();
@@ -273,8 +277,15 @@ export async function POST(req: Request) {
     if (!isSupabaseConfigured()) {
       recordDailyRequest(session.email);
     }
+    const finalMessage = message || "Respire. O que em você já sabe?";
+    if (revelation) {
+      await saveRevelation(session.email, {
+        questionText: userMessage || null,
+        responseText: finalMessage,
+      });
+    }
     const res = NextResponse.json({
-      message: message || "Respire. O que em você já sabe?",
+      message: finalMessage,
       phase: revelation ? 1 : (parsed.phase ?? phase),
       creditsUsed: creditsPerRevelation,
       balance: debitResult.newBalance,

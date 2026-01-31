@@ -1,4 +1,4 @@
-const originalEnv = process.env;
+const stripeTestEnv = process.env;
 
 jest.mock("stripe", () => {
   return jest.fn().mockImplementation(() => ({ _mock: "stripe" }));
@@ -6,7 +6,7 @@ jest.mock("stripe", () => {
 
 describe("lib/stripe", () => {
   afterEach(() => {
-    process.env = { ...originalEnv };
+    process.env = { ...stripeTestEnv };
     jest.resetModules();
   });
 

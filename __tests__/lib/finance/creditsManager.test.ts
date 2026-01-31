@@ -288,7 +288,7 @@ describe("lib/finance/creditsManager (com Supabase)", () => {
     it("retorna null quando insert payment falha", async () => {
       mockGetSupabase.mockReturnValue(
         createMockSupabaseClient({
-          selectUser: { data: { id: "u1" } },
+          selectUser: { data: { id: "u1", credits_balance: 0 } },
           insertPayment: { data: null },
         })
       );

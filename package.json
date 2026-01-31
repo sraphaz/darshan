@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node -e \"try { require('fs').rmSync('build', { recursive: true }) } catch (e) { }\"",
+    "prebuild": "node -e \"try { require('fs').rmSync('build', { recursive: true, maxRetries: 3 }) } catch (e) { if (e.code !== 'EPERM' && e.code !== 'EBUSY') throw e; }\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -21,15 +21,16 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
+    "@fusionstrings/swiss-eph": "^0.1.1",
     "@google/generative-ai": "^0.21.0",
     "@supabase/supabase-js": "^2.93.3",
     "framer-motion": "^11.11.17",
+    "mercadopago": "^2.0.0",
     "mhah-panchang": "^1.2.0",
     "next": "15.5.11",
     "openai": "^4.73.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "mercadopago": "^2.0.0",
     "stripe": "^17.4.0",
     "suncalc": "^1.9.0"
   },
@@ -40,10 +41,10 @@
     "@types/react-dom": "^19.0.1",
     "@types/suncalc": "^1.9.2",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.5.11",
     "jest": "^29.7.0",
+    "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
   }

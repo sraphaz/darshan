@@ -16,7 +16,8 @@ import { getCreditsBalance, debitCredits, logAiUsage, estimateCost, refreshUsdTo
 import type { AiUsageProvider } from "@/lib/finance";
 import { logger } from "@/lib/logger";
 import { getConfig } from "@/lib/configStore";
-import { getOfflineReading } from "@/lib/readingOffline";
+import { getOfflineReading, getOfflineReadingFullText } from "@/lib/readingOffline";
+import { saveReading } from "@/lib/historyStorage";
 import { computeVedicChartSimplified } from "@/lib/knowledge/vedic";
 import { getRulingNumberFromName, getNumberTraits } from "@/lib/knowledge/numerology";
 import { RASHI_NAMES } from "@/lib/knowledge/archetypes";
@@ -156,11 +157,13 @@ export async function POST(req: Request) {
 
   const useOffline = body.offline === true;
   if (useOffline) {
-    const message = getOfflineReading(profile);
+    const sections = getOfflineReading(profile);
+    const message = getOfflineReadingFullText(profile);
     const balanceFromCookie = getCreditsFromCookie(cookieHeader);
     const balance = await getCreditsBalance(session.email, balanceFromCookie);
     return NextResponse.json({
       message,
+      sections,
       balance,
       creditsUsed: 0,
       offline: true,
@@ -280,6 +283,8 @@ export async function POST(req: Request) {
       relatedUsageId: usageLogId ?? undefined,
       currentBalanceFromCookie: balance,
     });
+
+    await saveReading(session.email, message);
 
     const res = NextResponse.json({
       message,

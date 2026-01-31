@@ -1,0 +1,15 @@
+[
+  { "id": "YS.1.1", "text": "Yoga é a cessação das flutuações da mente.", "kleshaTargets": ["avidya"], "qualities": ["chala", "sukshma"] },
+  { "id": "YS.1.2", "text": "Quando a mente está em silêncio, o observador repousa em sua própria natureza.", "kleshaTargets": ["avidya"], "qualities": ["vishada", "laghu"] },
+  { "id": "YS.1.12", "text": "A prática e o desapego são o par que estabiliza a mente.", "kleshaTargets": ["raga"], "qualities": ["chala", "tikshna"] },
+  { "id": "YS.1.13", "text": "O esforço constante para estabilizar a mente é a prática.", "kleshaTargets": ["raga", "avidya"], "qualities": ["chala", "laghu"] },
+  { "id": "YS.1.14", "text": "A prática torna-se firme quando mantida por muito tempo, sem interrupção, com devoção.", "kleshaTargets": ["avidya"], "qualities": ["guru", "manda"] },
+  { "id": "YS.1.15", "text": "O desapego é o domínio de quem não deseja nem evita o que vê.", "kleshaTargets": ["raga", "dvesha"], "qualities": ["snigdha", "guru"] },
+  { "id": "YS.1.16", "text": "O ápice do desapego é quando a consciência reconhece sua própria natureza luminosa.", "kleshaTargets": [], "qualities": ["vishada", "laghu"] },
+  { "id": "YS.1.33", "text": "Amizade, compaixão, alegria e equanimidade em relação ao que é agradável, doloroso, meritório ou não — acalmam a mente.", "kleshaTargets": ["raga", "dvesha"], "qualities": ["chala", "ruksha", "tikshna", "ushna", "khara"] },
+  { "id": "YS.2.1", "text": "A prática constante e o desapego são os meios.", "kleshaTargets": ["asmita", "raga"], "qualities": ["kathina", "sthira"] },
+  { "id": "YS.2.6", "text": "O ego é a identificação do que vê com o instrumento do ver; reconhecer isso dissolve o orgulho.", "kleshaTargets": ["asmita"], "qualities": ["tikshna", "kathina"] },
+  { "id": "YS.2.7", "text": "O apego segue o prazer; o desapego nasce do discernimento.", "kleshaTargets": ["raga"], "qualities": ["tikshna", "ushna"] },
+  { "id": "YS.2.9", "text": "O medo da morte habita mesmo no sábio; é inerente à natureza. Observá-lo enfraquece seu poder.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "sandra"] },
+  { "id": "YS.2.35", "text": "Na presença de quem está firme na não-violência, a hostilidade cessa.", "kleshaTargets": ["dvesha", "asmita"], "qualities": ["tikshna", "khara"] }
+]

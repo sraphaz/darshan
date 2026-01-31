@@ -7,19 +7,19 @@ type Props = {
   onClick: () => void;
 };
 
-/** Ícone minimalista de mapa (documento/folha) — posicionado abaixo do ícone de cadastro. */
+/** Ícone de leitura (resumo completo) — posicionado abaixo do ícone Dados. */
 export default function PersonalMapIcon({ onClick }: Props) {
   return (
     <motion.button
       type="button"
       onClick={onClick}
-      className="fixed top-28 right-4 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-moon-grey/80 hover:text-white/50 transition-colors z-50"
+      className="fixed top-24 right-3 sm:top-28 sm:right-4 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-moon-grey/80 hover:text-white/50 transition-colors z-50"
       aria-label="Leitura (resumo completo por 9 créditos)"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.6, duration: 0.3 }}
     >
-      <Tooltip text="Leitura — resumo completo (9 créditos)" groupName="personalMap">
+      <Tooltip text="Leitura" groupName="personalMap" align="right">
         <svg
           className="w-5 h-5 text-current"
           viewBox="0 0 24 24"

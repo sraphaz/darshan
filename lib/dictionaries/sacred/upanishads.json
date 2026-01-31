@@ -1,0 +1,10 @@
+[
+  { "id": "UP.tat_tvam_asi", "text": "Isso és tu. O que você busca já é você.", "kleshaTargets": ["avidya"], "qualities": ["manda", "guru"] },
+  { "id": "UP.plenitude", "text": "O Ser que reside no coração é plenitude; o vazio é espaço para Ele.", "kleshaTargets": ["avidya"], "qualities": ["vishada", "laghu"] },
+  { "id": "UP.forgiveness", "text": "O perdão interno libera o peso; você pode recomeçar.", "kleshaTargets": ["avidya"], "qualities": ["guru", "picchila"] },
+  { "id": "UP.kena1", "text": "Aquilo que não pode ser pensado pela mente, mas pelo qual a mente pensa — conhece isso como o Absoluto.", "kleshaTargets": ["avidya"], "qualities": ["vishada"] },
+  { "id": "UP.isha_plenum", "text": "Isto é pleno; aquilo é pleno. Do pleno nasce o pleno. Tomando o pleno do pleno, o pleno permanece.", "kleshaTargets": [], "qualities": ["vishada", "laghu"] },
+  { "id": "UP.katha_observer", "text": "Conhece o que em você observa como o condutor da carruagem; o corpo é a carruagem.", "kleshaTargets": ["avidya", "asmita"], "qualities": ["vishada"] },
+  { "id": "UP.mundaka_birds", "text": "Duas aves, companheiras unidas, habitam a mesma árvore; uma come o fruto, a outra observa sem comer.", "kleshaTargets": ["raga"], "qualities": ["vishada"] },
+  { "id": "UP.brihadaranyaka", "text": "Conduz-me do não-ser ao ser; conduz-me da escuridão à luz; conduz-me da morte à imortalidade.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru"] }
+]
