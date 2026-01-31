@@ -1,8 +1,55 @@
 {
-  "general": [],
-  "love": ["relacionamento", "amor", "parceiro", "parceira", "casamento", "namoro", "amante", "coração", "perder alguém", "termo", "separação", "traição", "ciúmes", "afeto"],
-  "career": ["trabalho", "carreira", "dinheiro", "propósito", "emprego", "chefe", "equipe", "profissional", "finanças", "salário", "demissão", "mudança de emprego"],
-  "year": ["ano", "ano que vem", "próximo ano", "proximo ano", "este ano", "2025", "ciclo", "previsão do ano"],
-  "health": ["corpo", "saúde", "cansaço", "cansado", "doença", "dormir", "sono", "energia", "fadiga", "burnout", "exausto"],
-  "spirituality": ["meditação", "caminho", "dharma", "espiritual", "sentido da vida", "propósito maior", "alma", "interior"]
+  "general": [
+    "vida",
+    "momento",
+    "fase",
+    "direção",
+    "confusão"
+  ],
+  "love": [
+    "relacionamento",
+    "amor",
+    "namoro",
+    "casamento",
+    "parceiro",
+    "parceira",
+    "crush",
+    "ex",
+    "ciúmes",
+    "apego"
+  ],
+  "career": [
+    "trabalho",
+    "carreira",
+    "dinheiro",
+    "grana",
+    "emprego",
+    "propósito",
+    "projeto"
+  ],
+  "health": [
+    "saúde",
+    "corpo",
+    "cansaço",
+    "energia",
+    "sono",
+    "alimentação"
+  ],
+  "spirituality": [
+    "meditação",
+    "yoga",
+    "dharma",
+    "caminho espiritual",
+    "consciência",
+    "presença"
+  ],
+  "year": [
+    "ano",
+    "ano que vem",
+    "próximo ano",
+    "proximo ano",
+    "este ano",
+    "ciclo",
+    "previsão do ano"
+  ]
 }

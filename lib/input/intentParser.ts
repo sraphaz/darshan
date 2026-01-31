@@ -11,7 +11,7 @@ import inputEmotionsJson from "@/lib/dictionaries/inputEmotions.json";
 import inputQuestionsJson from "@/lib/dictionaries/inputQuestions.json";
 
 export type SubjectKey = "self" | "other" | "relational";
-export type VerbClassKey = "feel" | "seek" | "fear" | "want" | "conflict" | "reflect";
+export type VerbClassKey = "feel" | "seek" | "fear" | "conflict" | "reflect";
 export type ThemeKey = "general" | "love" | "career" | "year" | "health" | "spirituality";
 export type QuestionTypeKey = "what" | "how" | "why" | "when" | "where" | "who";
 
@@ -36,9 +36,10 @@ export type ParsedIntent = {
 
 type InputVerbsSchema = Record<string, string[]>;
 type InputThemesSchema = Record<string, string[]>;
+/** Aceita formato stateKey → keywords[] ou emotionLabel → { keywords, stateKeys } */
 type InputEmotionsSchema = Record<
   string,
-  { keywords: string[]; stateKeys: string[] }
+  string[] | { keywords: string[]; stateKeys: string[] }
 >;
 type InputQuestionsSchema = Record<string, string[]>;
 
@@ -85,9 +86,9 @@ function findTheme(normal: string): ThemeKey {
   let best: ThemeKey = "general";
   let bestLen = 0;
   for (const [theme, keywords] of Object.entries(INPUT_THEMES)) {
-    if (theme === "general" || !Array.isArray(keywords)) continue;
+    if (!Array.isArray(keywords)) continue;
     for (const kw of keywords) {
-      if (normal.includes(normalize(kw)) && kw.length > bestLen) {
+      if (kw && normal.includes(normalize(kw)) && kw.length > bestLen) {
         best = theme as ThemeKey;
         bestLen = kw.length;
       }
@@ -112,20 +113,29 @@ function findEmotionsAndStates(normal: string): {
 } {
   const emotionLabels: string[] = [];
   const stateScores = new Map<string, { score: number; matched: string[] }>();
-  for (const [emotionLabel, data] of Object.entries(INPUT_EMOTIONS)) {
-    const entry = data as { keywords: string[]; stateKeys: string[] };
-    if (!entry?.keywords?.length || !entry?.stateKeys?.length) continue;
+  for (const [key, data] of Object.entries(INPUT_EMOTIONS)) {
+    let keywords: string[];
+    let stateKeys: string[];
+    if (Array.isArray(data) && data.length > 0) {
+      keywords = data;
+      stateKeys = [key];
+    } else if (data && typeof data === "object" && !Array.isArray(data)) {
+      const entry = data as { keywords: string[]; stateKeys: string[] };
+      if (!entry?.keywords?.length || !entry?.stateKeys?.length) continue;
+      keywords = entry.keywords;
+      stateKeys = entry.stateKeys;
+    } else continue;
     const matched: string[] = [];
-    for (const kw of entry.keywords) {
-      if (normal.includes(normalize(kw))) {
+    for (const kw of keywords) {
+      if (kw && normal.includes(normalize(kw))) {
         matched.push(kw);
       }
     }
     if (matched.length > 0) {
-      emotionLabels.push(emotionLabel);
+      emotionLabels.push(key);
       const compoundBonus = normal.includes("medo de perder") || normal.includes("medo de") ? 1 : 0;
       const score = matched.length + compoundBonus;
-      for (const sk of entry.stateKeys) {
+      for (const sk of stateKeys) {
         const prev = stateScores.get(sk);
         if (!prev || score > prev.score) {
           stateScores.set(sk, { score, matched: [...matched] });

@@ -16,6 +16,8 @@ const VALID_STATES = new Set(REMEDY_MATRIX.map((e) => e.state));
 const WEIGHT_VERB_FEAR = 2;
 const WEIGHT_THEME = 1;
 const WEIGHT_SUBJECT_OTHER = 1;
+/** fear + love → attachment / fear_of_loss (relational_insecurity) em destaque */
+const WEIGHT_FEAR_AND_LOVE = 2;
 
 /** verbClass fear → estados que ganham bônus */
 const FEAR_STATES = new Set([
@@ -32,6 +34,13 @@ const LOVE_STATES = new Set([
   "longing",
   "jealousy",
   "grief",
+]);
+
+/** fear + love juntos → apego / medo de perder (resposta prioriza esses estados) */
+const FEAR_AND_LOVE_STATES = new Set([
+  "emotional_attachment",
+  "relational_insecurity",
+  "anxiety",
 ]);
 
 /** theme career → estados que ganham bônus */
@@ -83,10 +92,12 @@ export function pickBestState(intent: ParsedIntent | null): PickBestStateResult 
   }
 
   const scores = new Map<string, number>();
+  const fearAndLove = intent.verbClass === "fear" && intent.theme === "love";
   for (const c of validCandidates) {
     let score = c.score;
     if (intent.verbClass === "fear" && FEAR_STATES.has(c.stateKey)) score += WEIGHT_VERB_FEAR;
     if (intent.theme === "love" && LOVE_STATES.has(c.stateKey)) score += WEIGHT_THEME;
+    if (fearAndLove && FEAR_AND_LOVE_STATES.has(c.stateKey)) score += WEIGHT_FEAR_AND_LOVE;
     if (intent.theme === "career" && CAREER_STATES.has(c.stateKey)) score += WEIGHT_THEME;
     if (intent.theme === "health" && HEALTH_STATES.has(c.stateKey)) score += WEIGHT_THEME;
     if (intent.subject === "other" && OTHER_SUBJECT_STATES.has(c.stateKey)) score += WEIGHT_SUBJECT_OTHER;

@@ -1,62 +1,72 @@
 {
-  "anxiety": {
-    "keywords": ["ansioso", "ansiosa", "ansiedade", "preocupado", "preocupada", "preocupação", "nervoso", "nervosa", "agitado", "agitada", "medo de perder", "incerto", "incerta"],
-    "stateKeys": ["anxiety", "relational_insecurity", "avoidance"]
-  },
-  "grief": {
-    "keywords": ["perda", "perdi", "luto", "chorar", "tristeza", "triste", "saudade", "morreu", "morte", "despedida"],
-    "stateKeys": ["grief", "deep_sadness", "emotional_exhaustion"]
-  },
-  "anger": {
-    "keywords": ["raiva", "raivoso", "raivosa", "irritado", "irritada", "irritação", "revoltado", "revoltada", "ódio", "brigar", "briga", "discutir"],
-    "stateKeys": ["anger", "resentment", "irritability"]
-  },
-  "confusion": {
-    "keywords": ["confuso", "confusa", "confusão", "dúvida", "em dúvida", "não sei", "perdido", "perdida", "sem direção"],
-    "stateKeys": ["confusion", "overthinking", "self_doubt"]
-  },
-  "fear": {
-    "keywords": ["medo", "medo de", "temendo", "receio", "apreensivo", "apreensiva", "assustado", "assustada", "pavor"],
-    "stateKeys": ["anxiety", "existential_fear", "relational_insecurity"]
-  },
-  "sadness": {
-    "keywords": ["triste", "tristeza", "deprimido", "deprimida", "melancolia", "vazio", "vazia", "vazio interior"],
-    "stateKeys": ["deep_sadness", "emptiness", "despair"]
-  },
-  "exhaustion": {
-    "keywords": ["cansado", "cansada", "exausto", "exausta", "esgotado", "esgotada", "sem energia", "burnout", "sobrecarregado", "sobrecarregada"],
-    "stateKeys": ["burnout", "emotional_exhaustion", "overwhelm"]
-  },
-  "doubt": {
-    "keywords": ["dúvida", "duvidoso", "incerto", "não sei se", "será que", "autocrítica", "não me acho"],
-    "stateKeys": ["self_doubt", "confusion", "perfectionism"]
-  },
-  "jealousy": {
-    "keywords": ["ciúmes", "ciumento", "ciumenta", "inveja", "invejoso", "invejosa", "comparação", "comparando"],
-    "stateKeys": ["jealousy", "envy", "emotional_attachment"]
-  },
-  "longing": {
-    "keywords": ["saudade", "saudades", "quero estar", "falta", "sentir falta", "desejo", "desejo de"],
-    "stateKeys": ["longing", "emotional_attachment", "emotional_dependence"]
-  },
-  "guilt": {
-    "keywords": ["culpa", "culpado", "culpada", "remorso", "arrependido", "arrependida"],
-    "stateKeys": ["excess_guilt", "shame"]
-  },
-  "shame": {
-    "keywords": ["vergonha", "envergonhado", "envergonhada", "humilhação"],
-    "stateKeys": ["shame", "excess_guilt"]
-  },
-  "control": {
-    "keywords": ["controlar", "controle", "previsível", "tudo sob controle", "não consigo soltar"],
-    "stateKeys": ["hypercontrol", "rigidity", "perfectionism"]
-  },
-  "restlessness": {
-    "keywords": ["inquieto", "inquieta", "agitado", "agitada", "não paro", "correria", "pressa"],
-    "stateKeys": ["restlessness", "rush", "distraction"]
-  },
-  "stagnation": {
-    "keywords": ["parado", "parada", "estagnado", "estagnada", "sem saída", "travado", "travada", "não avanço"],
-    "stateKeys": ["stagnation", "lethargy", "lack_of_purpose"]
-  }
+  "anxiety": [
+    "ansioso", "ansiosa",
+    "nervoso", "nervosa",
+    "tô agoniado", "tô agoniada",
+    "tô surtando",
+    "mente não para",
+    "pânico"
+  ],
+  "burnout": [
+    "cansado", "cansada",
+    "exausto", "exausta",
+    "esgotado", "esgotada",
+    "tô no limite",
+    "não aguento mais",
+    "tô acabado", "tô acabada"
+  ],
+  "grief": [
+    "triste",
+    "tô na bad",
+    "deprimido", "deprimida",
+    "luto",
+    "coração pesado"
+  ],
+  "solitude": [
+    "sozinho", "sozinha",
+    "solidão",
+    "isolado", "isolada",
+    "me sinto sozinho", "me sinto sozinha"
+  ],
+  "isolation": [
+    "sozinho", "sozinha",
+    "solidão",
+    "isolado", "isolada"
+  ],
+  "anger": [
+    "raiva",
+    "irritado", "irritada",
+    "tô puto", "tô puta",
+    "frustrado", "frustrada"
+  ],
+  "confusion": [
+    "confuso", "confusa",
+    "perdido", "perdida",
+    "travado", "travada",
+    "não sei o que fazer",
+    "sla"
+  ],
+  "emotional_attachment": [
+    "apego",
+    "ciúmes",
+    "dependência",
+    "não consigo deixar ir"
+  ],
+  "relational_insecurity": [
+    "medo de perder",
+    "abandono",
+    "rejeição",
+    "medo que me deixem"
+  ],
+  "existential_fear": [
+    "medo de perder",
+    "abandono",
+    "rejeição"
+  ],
+  "lack_of_purpose": [
+    "sem propósito",
+    "sem sentido",
+    "pra que tudo isso",
+    "não sei meu caminho"
+  ]
 }
