@@ -9,7 +9,7 @@ Motor **paralelo** ao fluxo atual do Darshan. Não substitui `/api/darshan`; adi
 - **Diagnóstico consciente:** klesha + samkhya guna + qualidades ayurvédicas (excesso/deficiência).
 - **Corpus sagrado taggeado:** yoga_sutras, puranas, upanishads com `kleshaTargets` e `qualities`.
 - **Seleção dirigida:** texto sagrado escolhido por klesha e qualidades (anti-repetição por `avoidIds`).
-- **Matriz de remédios (30 estados):** cada estado mapeia klesha, samkhyaGuna, qualidades, prática, alimento, pergunta.
+- **Matriz de remédios (50 estados):** cada estado mapeia klesha, samkhyaGuna, qualidades, prática, alimento, pergunta.
 
 ---
 
@@ -86,7 +86,7 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 
 ## 6. Relação com o resto do produto
 
-- **`/api/darshan` (POST, mock/IA):** continua como está (IA + fallback; 7 fases; `getOfflineRevelation` etc.). **Não foi alterado.**
+- **`/api/darshan` (POST, mock/IA):** no mock usa **apenas** Sacred Remedy (`composeInstantLight` de `lib/sacredRemedy`); cooldown server-side quando usuário logado.
 - **`/api/instant-light` (GET):** motor novo, só offline, só Sacred Remedy (diagnóstico + corpus taggeado + matriz + prática + pergunta).
 - **Leitura offline narrativa (`readingOffline`, `oracleOffline`):** segue separada; o Instant Light do Sacred Remedy é outra camada (resposta estruturada: sacredText, insight, practice, question).
 
