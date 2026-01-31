@@ -56,6 +56,14 @@ export type ConsciousDiagnosis = {
   numerologyFromMap?: NumerologyFromMap;
 };
 
+/** Contexto sequencial (para Sutra Context Engine — verso anterior/posterior) */
+export type SacredContextBlock = {
+  prev?: string;
+  next?: string;
+  /** Quando true, Instant Light inclui verso anterior em sacred.supporting */
+  requiresPrev?: boolean;
+};
+
 /** Entrada do corpus sagrado (dictionaries/sacred/*.json) — taggeada por klesha, qualidades e temas */
 export type SacredCorpusEntry = {
   id: string;
@@ -66,6 +74,10 @@ export type SacredCorpusEntry = {
   qualities?: string[];
   /** Temas para matching futuro (ex.: presença, medo, amor, corpo) — opcional até expansão premium */
   themes?: string[];
+  /** Contexto sequencial (prev/next/requiresPrev) — usado pelo sutraContextResolver */
+  context?: SacredContextBlock;
+  /** Nota de continuidade (ex.: "Este verso continua a instrução anterior...") */
+  commentary?: string;
 };
 
 /** Entrada da matriz de remédios (50 estados) */

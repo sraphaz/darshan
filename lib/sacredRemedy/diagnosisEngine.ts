@@ -116,9 +116,18 @@ function remedyToDiagnosis(
 
 /**
  * Diagnóstico universal (sem perfil). Escolhe um estado da matriz por seed; evita recentIds.
+ * Se preferredStateKey for informado e existir na matriz, usa esse estado.
  */
-export function diagnosisUniversal(options: { seed?: number; recentStateKeys?: string[] } = {}): ConsciousDiagnosis {
-  const { seed = 0, recentStateKeys = [] } = options;
+export function diagnosisUniversal(options: {
+  seed?: number;
+  recentStateKeys?: string[];
+  preferredStateKey?: string;
+} = {}): ConsciousDiagnosis {
+  const { seed = 0, recentStateKeys = [], preferredStateKey } = options;
+  if (preferredStateKey) {
+    const found = REMEDY_MATRIX.find((e) => e.state === preferredStateKey);
+    if (found) return remedyToDiagnosis(found);
+  }
   const avoid = new Set(recentStateKeys);
   const pool = avoid.size > 0
     ? REMEDY_MATRIX.filter((e) => !avoid.has(e.state))
@@ -131,14 +140,14 @@ export function diagnosisUniversal(options: { seed?: number; recentStateKeys?: s
 
 /**
  * Diagnóstico personalizado (com mapa). Filtra por guna dominante; seed influenciado por numerologia (lifePath, soulUrge).
+ * Se preferredStateKey for informado e existir na matriz, usa esse estado (com prakriti/numerologia do mapa).
  */
 export function diagnosisPersonal(
   profile: UserProfileForOracle,
-  options: { seed?: number; recentStateKeys?: string[] } = {}
+  options: { seed?: number; recentStateKeys?: string[]; preferredStateKey?: string } = {}
 ): ConsciousDiagnosis {
-  const { seed = 0, recentStateKeys = [] } = options;
+  const { seed = 0, recentStateKeys = [], preferredStateKey } = options;
   const map = buildSymbolicMap(profile);
-  const dominantGuna = getDominantSamkhyaGuna(map);
   const prakriti = getPrakritiFromMap(map);
   const lifePath = map.numerology?.lifePathNumber ?? 0;
   const soulUrge = map.numerology?.soulUrgeNumber ?? 0;
@@ -148,6 +157,11 @@ export function diagnosisPersonal(
     expression: map.numerology?.expressionNumber ?? undefined,
     personality: map.numerology?.personalityNumber ?? undefined,
   };
+  if (preferredStateKey) {
+    const found = REMEDY_MATRIX.find((e) => e.state === preferredStateKey);
+    if (found) return remedyToDiagnosis(found, prakriti, numerologyFromMap);
+  }
+  const dominantGuna = getDominantSamkhyaGuna(map);
   const effectiveSeed = seed + (lifePath || 0) * 31 + (soulUrge || 0);
   const avoid = new Set(recentStateKeys);
   const byGuna = REMEDY_MATRIX.filter((e) => e.samkhyaGuna === dominantGuna);

@@ -28,6 +28,8 @@ export type DarshanTruthPackage = {
     text: string;
     translation?: string;
     tags?: string[];
+    /** Versos de contexto (ex.: anterior ao sutra medicinal) para exibir em bloco completo */
+    supporting?: { id: string; text: string }[];
   };
   practice: {
     title: string;

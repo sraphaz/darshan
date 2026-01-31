@@ -12,6 +12,7 @@ import {
   getRemedyForDiagnosis,
 } from "./diagnosisEngine";
 import { selectSacredText } from "./sacredSelector";
+import { resolveSutraContext, shouldIncludePrevContext } from "./sutraContextResolver";
 import {
   getFullActionsForQualitiesWithDosha,
   getActionsForQualities,
@@ -115,9 +116,16 @@ export function composeInstantLight(
     seed: effectiveSeed,
   });
 
-  const sacredText = sacredEntry?.text?.trim() || remedy.sacred?.verse?.trim() || remedy.sacred?.id || "";
+  let sacredText = sacredEntry?.text?.trim() || remedy.sacred?.verse?.trim() || remedy.sacred?.id || "";
   const sacredCorpus = sacredEntry ? (sacredEntry.corpus as SacredCorpusKey) : toSacredCorpusKey(remedy.sacred?.corpus ?? "legacy");
   const sacredId = sacredEntry ? sacredEntry.id : (remedy.sacred?.id ?? remedy.state);
+  let sacredSupporting: { id: string; text: string }[] | undefined;
+  if (sacredEntry?.corpus === "yoga_sutras" && shouldIncludePrevContext(sacredEntry.id)) {
+    const context = resolveSutraContext(sacredEntry.id);
+    if (context?.prev) {
+      sacredSupporting = [{ id: context.prev.id, text: context.prev.text }];
+    }
+  }
 
   const dosha = diagnosis.prakritiFromJyotish?.dosha;
   const hasQualities = diagnosis.ayurvedicQualities.excess.length > 0;
@@ -153,6 +161,7 @@ export function composeInstantLight(
       id: sacredId,
       corpus: sacredCorpus === "purana" ? "puranas" : sacredCorpus,
       text: sacredText,
+      ...(sacredSupporting?.length ? { supporting: sacredSupporting } : {}),
     },
     practice: toPracticeStruct(practiceStr),
     food: foodStruct.do.length > 0 ? foodStruct : undefined,

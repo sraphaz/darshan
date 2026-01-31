@@ -11,6 +11,8 @@ export {
 } from "./diagnosisEngine";
 export { selectSacredText, getAllSacredEntries } from "./sacredSelector";
 export type { SelectSacredOptions } from "./sacredSelector";
+export { resolveSutraContext, shouldIncludePrevContext } from "./sutraContextResolver";
+export type { SutraContextResult } from "./sutraContextResolver";
 export {
   getPracticeForQuality,
   getFoodForQuality,

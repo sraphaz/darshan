@@ -51,6 +51,18 @@ describe("sacredRemedy/diagnosisEngine", () => {
       expect(d1.klesha).toBe(d2.klesha);
     });
 
+    it("usa preferredStateKey quando informado e válido", () => {
+      const d = diagnosisUniversal({ preferredStateKey: "anxiety" });
+      expect(d.stateKey).toBe("anxiety");
+      expect(d.klesha).toBeDefined();
+    });
+
+    it("ignora preferredStateKey inexistente e cai no seed", () => {
+      const d = diagnosisUniversal({ seed: 5, preferredStateKey: "estado_inexistente" });
+      expect(d.stateKey).toBeDefined();
+      expect(d.stateKey).not.toBe("estado_inexistente");
+    });
+
     it("evita recentStateKeys quando possível", () => {
       const d1 = diagnosisUniversal({ seed: 1 });
       const key = d1.stateKey!;
@@ -92,6 +104,13 @@ describe("sacredRemedy/diagnosisEngine", () => {
       );
       expect(d1.prakritiFromJyotish?.dosha).toBeDefined();
       expect(d2.prakritiFromJyotish?.dosha).toBeDefined();
+    });
+
+    it("usa preferredStateKey quando informado e válido", () => {
+      const d = diagnosisPersonal(profileWithData, { preferredStateKey: "grief" });
+      expect(d.stateKey).toBe("grief");
+      expect(d.numerologyFromMap).toBeDefined();
+      expect(d.prakritiFromJyotish).toBeDefined();
     });
   });
 
