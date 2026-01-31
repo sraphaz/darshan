@@ -1,6 +1,6 @@
 /**
  * Truth Package canônico — payload único que alimenta offline e IA.
- * Não inventar remédios; IA só expande a partir disso.
+ * Todo endpoint Darshan retorna este formato. Não inventar remédios; IA só expande a partir disso.
  */
 
 import type { Theme, Mode } from "./UserRequestContext";
@@ -14,6 +14,7 @@ export type SacredCorpusKey =
 export type DarshanTruthPackage = {
   mode: Mode;
   theme: Theme;
+  /** Estado RemedyMatrix escolhido */
   stateKey: string;
   diagnosis: {
     klesha: string;
@@ -26,6 +27,7 @@ export type DarshanTruthPackage = {
     corpus: SacredCorpusKey;
     text: string;
     translation?: string;
+    tags?: string[];
   };
   practice: {
     title: string;
@@ -34,14 +36,20 @@ export type DarshanTruthPackage = {
   };
   food?: {
     do: string[];
-    avoid?: string[];
+    avoid: string[];
   };
-  question: {
+  /** Pergunta contemplativa final (canônico) */
+  contemplativeQuestion: {
+    text: string;
+  };
+  /** @deprecated Use contemplativeQuestion */
+  question?: {
     text: string;
   };
   /** Opcional para modo personal */
   symbolicMap?: unknown;
   meta?: {
+    generatedAt: string;
     usedSacredIds?: string[];
     usedStateKeys?: string[];
   };

@@ -21,6 +21,10 @@ describe("sacredRemedy/instantLightComposer", () => {
       expect(res.practice).toHaveProperty("steps");
       expect(res).toHaveProperty("question");
       expect(res.question).toHaveProperty("text");
+      expect(res).toHaveProperty("contemplativeQuestion");
+      expect(res.contemplativeQuestion).toHaveProperty("text");
+      expect(res).toHaveProperty("meta");
+      expect(typeof res.meta?.generatedAt).toBe("string");
       expect(res).toHaveProperty("sacredId");
       expect(res).toHaveProperty("stateKey");
       expect(typeof res.sacredText).toBe("string");

@@ -1,6 +1,12 @@
 /**
  * Normalização do input do usuário para matching offline.
- * Lower-case, remove acentos, aplica inputNormalization.json, remove ruído.
+ * Roda antes de qualquer parsing.
+ *
+ * 1. lowercase
+ * 2. remove acentos (á → a, ç → c)
+ * 3. aplica abreviações WhatsApp via inputNormalization.json (tô → estou, vc → você, etc.)
+ * 4. remove ruído ("tipo", "mano", "cara", etc.)
+ * 5. colapsa espaços
  */
 
 import inputNormalizationJson from "@/lib/dictionaries/inputNormalization.json";

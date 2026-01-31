@@ -74,15 +74,26 @@ export type PickBestStateResult = {
   confidence: number;
 };
 
+/** Fallback quando não há candidatos (ex.: texto sem emoção detectada). */
+const FALLBACK_STATE = "confusion";
+const FALLBACK_CONFIDENCE = 0.3;
+
 /**
  * Retorna o melhor stateKey e confiança (0–1) para o intent.
- * Usa base score do parser + bônus por eixo (fear+love, conflict→anger, etc.).
+ * Usa base score do parser + bônus por eixo (fear+love → attachment/relational_insecurity; how→prática, why→sutra).
+ * Se não houver candidatos, retorna confusion para o engine sempre responder offline.
  */
 export function pickBestState(intent: ParsedIntent | null): PickBestStateResult | undefined {
-  if (intent == null || intent.stateCandidates.length === 0) return undefined;
+  if (intent == null) return undefined;
+  if (intent.stateCandidates.length === 0) {
+    return { stateKey: FALLBACK_STATE, confidence: FALLBACK_CONFIDENCE };
+  }
   const validCandidates = intent.stateCandidates.filter((c) =>
     VALID_STATES.has(c.stateKey)
   ) as StateCandidate[];
+  if (validCandidates.length === 0) {
+    return { stateKey: FALLBACK_STATE, confidence: FALLBACK_CONFIDENCE };
+  }
   if (validCandidates.length === 0) return undefined;
   if (validCandidates.length === 1) {
     return {

@@ -66,12 +66,12 @@ function toPracticeStruct(practiceStr: string): { title: string; steps: string[]
   return { title: "Prática", steps };
 }
 
-/** Converte string de alimento em food.do (evitar vazio) */
-function toFoodStruct(foodStr: string): { do: string[]; avoid?: string[] } {
+/** Converte string de alimento em food.do e avoid (formato canônico TruthPackage) */
+function toFoodStruct(foodStr: string): { do: string[]; avoid: string[] } {
   const s = (foodStr ?? "").trim();
-  if (!s) return { do: [] };
+  if (!s) return { do: [], avoid: [] };
   const items = s.split(/[,;]/).map((x) => x.trim()).filter(Boolean);
-  return { do: items.length > 0 ? items : [s] };
+  return { do: items.length > 0 ? items : [s], avoid: [] };
 }
 
 /**
@@ -138,6 +138,7 @@ export function composeInstantLight(
   const stateKey = diagnosis.stateKey ?? remedy.state;
   const confidence = preferredStateKey ? (inputConfidence ?? 0.7) : undefined;
 
+  const foodStruct = toFoodStruct(foodStr);
   const packageResult: DarshanTruthPackage = {
     mode,
     theme,
@@ -154,9 +155,11 @@ export function composeInstantLight(
       text: sacredText,
     },
     practice: toPracticeStruct(practiceStr),
-    food: toFoodStruct(foodStr).do.length > 0 ? toFoodStruct(foodStr) : undefined,
+    food: foodStruct.do.length > 0 ? foodStruct : undefined,
+    contemplativeQuestion: { text: questionFinal },
     question: { text: questionFinal },
     meta: {
+      generatedAt: new Date().toISOString(),
       usedSacredIds: recentSacredIds.length > 0 ? recentSacredIds : undefined,
       usedStateKeys: recentStateKeys.length > 0 ? recentStateKeys : undefined,
     },

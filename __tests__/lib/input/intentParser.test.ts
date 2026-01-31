@@ -45,9 +45,9 @@ describe("lib/input intentParser", () => {
 });
 
 describe("lib/input stateScorer", () => {
-  it("retorna undefined para intent null ou sem stateCandidates", () => {
+  it("retorna undefined para intent null; retorna fallback confusion quando sem stateCandidates", () => {
     expect(scoreState(null)).toBeUndefined();
-    expect(scoreState({ subject: "self", verbClass: null, theme: "general", emotionLabels: [], stateCandidates: [] })).toBeUndefined();
+    expect(scoreState({ subject: "self", verbClass: null, theme: "general", emotionLabels: [], stateCandidates: [] })).toBe("confusion");
   });
 
   it("retorna stateKey válido quando há candidatos", () => {

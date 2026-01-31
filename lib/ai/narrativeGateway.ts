@@ -37,7 +37,7 @@ export async function expandNarrative(
   const practiceTitle = truthPackage.practice?.title ?? "Prática";
   const practiceSteps = (truthPackage.practice?.steps ?? []).join("; ");
   const foodDo = (truthPackage.food?.do ?? []).join(", ");
-  const questionText = truthPackage.question?.text ?? "";
+  const questionText = truthPackage.contemplativeQuestion?.text ?? truthPackage.question?.text ?? "";
 
   const packageSummary = `
 [Diagnóstico] klesha: ${truthPackage.diagnosis?.klesha ?? ""}, guna: ${truthPackage.diagnosis?.samkhyaGuna ?? ""}, estado: ${truthPackage.stateKey}.

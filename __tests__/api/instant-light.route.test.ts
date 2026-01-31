@@ -51,6 +51,10 @@ describe("GET /api/instant-light", () => {
       expect(body.practice).toHaveProperty("steps");
       expect(body).toHaveProperty("question");
       expect(body.question).toHaveProperty("text");
+      expect(body).toHaveProperty("contemplativeQuestion");
+      expect(body.contemplativeQuestion).toHaveProperty("text");
+      expect(body).toHaveProperty("meta");
+      expect(typeof body.meta?.generatedAt).toBe("string");
       expect(body).toHaveProperty("sacredId");
       expect(body).toHaveProperty("stateKey");
       expect(typeof body.sacredText).toBe("string");

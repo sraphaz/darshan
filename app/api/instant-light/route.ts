@@ -2,9 +2,13 @@
  * GET /api/instant-light — Sacred Remedy Engine (motor medicinal offline).
  * Não consome créditos; não depende de IA. Retorna DarshanTruthPackage.
  *
+ * Pipeline quando há userText:
+ *   userText → normalize → parseIntent → pickBestState → preferredStateKey + theme + questionType
+ *   → composeInstantLight(symbolicMap?, inputStateKey, theme, questionType)
+ *   → sutra medicinal + prática ayurvédica + pergunta contemplativa (tudo offline).
+ *
  * Query: fullName?, birthDate?, birthTime?, birthPlace?, userText?, question?, theme?, recentSacredIds?, recentStateKeys?
- * - userText/question?: texto → Intent Parser multi-eixo → pickBestState → inputStateKey + confidence.
- * - Cooldown server-side: servidor consulta histórico (getRecentSacredIds/getRecentStateKeys) e grava uso.
+ * Cooldown server-side: getRecentSacredIds/getRecentStateKeys + recordInstantLight.
  */
 
 import { NextResponse } from "next/server";
@@ -59,6 +63,7 @@ export async function GET(req: Request) {
   let preferredStateKey: string | undefined;
   let inputConfidence: number | undefined;
   let questionType: string | undefined;
+  let themeFromIntent: Theme | undefined;
 
   const inputText = (userText ?? questionExplicit)?.trim();
   if (inputText) {
@@ -69,9 +74,10 @@ export async function GET(req: Request) {
       inputConfidence = best.confidence;
     }
     if (intent?.questionType) questionType = intent.questionType;
+    if (intent?.theme) themeFromIntent = intent.theme as Theme;
   }
 
-  const theme = parseTheme(themeParam);
+  const theme = themeFromIntent ?? parseTheme(themeParam);
 
   const userProfile =
     (fullName?.trim() || birthDate?.trim())
