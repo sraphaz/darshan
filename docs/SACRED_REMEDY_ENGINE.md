@@ -106,9 +106,14 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 - **P1 — Cooldown autônomo:** Quando o usuário está logado, o servidor busca `recentSacredIds` e `recentStateKeys` em `getRecentInstantLightIds(userEmail)` e registra uso em `recordInstantLightUse(userEmail, { sacredId, stateKey })`. Tabela `instant_light_uses` (migração `20250129110000_instant_light_uses.sql`).
 - **P2 — Numerologia completa:** `getSoulUrgeNumber(fullName)` (vogais) e `getPersonalityNumber(fullName)` (consoantes) em `lib/knowledge/numerology.ts`. SymbolicMap inclui `soulUrgeNumber` e `personalityNumber`.
 
-## 9. Próximos passos (editorial)
+## 9. Engine 2.1 — Concluído (P3, P4, numerologia, cooldown instant-light)
+
+- **Numerologia no diagnóstico:** `ConsciousDiagnosis.numerologyFromMap` (lifePath, soulUrge, expression, personality); seed em `diagnosisPersonal` influenciado por lifePath/soulUrge para coerência.
+- **Ayurveda high-end:** `getActionsForQualitiesWithDosha(qualities, dosha, { maxSuggestions: 3 })` — prioridade por dosha (vata/pitta/kapha), combina até 3 práticas e 3 alimentos; usado no composer quando há prakriti.
+- **Cooldown GET /api/instant-light:** Com sessão (cookie), o servidor busca `getRecentInstantLightIds(session.email)` e registra uso com `recordInstantLightUse`; query params são fallback para anônimos.
+- **Corpus expandido:** Yoga Sutras 100+ (YS.2.51–YS.3.10 adicionados), Puranas 80+, Upanishads 50+.
+
+## 10. Próximos passos (editorial)
 
 - Refinar mapeamento Nakshatra → tendência → klesha provável (para diagnóstico personal mais fino).
-- P3: Ayurveda action selector high-end (múltiplas qualities, prioridade por dosha).
-- P4: Corpus premium (Yoga Sutras 100+, Puranas 80+, Upanishads 50+).
 - Testes automatizados para `diagnosisEngine`, `sacredSelector`, `ayurvedaActionSelector`, `composeInstantLight` e GET `/api/instant-light`.

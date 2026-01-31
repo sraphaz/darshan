@@ -13,6 +13,7 @@ import type {
   SamkhyaGuna,
   PrakritiFromJyotish,
   AyurvedicQuality,
+  NumerologyFromMap,
 } from "./types";
 
 import remedyMatrixJson from "@/lib/dictionaries/remedyMatrix.json";
@@ -56,7 +57,11 @@ function getDominantSamkhyaGuna(map: SymbolicMap): SamkhyaGuna {
   return (guna ?? "tamas") as SamkhyaGuna;
 }
 
-function remedyToDiagnosis(remedy: RemedyMatrixEntry, prakriti?: PrakritiFromJyotish): ConsciousDiagnosis {
+function remedyToDiagnosis(
+  remedy: RemedyMatrixEntry,
+  prakriti?: PrakritiFromJyotish,
+  numerologyFromMap?: NumerologyFromMap
+): ConsciousDiagnosis {
   const g = remedy.samkhyaGuna;
   const sattva = g === "sattva" ? 0.6 : 0.2;
   const rajas = g === "rajas" ? 0.6 : 0.2;
@@ -64,13 +69,17 @@ function remedyToDiagnosis(remedy: RemedyMatrixEntry, prakriti?: PrakritiFromJyo
   const excessFromRemedy = (remedy.qualities ?? []) as AyurvedicQuality[];
   const excessFromDosha = prakriti?.dosha ? DOSHA_TO_QUALITIES_EXCESS[prakriti.dosha] ?? [] : [];
   const excess = [...new Set([...excessFromRemedy, ...excessFromDosha])];
-  return {
+  const out: ConsciousDiagnosis = {
     klesha: remedy.klesha,
     samkhyaGunas: { sattva, rajas, tamas },
     ayurvedicQualities: { excess, deficient: [] },
     prakritiFromJyotish: prakriti,
     stateKey: remedy.state,
   };
+  if (numerologyFromMap && (numerologyFromMap.lifePath != null || numerologyFromMap.soulUrge != null)) {
+    out.numerologyFromMap = numerologyFromMap;
+  }
+  return out;
 }
 
 /**
@@ -89,7 +98,7 @@ export function diagnosisUniversal(options: { seed?: number; recentStateKeys?: s
 }
 
 /**
- * Diagnóstico personalizado (com mapa). Filtra por guna dominante do mapa; escolhe por seed; evita recentIds.
+ * Diagnóstico personalizado (com mapa). Filtra por guna dominante; seed influenciado por numerologia (lifePath, soulUrge).
  */
 export function diagnosisPersonal(
   profile: UserProfileForOracle,
@@ -99,14 +108,23 @@ export function diagnosisPersonal(
   const map = buildSymbolicMap(profile);
   const dominantGuna = getDominantSamkhyaGuna(map);
   const prakriti = getPrakritiFromMap(map);
+  const lifePath = map.numerology?.lifePathNumber ?? 0;
+  const soulUrge = map.numerology?.soulUrgeNumber ?? 0;
+  const numerologyFromMap: NumerologyFromMap = {
+    lifePath: lifePath || undefined,
+    soulUrge: soulUrge || undefined,
+    expression: map.numerology?.expressionNumber ?? undefined,
+    personality: map.numerology?.personalityNumber ?? undefined,
+  };
+  const effectiveSeed = seed + (lifePath || 0) * 31 + (soulUrge || 0);
   const avoid = new Set(recentStateKeys);
   const byGuna = REMEDY_MATRIX.filter((e) => e.samkhyaGuna === dominantGuna);
   const pool = byGuna.length > 0 ? byGuna : REMEDY_MATRIX;
   const preferred = pool.filter((e) => !avoid.has(e.state));
   const candidates = preferred.length > 0 ? preferred : pool;
-  const idx = Math.abs(Math.floor(seed)) % candidates.length;
+  const idx = Math.abs(Math.floor(effectiveSeed)) % candidates.length;
   const remedy = candidates[idx] ?? candidates[0];
-  return remedyToDiagnosis(remedy, prakriti);
+  return remedyToDiagnosis(remedy, prakriti, numerologyFromMap);
 }
 
 /**

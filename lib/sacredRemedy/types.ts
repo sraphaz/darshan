@@ -35,6 +35,14 @@ export type SamkhyaGunas = {
   tamas: number;
 };
 
+/** Numerologia no mapa (Life Path, Soul Urge, etc.) — usada para coerência do diagnóstico personal */
+export type NumerologyFromMap = {
+  lifePath?: number;
+  soulUrge?: number;
+  expression?: number;
+  personality?: number;
+};
+
 /** Diagnóstico consciente — entrada do motor de remédio */
 export type ConsciousDiagnosis = {
   klesha: KleshaKey;
@@ -44,6 +52,8 @@ export type ConsciousDiagnosis = {
   prakritiFromJyotish?: PrakritiFromJyotish;
   /** Estado da matriz usado (ex.: anxiety, lethargy) */
   stateKey?: string;
+  /** Preenchido em diagnóstico personal — influencia seed e coerência */
+  numerologyFromMap?: NumerologyFromMap;
 };
 
 /** Entrada do corpus sagrado (dictionaries/sacred/*.json) — taggeada por klesha e qualidades */

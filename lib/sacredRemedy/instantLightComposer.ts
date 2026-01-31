@@ -12,7 +12,7 @@ import {
   getRemedyForDiagnosis,
 } from "./diagnosisEngine";
 import { selectSacredText } from "./sacredSelector";
-import { getActionsForQualities } from "./ayurvedaActionSelector";
+import { getActionsForQualities, getActionsForQualitiesWithDosha } from "./ayurvedaActionSelector";
 import type { UserProfileForOracle } from "@/lib/knowledge/types";
 import type { InstantLightResponse } from "./types";
 
@@ -68,7 +68,10 @@ export function composeInstantLight(
   const sacredText = sacredEntry?.text?.trim() || remedy.sacred?.verse?.trim() || remedy.sacred?.id || "";
   const sacredId = sacredEntry ? `${sacredEntry.corpus}.${sacredEntry.id}` : `${remedy.sacred?.corpus ?? "remedy"}.${remedy.sacred?.id ?? remedy.state}`;
 
-  const ayurvedaActions = getActionsForQualities(diagnosis.ayurvedicQualities.excess);
+  const dosha = diagnosis.prakritiFromJyotish?.dosha;
+  const ayurvedaActions = dosha && diagnosis.ayurvedicQualities.excess.length > 0
+    ? getActionsForQualitiesWithDosha(diagnosis.ayurvedicQualities.excess, dosha, { maxSuggestions: 3 })
+    : getActionsForQualities(diagnosis.ayurvedicQualities.excess);
   const practice = (ayurvedaActions.practice || remedy.practice || "").trim();
   const food = (ayurvedaActions.food || remedy.food || "").trim();
   const question = (remedy.question || "O que em você já sabe?").trim();

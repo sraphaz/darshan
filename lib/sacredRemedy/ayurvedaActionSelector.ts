@@ -69,6 +69,25 @@ export function getFoodForQuality(quality: AyurvedicQuality | string): string {
   return QUALITY_TO_FOOD[quality] ?? "";
 }
 
+/** Dosha → qualidades tipicamente em excesso (prioridade no antídoto) */
+const DOSHA_QUALITIES_PRIORITY: Record<string, string[]> = {
+  vata: ["ruksha", "laghu", "chala", "sukshma", "sara"],
+  pitta: ["ushna", "tikshna", "drava"],
+  kapha: ["guru", "snigdha", "manda", "sthira", "sandra"],
+};
+
+function orderByDosha(qualities: string[], dosha?: string): string[] {
+  if (!dosha || !DOSHA_QUALITIES_PRIORITY[dosha]) return qualities;
+  const priority = DOSHA_QUALITIES_PRIORITY[dosha];
+  const set = new Set(qualities);
+  const first: string[] = [];
+  for (const p of priority) {
+    if (set.has(p)) first.push(p);
+  }
+  const rest = qualities.filter((q) => !priority.includes(q));
+  return [...first, ...rest];
+}
+
 /**
  * Dado uma lista de qualidades em excesso, retorna práticas e alimentos concretos.
  * Prioriza a primeira qualidade; pode combinar até 2 sugestões.
@@ -80,5 +99,31 @@ export function getActionsForQualities(qualities: (AyurvedicQuality | string)[])
   const q = qualities.filter(Boolean);
   const practice = q.map((x) => QUALITY_TO_PRACTICE[x]).filter(Boolean)[0] ?? "";
   const food = q.map((x) => QUALITY_TO_FOOD[x]).filter(Boolean)[0] ?? "";
+  return { practice, food };
+}
+
+export type GetActionsWithDoshaOptions = { maxSuggestions?: number };
+
+/**
+ * High-end: múltiplas qualities, prioridade por dosha. Combina até maxSuggestions antídotos (default 3).
+ */
+export function getActionsForQualitiesWithDosha(
+  qualities: (AyurvedicQuality | string)[],
+  dosha?: string,
+  options: GetActionsWithDoshaOptions = {}
+): { practice: string; food: string } {
+  const max = Math.min(5, Math.max(1, options.maxSuggestions ?? 3));
+  const ordered = orderByDosha(qualities.filter(Boolean).map(String), dosha);
+  const practices: string[] = [];
+  const foods: string[] = [];
+  for (const q of ordered) {
+    const p = QUALITY_TO_PRACTICE[q]?.trim();
+    const f = QUALITY_TO_FOOD[q]?.trim();
+    if (p && p !== "—" && !practices.includes(p)) practices.push(p);
+    if (f && f !== "—" && !foods.includes(f)) foods.push(f);
+    if (practices.length >= max && foods.length >= max) break;
+  }
+  const practice = practices.slice(0, max).join(". ").trim() || "";
+  const food = foods.slice(0, max).join("; ").trim() || "";
   return { practice, food };
 }
