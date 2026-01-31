@@ -37,15 +37,27 @@ export type SelectSacredOptions = {
   seed?: number;
 };
 
+/** Conta quantos avoidIds pertencem a cada corpus (para balancear e evitar repetir corpus inteiro). */
+function corpusUsageCount(avoidIds: string[]): Map<string, number> {
+  const count = new Map<string, number>();
+  for (const id of avoidIds) {
+    const corpus = id.includes(".") ? id.split(".")[0] : "legacy";
+    count.set(corpus, (count.get(corpus) ?? 0) + 1);
+  }
+  return count;
+}
+
 /**
  * Seleciona um texto sagrado dirigido por klesha e qualidades.
  * Prioriza entradas que batem em kleshaTargets; depois em qualities; evita avoidIds.
+ * Balanceia corpora: entre candidatos com mesmo score, prefere o corpus menos usado em avoidIds.
  */
 export function selectSacredText(options: SelectSacredOptions = {}): SacredCorpusEntry & { corpus: string } {
   const { kleshaTargets = [], qualities = [], avoidIds = [], seed = 0 } = options;
   const avoidSet = new Set(avoidIds);
   const kleshaSet = new Set(kleshaTargets.filter(Boolean));
   const qualitySet = new Set(qualities.filter(Boolean));
+  const corpusUsage = corpusUsageCount(avoidIds);
 
   const score = (e: TaggedEntry): number => {
     let s = 0;
@@ -65,7 +77,15 @@ export function selectSacredText(options: SelectSacredOptions = {}): SacredCorpu
   const scored = pool.map((e) => ({ e, s: score(e) }));
   scored.sort((a, b) => b.s - a.s);
   const bestScore = scored[0]?.s ?? 0;
-  const candidates = bestScore > 0 ? scored.filter((x) => x.s === bestScore).map((x) => x.e) : pool;
+  let candidates = bestScore > 0 ? scored.filter((x) => x.s === bestScore).map((x) => x.e) : pool;
+
+  if (candidates.length > 1 && corpusUsage.size > 0) {
+    candidates = [...candidates].sort((a, b) => {
+      const useA = corpusUsage.get(a.corpus) ?? 0;
+      const useB = corpusUsage.get(b.corpus) ?? 0;
+      return useA - useB;
+    });
+  }
 
   const idx = Math.abs(Math.floor(seed)) % candidates.length;
   return candidates[idx] ?? candidates[0];

@@ -1,0 +1,8 @@
+{
+  "what": ["o que", "oq", "qual", "quais", "que ", "o quê", "que coisa"],
+  "how": ["como", "de que forma", "de que jeito", "de que maneira", "como faço", "como lidar"],
+  "why": ["por que", "porque", "por quê", "pq", "motivo", "razão", "razao", "por qual motivo"],
+  "when": ["quando", "qdo", "qd", "em que momento", "que hora", "que dia"],
+  "where": ["onde", "aonde", "em que lugar", "em qual"],
+  "who": ["quem", "qual pessoa", "com quem"]
+}

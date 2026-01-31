@@ -1,20 +1,28 @@
 /**
  * GET /api/instant-light — Sacred Remedy Engine (motor medicinal offline).
- * Não consome créditos; não depende de IA. Motor paralelo ao /api/darshan.
+ * Não consome créditos; não depende de IA. Retorna DarshanTruthPackage.
  *
- * Query: fullName?, birthDate?, birthTime?, birthPlace?, recentSacredIds?, recentStateKeys?
- * - Se userProfile existe (nome ou data) → diagnosisPersonal(SymbolicMap) + insight.
- * - Se não existe → diagnosisUniversal().
- * - Cooldown server-side: quando há sessão, recentSacredIds/recentStateKeys vêm do servidor e o uso é registrado.
- *
- * Resposta: sacredText, insight? (se personal), practice, question, sacredId?, stateKey?
+ * Query: fullName?, birthDate?, birthTime?, birthPlace?, userText?, question?, theme?, recentSacredIds?, recentStateKeys?
+ * - userText/question?: texto → Intent Parser multi-eixo → pickBestState → inputStateKey + confidence.
+ * - Cooldown server-side: servidor consulta histórico (getRecentSacredIds/getRecentStateKeys) e grava uso.
  */
 
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { composeInstantLight } from "@/lib/sacredRemedy";
+import { parseIntent } from "@/lib/input/intentParser";
+import { pickBestState } from "@/lib/input/stateScorer";
 import { getSessionFromCookie } from "@/lib/auth";
-import { getRecentInstantLightIds, recordInstantLightUse } from "@/lib/historyStorage";
+import { getRecentSacredIds, getRecentStateKeys, recordInstantLight } from "@/lib/history/historyAdapter";
+import type { Theme } from "@/lib/core/UserRequestContext";
+
+const THEMES: Theme[] = ["general", "love", "career", "year", "health", "spirituality"];
+
+function parseTheme(s: string | null): Theme {
+  if (!s) return "general";
+  const t = s.toLowerCase().trim();
+  return THEMES.includes(t as Theme) ? (t as Theme) : "general";
+}
 
 export const dynamic = "force-dynamic";
 
@@ -24,6 +32,9 @@ export async function GET(req: Request) {
   const birthDate = searchParams.get("birthDate") ?? undefined;
   const birthTime = searchParams.get("birthTime") ?? undefined;
   const birthPlace = searchParams.get("birthPlace") ?? undefined;
+  const userText = searchParams.get("userText") ?? searchParams.get("question") ?? undefined;
+  const questionExplicit = searchParams.get("question") ?? undefined;
+  const themeParam = searchParams.get("theme") ?? undefined;
   const recentSacredIdsParam = searchParams.get("recentSacredIds");
   const recentStateKeysParam = searchParams.get("recentStateKeys");
 
@@ -36,13 +47,31 @@ export async function GET(req: Request) {
 
   const cookieStore = await cookies();
   const session = getSessionFromCookie(cookieStore.toString());
-  if (session?.email) {
-    const recent = await getRecentInstantLightIds(session.email, 50, 7);
-    if (recent.sacredIds.length > 0 || recent.stateKeys.length > 0) {
-      recentSacredIds = recent.sacredIds.length > 0 ? recent.sacredIds : recentSacredIds;
-      recentStateKeys = recent.stateKeys.length > 0 ? recent.stateKeys : recentStateKeys;
-    }
+  const userKey = session?.email ?? undefined;
+
+  if (userKey) {
+    const sacredIds = await getRecentSacredIds(userKey, 7);
+    const stateKeys = await getRecentStateKeys(userKey, 7);
+    if (sacredIds.length > 0) recentSacredIds = sacredIds;
+    if (stateKeys.length > 0) recentStateKeys = stateKeys;
   }
+
+  let preferredStateKey: string | undefined;
+  let inputConfidence: number | undefined;
+  let questionType: string | undefined;
+
+  const inputText = (userText ?? questionExplicit)?.trim();
+  if (inputText) {
+    const intent = parseIntent(inputText);
+    const best = pickBestState(intent ?? null);
+    if (best) {
+      preferredStateKey = best.stateKey;
+      inputConfidence = best.confidence;
+    }
+    if (intent?.questionType) questionType = intent.questionType;
+  }
+
+  const theme = parseTheme(themeParam);
 
   const userProfile =
     (fullName?.trim() || birthDate?.trim())
@@ -57,13 +86,15 @@ export async function GET(req: Request) {
   const result = composeInstantLight(userProfile, {
     recentSacredIds,
     recentStateKeys,
+    preferredStateKey,
+    theme,
+    questionType,
+    inputConfidence,
+    questionText: questionExplicit ?? inputText ?? undefined,
   });
 
-  if (session?.email && result.sacredId) {
-    recordInstantLightUse(session.email, {
-      sacredId: result.sacredId,
-      stateKey: result.stateKey ?? undefined,
-    }).catch(() => {});
+  if (userKey && result.sacred?.id) {
+    recordInstantLight(userKey, result).catch(() => {});
   }
 
   return NextResponse.json(result);

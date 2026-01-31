@@ -9,15 +9,22 @@ describe("sacredRemedy/instantLightComposer", () => {
   const fixedSeed = 12345;
 
   describe("modo universal (sem perfil)", () => {
-    it("retorna sacredText, practice, question, sacredId, stateKey", () => {
+    it("retorna DarshanTruthPackage: sacred, practice, question, stateKey", () => {
       const res = composeInstantLight(null, { seed: fixedSeed });
       expect(res).toHaveProperty("sacredText");
+      expect(res).toHaveProperty("sacred");
+      expect(res.sacred).toHaveProperty("id");
+      expect(res.sacred).toHaveProperty("corpus");
+      expect(res.sacred).toHaveProperty("text");
       expect(res).toHaveProperty("practice");
+      expect(res.practice).toHaveProperty("title");
+      expect(res.practice).toHaveProperty("steps");
       expect(res).toHaveProperty("question");
+      expect(res.question).toHaveProperty("text");
       expect(res).toHaveProperty("sacredId");
       expect(res).toHaveProperty("stateKey");
       expect(typeof res.sacredText).toBe("string");
-      expect(typeof res.question).toBe("string");
+      expect(typeof res.question.text).toBe("string");
     });
 
     it("não inclui insight em modo universal", () => {
@@ -31,7 +38,7 @@ describe("sacredRemedy/instantLightComposer", () => {
       expect(r1.sacredId).toBe(r2.sacredId);
       expect(r1.stateKey).toBe(r2.stateKey);
       expect(r1.sacredText).toBe(r2.sacredText);
-      expect(r1.question).toBe(r2.question);
+      expect(r1.question.text).toBe(r2.question.text);
     });
   });
 
@@ -57,6 +64,7 @@ describe("sacredRemedy/instantLightComposer", () => {
       expect(r1.sacredId).toBe(r2.sacredId);
       expect(r1.stateKey).toBe(r2.stateKey);
       expect(r1.sacredText).toBe(r2.sacredText);
+      expect(r1.question.text).toBe(r2.question.text);
     });
   });
 
@@ -78,6 +86,7 @@ describe("sacredRemedy/instantLightComposer", () => {
         seed: 2,
         recentSacredIds: r1.sacredId ? [r1.sacredId] : [],
       });
+      expect(r2.sacred?.id).toBeDefined();
       expect(r2.sacredId).toBeDefined();
     });
   });

@@ -22,7 +22,8 @@ import {
 import { logger } from "@/lib/logger";
 import { checkAndRecordRateLimit, checkDailyLimit, recordDailyRequest } from "@/lib/usageLimits";
 import { isSupabaseConfigured } from "@/lib/supabase";
-import { saveRevelation, getRecentInstantLightIds, recordInstantLightUse } from "@/lib/historyStorage";
+import { saveRevelation } from "@/lib/historyStorage";
+import { getRecentSacredIds, getRecentStateKeys, recordInstantLight } from "@/lib/history/historyAdapter";
 
 export const dynamic = "force-dynamic";
 
@@ -130,25 +131,29 @@ export async function POST(req: Request) {
       ? body.recentStateKeys.filter((k: unknown) => typeof k === "string")
       : [];
     if (session?.email) {
-      const recent = await getRecentInstantLightIds(session.email, 20);
-      if (recent.sacredIds.length || recent.stateKeys.length) {
-        recentSacredIdsRes = recent.sacredIds.length ? recent.sacredIds : recentSacredIdsRes;
-        recentStateKeysRes = recent.stateKeys.length ? recent.stateKeys : recentStateKeysRes;
-      }
+      const [sacredIds, stateKeys] = await Promise.all([
+        getRecentSacredIds(session.email, 7),
+        getRecentStateKeys(session.email, 7),
+      ]);
+      if (sacredIds.length) recentSacredIdsRes = sacredIds;
+      if (stateKeys.length) recentStateKeysRes = stateKeys;
     }
     const res = composeInstantLight(userProfile, {
       recentSacredIds: recentSacredIdsRes,
       recentStateKeys: recentStateKeysRes,
     });
-    if (session?.email && res.sacredId) {
-      recordInstantLightUse(session.email, { sacredId: res.sacredId, stateKey: res.stateKey ?? undefined }).catch(() => {});
+    if (session?.email && res.sacred?.id) {
+      recordInstantLight(session.email, res).catch(() => {});
     }
     const parts: string[] = [];
     if (res.sacredText?.trim()) parts.push(res.sacredText.trim());
     if (res.insight?.trim()) parts.push(res.insight.trim());
-    if (res.practice?.trim()) parts.push(res.practice.trim());
-    if (res.food?.trim()) parts.push(res.food.trim());
-    if (res.question?.trim()) parts.push(res.question.trim());
+    const practiceStr = Array.isArray(res.practice?.steps) ? res.practice.steps.join("; ") : (res.practice as unknown as { title?: string })?.title ?? "";
+    if (practiceStr.trim()) parts.push(practiceStr.trim());
+    const foodStr = Array.isArray(res.food?.do) ? res.food.do.join(", ") : "";
+    if (foodStr.trim()) parts.push(foodStr.trim());
+    const questionStr = res.question?.text?.trim() ?? "";
+    if (questionStr) parts.push(questionStr);
     const message = parts.length > 0 ? parts.join("\n\n") : getMockMessage(mockMessages);
     return NextResponse.json({
       message,

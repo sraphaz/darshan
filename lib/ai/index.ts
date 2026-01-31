@@ -39,3 +39,5 @@ export function getAvailableConnectors(): AIConnector[] {
 }
 
 export type { AIConnector, ConnectorId } from "./types";
+export { expandNarrative } from "./narrativeGateway";
+export type { NarrativeExpansionResult } from "./narrativeGateway";

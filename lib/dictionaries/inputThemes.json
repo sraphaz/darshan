@@ -1,0 +1,8 @@
+{
+  "general": [],
+  "love": ["relacionamento", "amor", "parceiro", "parceira", "casamento", "namoro", "amante", "coração", "perder alguém", "termo", "separação", "traição", "ciúmes", "afeto"],
+  "career": ["trabalho", "carreira", "dinheiro", "propósito", "emprego", "chefe", "equipe", "profissional", "finanças", "salário", "demissão", "mudança de emprego"],
+  "year": ["ano", "ano que vem", "próximo ano", "proximo ano", "este ano", "2025", "ciclo", "previsão do ano"],
+  "health": ["corpo", "saúde", "cansaço", "cansado", "doença", "dormir", "sono", "energia", "fadiga", "burnout", "exausto"],
+  "spirituality": ["meditação", "caminho", "dharma", "espiritual", "sentido da vida", "propósito maior", "alma", "interior"]
+}
