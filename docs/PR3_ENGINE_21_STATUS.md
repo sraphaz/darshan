@@ -97,11 +97,16 @@ Este documento mapeia os **gaps** apontados na avaliação do PR #3 com o **esta
 
 ---
 
-## O que NÃO está feito (próximos PRs)
+## O que foi feito neste ciclo (próximas etapas)
 
-- **Testes automatizados** para diagnosisEngine, sacredSelector, ayurvedaActionSelector, composeInstantLight e GET `/api/instant-light` (determinismo, cooldown, universal vs personal, numerologia).
-- **Corpus em escala premium** (196 Sutras, 300+ Puranas, 200 Upanishads) e campo **themes** obrigatório em cada entrada — trabalho editorial.
-- Refino **Nakshatra → klesha** para diagnóstico personal mais fino (opcional).
+- **Testes automatizados:** `__tests__/lib/sacredRemedy/` — diagnosisEngine, sacredSelector, ayurvedaActionSelector, instantLightComposer (determinismo, universal vs personal, anti-repetição, 20 gunas).
+- **Campo themes:** `SacredCorpusEntry.themes?: string[]` opcional para expansão premium.
+- **Refino Nakshatra → klesha:** mapa `NAKSHATRA_KLESHA_TENDENCY` em diagnosisEngine; diagnóstico personal prefere remédios que coincidem com o klesha da nakshatra lunar quando definido.
+
+## O que permanece em backlog
+
+- **Corpus em escala premium** (196 Sutras, 300+ Puranas, 200 Upanishads) e **themes** em todas as entradas — trabalho editorial.
+- Testes de integração para GET `/api/instant-light` (cooldown com sessão mock).
 
 ---
 

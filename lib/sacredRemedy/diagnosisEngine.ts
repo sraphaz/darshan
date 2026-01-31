@@ -14,6 +14,7 @@ import type {
   PrakritiFromJyotish,
   AyurvedicQuality,
   NumerologyFromMap,
+  KleshaKey,
 } from "./types";
 
 import remedyMatrixJson from "@/lib/dictionaries/remedyMatrix.json";
@@ -37,6 +38,37 @@ const DOSHA_TO_QUALITIES_EXCESS: Record<string, AyurvedicQuality[]> = {
   vata: ["ruksha", "laghu", "chala", "sukshma", "sara"],
   pitta: ["ushna", "tikshna", "drava"],
   kapha: ["guru", "snigdha", "manda", "sthira", "sandra"],
+};
+
+/** Nakshatra → klesha provável (tendência psicológica) — refina diagnóstico personal */
+const NAKSHATRA_KLESHA_TENDENCY: Record<string, KleshaKey> = {
+  ashwini: "abhinivesha",
+  bharani: "raga",
+  krittika: "dvesha",
+  rohini: "raga",
+  mrigashira: "avidya",
+  ardra: "dvesha",
+  punarvasu: "raga",
+  pushya: "avidya",
+  ashlesha: "asmita",
+  magha: "asmita",
+  "purva-phalguni": "raga",
+  "uttara-phalguni": "raga",
+  hasta: "avidya",
+  chitra: "asmita",
+  swati: "raga",
+  vishakha: "dvesha",
+  anuradha: "raga",
+  jyestha: "asmita",
+  mula: "abhinivesha",
+  "purva-ashadha": "raga",
+  "uttara-ashadha": "asmita",
+  shravana: "avidya",
+  dhanishta: "asmita",
+  shatabhisha: "abhinivesha",
+  "purva-bhadra": "dvesha",
+  "uttara-bhadra": "abhinivesha",
+  revati: "avidya",
 };
 
 export function getRemedyMatrix(): RemedyMatrixEntry[] {
@@ -119,7 +151,13 @@ export function diagnosisPersonal(
   const effectiveSeed = seed + (lifePath || 0) * 31 + (soulUrge || 0);
   const avoid = new Set(recentStateKeys);
   const byGuna = REMEDY_MATRIX.filter((e) => e.samkhyaGuna === dominantGuna);
-  const pool = byGuna.length > 0 ? byGuna : REMEDY_MATRIX;
+  let pool = byGuna.length > 0 ? byGuna : REMEDY_MATRIX;
+  const nakshatra = map.jyotish?.nakshatra ?? "";
+  const nakshatraKlesha = nakshatra ? NAKSHATRA_KLESHA_TENDENCY[nakshatra] : null;
+  if (nakshatraKlesha) {
+    const byNakshatra = pool.filter((e) => e.klesha === nakshatraKlesha);
+    if (byNakshatra.length > 0) pool = byNakshatra;
+  }
   const preferred = pool.filter((e) => !avoid.has(e.state));
   const candidates = preferred.length > 0 ? preferred : pool;
   const idx = Math.abs(Math.floor(effectiveSeed)) % candidates.length;

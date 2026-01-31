@@ -56,7 +56,7 @@ export type ConsciousDiagnosis = {
   numerologyFromMap?: NumerologyFromMap;
 };
 
-/** Entrada do corpus sagrado (dictionaries/sacred/*.json) — taggeada por klesha e qualidades */
+/** Entrada do corpus sagrado (dictionaries/sacred/*.json) — taggeada por klesha, qualidades e temas */
 export type SacredCorpusEntry = {
   id: string;
   text: string;
@@ -64,6 +64,8 @@ export type SacredCorpusEntry = {
   kleshaTargets?: string[];
   /** Qualidades ayurvédicas associadas */
   qualities?: string[];
+  /** Temas para matching futuro (ex.: presença, medo, amor, corpo) — opcional até expansão premium */
+  themes?: string[];
 };
 
 /** Entrada da matriz de remédios (50 estados) */

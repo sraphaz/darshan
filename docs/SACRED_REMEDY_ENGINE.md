@@ -81,6 +81,7 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 
 - **kleshaTargets:** kleśas que o texto ajuda a equilibrar.
 - **qualities:** qualidades ayurvédicas associadas (para matching com o diagnóstico).
+- **themes:** (opcional) temas para matching futuro (ex.: presença, medo, amor) — usado na expansão premium.
 
 ---
 
@@ -113,7 +114,13 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 - **Cooldown GET /api/instant-light:** Com sessão (cookie), o servidor busca `getRecentInstantLightIds(session.email)` e registra uso com `recordInstantLightUse`; query params são fallback para anônimos.
 - **Corpus expandido:** Yoga Sutras 100+ (YS.2.51–YS.3.10 adicionados), Puranas 80+, Upanishads 50+.
 
-## 10. Próximos passos (editorial)
+## 10. Testes e refinamentos (Engine 2.1 finalization)
 
-- Refinar mapeamento Nakshatra → tendência → klesha provável (para diagnóstico personal mais fino).
-- Testes automatizados para `diagnosisEngine`, `sacredSelector`, `ayurvedaActionSelector`, `composeInstantLight` e GET `/api/instant-light`.
+- **Testes:** `__tests__/lib/sacredRemedy/` — diagnosisEngine, sacredSelector, ayurvedaActionSelector, instantLightComposer (determinismo, universal vs personal, anti-repetição, 20 gunas). Executar: `npx jest __tests__/lib/sacredRemedy`.
+- **Campo themes:** `SacredCorpusEntry.themes?: string[]` opcional para matching futuro (corpus premium).
+- **Nakshatra → klesha:** mapa `NAKSHATRA_KLESHA_TENDENCY` em diagnosisEngine; diagnóstico personal prefere remédios cujo klesha coincide com a tendência da nakshatra lunar.
+
+## 11. Próximos passos (editorial)
+
+- Corpus premium (196 Sutras, 300+ Puranas, 200 Upanishads) com themes em todas as entradas.
+- Testes de integração para GET `/api/instant-light` (cooldown com sessão mock).
