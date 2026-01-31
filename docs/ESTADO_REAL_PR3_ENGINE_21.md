@@ -75,8 +75,8 @@ IA recebe **truthPackage + question + theme**; não recalcula diagnóstico, apen
 
 - **Input Parser:** existe; texto do usuário → stateKey → Instant Light.
 - **Truth Package:** existe; UserRequestContext + DarshanTruthPackage; Instant Light e IA usam o mesmo formato.
-- **Engine único:** sacredRemedy é o único truth engine; wrappers são só re-exports.
+- **Engine único:** sacredRemedy é o único truth engine; wrappers antigos foram removidos (não existem mais `lib/instantLight`, `lib/sacred`, `lib/diagnosis`).
 - **IA Expansion:** narrativeGateway + POST /api/ai/expand implementados.
 - **Numerologia:** lifePath, expression, soulUrge, personality no SymbolicMap e no diagnosis.
 
-O produto está **premium fechado** nos 4 críticos; o que resta é expansão de conteúdo (corpus) e limpeza opcional de wrappers.
+O produto está **premium fechado** nos 5 críticos; o que resta é expansão de conteúdo (corpus).
