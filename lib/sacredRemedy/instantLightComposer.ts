@@ -159,7 +159,7 @@ export function composeInstantLight(
     },
     sacred: {
       id: sacredId,
-      corpus: sacredCorpus === "purana" ? "puranas" : sacredCorpus,
+      corpus: (sacredCorpus as string) === "purana" ? "puranas" : sacredCorpus,
       text: sacredText,
       ...(sacredSupporting?.length ? { supporting: sacredSupporting } : {}),
     },
@@ -183,8 +183,9 @@ export function composeInstantLight(
     }
   }
 
-  if (questionType === "when") {
-    packageResult.meta = { ...packageResult.meta, usedSacredIds: packageResult.meta?.usedSacredIds, usedStateKeys: packageResult.meta?.usedStateKeys };
+  if (questionType === "when" && packageResult.meta) {
+    const { generatedAt, usedSacredIds, usedStateKeys } = packageResult.meta;
+    packageResult.meta = { generatedAt, usedSacredIds, usedStateKeys };
   }
 
   packageResult.sacredText = sacredText;

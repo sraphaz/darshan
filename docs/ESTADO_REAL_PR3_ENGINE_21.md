@@ -80,3 +80,5 @@ IA recebe **truthPackage + question + theme**; não recalcula diagnóstico, apen
 - **Numerologia:** lifePath, expression, soulUrge, personality no SymbolicMap e no diagnosis.
 
 O produto está **premium fechado** nos 5 críticos; o que resta é expansão de conteúdo (corpus).
+
+**Build:** prebuild corrigido (ENOENT quando `build` não existe); tipos TS em `instant-light/route` e `instantLightComposer` ajustados; `npm run build` passa.

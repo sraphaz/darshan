@@ -77,7 +77,7 @@ export async function GET(req: Request) {
     if (intent?.theme) themeFromIntent = intent.theme as Theme;
   }
 
-  const theme = themeFromIntent ?? parseTheme(themeParam);
+  const theme = themeFromIntent ?? parseTheme(themeParam ?? null);
 
   const userProfile =
     (fullName?.trim() || birthDate?.trim())

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node -e \"try { require('fs').rmSync('build', { recursive: true, maxRetries: 3 }) } catch (e) { if (e.code !== 'EPERM' && e.code !== 'EBUSY' && e.code !== 'ENOENT') throw e; }\"",
+    "prebuild": "node -e \"var fs=require('fs'); if(fs.existsSync('build')){ fs.rmSync('build',{recursive:true,maxRetries:3}); }\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
