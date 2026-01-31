@@ -95,7 +95,7 @@ describe("GET /api/instant-light", () => {
       const req = new Request("http://localhost/api/instant-light");
       const res = await GET(req);
       expect(res.status).toBe(200);
-      expect(mockGetRecentInstantLightIds).toHaveBeenCalledWith("user@example.com", 20);
+      expect(mockGetRecentInstantLightIds).toHaveBeenCalledWith("user@example.com", 50, 7);
       const body = await res.json();
       expect(body).toHaveProperty("sacredId");
       expect(body).toHaveProperty("stateKey");

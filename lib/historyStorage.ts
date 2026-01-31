@@ -128,22 +128,29 @@ export async function getHistoryCounts(userEmail: string): Promise<{ revelations
   };
 }
 
-/** Cooldown server-side: retorna sacredIds e stateKeys recentes do usuário (evitar repetição). */
+/** Cooldown server-side: retorna sacredIds e stateKeys recentes do usuário (evitar repetição).
+ * Se sinceDays for informado (ex.: 7), só retorna usos dos últimos N dias — cooldown de 7 dias por sacredId. */
 export async function getRecentInstantLightIds(
   userEmail: string,
-  limit: number = 20
+  limit: number = 20,
+  sinceDays?: number
 ): Promise<{ sacredIds: string[]; stateKeys: string[] }> {
   const supabase = getSupabase();
   if (!supabase || !isSupabaseConfigured()) return { sacredIds: [], stateKeys: [] };
   const userId = await getUserIdByEmail(userEmail);
   if (!userId) return { sacredIds: [], stateKeys: [] };
   const cap = Math.min(Math.max(1, limit), 50);
-  const { data } = await supabase
+  let query = supabase
     .from("instant_light_uses")
     .select("sacred_id, state_key")
     .eq("user_id", userId)
     .order("created_at", { ascending: false })
     .limit(cap);
+  if (sinceDays != null && sinceDays > 0) {
+    const since = new Date(Date.now() - sinceDays * 24 * 60 * 60 * 1000).toISOString();
+    query = query.gte("created_at", since);
+  }
+  const { data } = await query;
   const rows = (data ?? []) as { sacred_id: string; state_key: string | null }[];
   return {
     sacredIds: rows.map((r) => r.sacred_id).filter(Boolean),

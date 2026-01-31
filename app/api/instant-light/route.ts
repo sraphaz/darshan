@@ -37,7 +37,7 @@ export async function GET(req: Request) {
   const cookieStore = await cookies();
   const session = getSessionFromCookie(cookieStore.toString());
   if (session?.email) {
-    const recent = await getRecentInstantLightIds(session.email, 20);
+    const recent = await getRecentInstantLightIds(session.email, 50, 7);
     if (recent.sacredIds.length > 0 || recent.stateKeys.length > 0) {
       recentSacredIds = recent.sacredIds.length > 0 ? recent.sacredIds : recentSacredIds;
       recentStateKeys = recent.stateKeys.length > 0 ? recent.stateKeys : recentStateKeys;
