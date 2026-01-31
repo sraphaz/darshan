@@ -1,15 +1,15 @@
 /**
  * Sacred Selector — seleção dirigida de texto sagrado por klesha e qualidades.
- * Carrega yoga_sutras, puranas, upanishads (dictionaries/sacred/) com kleshaTargets e qualities.
+ * Carrega yoga_sutras_full (196 sutras), puranas, upanishads (dictionaries/sacred/) com kleshaTargets, qualities e themes.
  */
 
 import type { SacredCorpusEntry } from "./types";
 
-import yogaSutrasJson from "@/lib/dictionaries/sacred/yoga_sutras.json";
+import yogaSutrasFullJson from "@/lib/dictionaries/sacred/yoga_sutras_full.json";
 import puranasJson from "@/lib/dictionaries/sacred/puranas.json";
 import upanishadsJson from "@/lib/dictionaries/sacred/upanishads.json";
 
-const YOGA_SUTRAS = yogaSutrasJson as SacredCorpusEntry[];
+const YOGA_SUTRAS = yogaSutrasFullJson as SacredCorpusEntry[];
 const PURANAS = puranasJson as SacredCorpusEntry[];
 const UPANISHADS = upanishadsJson as SacredCorpusEntry[];
 

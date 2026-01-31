@@ -21,7 +21,7 @@ Motor **paralelo** ao fluxo atual do Darshan. Não substitui `/api/darshan`; adi
 | Diagnosis Engine | `lib/sacredRemedy/diagnosisEngine.ts` |
 | Sacred Selector | `lib/sacredRemedy/sacredSelector.ts` |
 | Instant Light Composer | `lib/sacredRemedy/instantLightComposer.ts` |
-| Yoga Sutras (taggeado) | `lib/dictionaries/sacred/yoga_sutras.json` |
+| Yoga Sutras completos (196) | `lib/dictionaries/sacred/yoga_sutras_full.json` |
 | Puranas | `lib/dictionaries/sacred/puranas.json` |
 | Upanishads | `lib/dictionaries/sacred/upanishads.json` |
 | Matriz de remédios | `lib/dictionaries/remedyMatrix.json` |
@@ -87,6 +87,7 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 
 ## 6. Relação com o resto do produto
 
+- **Motor único:** `lib/sacredRemedy` é o único pipeline Instant Light; `lib/instantLight`, `lib/sacred` e `lib/diagnosis` foram removidos (P0).
 - **`/api/darshan` (POST, mock/IA):** no mock usa **apenas** Sacred Remedy (`composeInstantLight` de `lib/sacredRemedy`); cooldown server-side quando usuário logado.
 - **`/api/instant-light` (GET):** motor novo, só offline, só Sacred Remedy (diagnóstico + corpus taggeado + matriz + prática + pergunta).
 - **Leitura offline narrativa (`readingOffline`, `oracleOffline`):** segue separada; o Instant Light do Sacred Remedy é outra camada (resposta estruturada: sacredText, insight, practice, question).
