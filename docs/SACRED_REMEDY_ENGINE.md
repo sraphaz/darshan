@@ -92,8 +92,15 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 
 ---
 
-## 7. Próximos passos (editorial)
+## 7. Engine 2.1 — Ayurveda + corpus expandido
 
-- Ampliar entradas em yoga_sutras, puranas, upanishads (mais versos + tags).
+- **AyurvedicQuality (20 gunas)** em `types.ts`: guru/laghu, snigdha/ruksha, sita/ushna, manda/tikshna, sthira/chala, mridu/kathina, vishada/picchila, shlakshna/khara, sukshma/sthula, sandra/drava, sara.
+- **Diagnosis** retorna `ayurvedicQualities.excess` e `deficient`; **prakriti/dosha** do mapa enriquece o diagnóstico (dosha → qualidades típicas em excesso).
+- **Ayurveda Action Selector** (`ayurvedaActionSelector.ts`): prática e alimento concretos por qualidade (ruksha → oleação, chala → grounding, tikshna → cooling, etc.).
+- **remedyMatrix.json**: 50 estados (incl. burnout, solitude, grief, jealousy, numbness, hypercontrol, shame, impatience, despair, envy, restlessness, boredom, overwhelm, isolation, perfectionism, avoidance, irritability, self_doubt, longing, acceptance).
+- **Corpus sagrado**: yoga_sutras ~60 entradas, puranas ~40, upanishads ~30, todas com `kleshaTargets` e `qualities`.
+
+## 8. Próximos passos (editorial)
+
 - Refinar mapeamento Nakshatra → tendência → klesha provável (para diagnóstico personal mais fino).
-- Testes automatizados para `diagnosisEngine`, `sacredSelector`, `composeInstantLight` e GET `/api/instant-light`.
+- Testes automatizados para `diagnosisEngine`, `sacredSelector`, `ayurvedaActionSelector`, `composeInstantLight` e GET `/api/instant-light`.

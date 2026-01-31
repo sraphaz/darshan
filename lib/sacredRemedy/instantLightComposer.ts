@@ -12,6 +12,7 @@ import {
   getRemedyForDiagnosis,
 } from "./diagnosisEngine";
 import { selectSacredText } from "./sacredSelector";
+import { getActionsForQualities } from "./ayurvedaActionSelector";
 import type { UserProfileForOracle } from "@/lib/knowledge/types";
 import type { InstantLightResponse } from "./types";
 
@@ -67,13 +68,19 @@ export function composeInstantLight(
   const sacredText = sacredEntry?.text?.trim() || remedy.sacred?.verse?.trim() || remedy.sacred?.id || "";
   const sacredId = sacredEntry ? `${sacredEntry.corpus}.${sacredEntry.id}` : `${remedy.sacred?.corpus ?? "remedy"}.${remedy.sacred?.id ?? remedy.state}`;
 
+  const ayurvedaActions = getActionsForQualities(diagnosis.ayurvedicQualities.excess);
+  const practice = (ayurvedaActions.practice || remedy.practice || "").trim();
+  const food = (ayurvedaActions.food || remedy.food || "").trim();
+  const question = (remedy.question || "O que em você já sabe?").trim();
+
   const result: InstantLightResponse = {
     sacredText,
-    practice: remedy.practice?.trim() || "",
-    question: remedy.question?.trim() || "O que em você já sabe?",
+    practice,
+    question,
     sacredId,
     stateKey: diagnosis.stateKey ?? remedy.state,
   };
+  if (food) result.food = food;
 
   if (hasProfile && profile) {
     const map = buildSymbolicMap(profile);

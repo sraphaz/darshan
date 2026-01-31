@@ -12,6 +12,7 @@ import type {
   RemedyMatrixEntry,
   SamkhyaGuna,
   PrakritiFromJyotish,
+  AyurvedicQuality,
 } from "./types";
 
 import remedyMatrixJson from "@/lib/dictionaries/remedyMatrix.json";
@@ -28,6 +29,13 @@ const RASHI_TO_ELEMENT: Record<string, string> = {
   mesha: "fire", vrishabha: "earth", mithuna: "air", karka: "water",
   simha: "fire", kanya: "earth", tula: "air", vrischika: "water",
   dhanu: "fire", makara: "earth", kumbha: "air", mina: "water",
+};
+
+/** Dosha → qualidades tipicamente em excesso (Ayurveda); usadas para enriquecer diagnóstico a partir do mapa */
+const DOSHA_TO_QUALITIES_EXCESS: Record<string, AyurvedicQuality[]> = {
+  vata: ["ruksha", "laghu", "chala", "sukshma", "sara"],
+  pitta: ["ushna", "tikshna", "drava"],
+  kapha: ["guru", "snigdha", "manda", "sthira", "sandra"],
 };
 
 export function getRemedyMatrix(): RemedyMatrixEntry[] {
@@ -53,10 +61,13 @@ function remedyToDiagnosis(remedy: RemedyMatrixEntry, prakriti?: PrakritiFromJyo
   const sattva = g === "sattva" ? 0.6 : 0.2;
   const rajas = g === "rajas" ? 0.6 : 0.2;
   const tamas = g === "tamas" ? 0.6 : 0.2;
+  const excessFromRemedy = (remedy.qualities ?? []) as AyurvedicQuality[];
+  const excessFromDosha = prakriti?.dosha ? DOSHA_TO_QUALITIES_EXCESS[prakriti.dosha] ?? [] : [];
+  const excess = [...new Set([...excessFromRemedy, ...excessFromDosha])];
   return {
     klesha: remedy.klesha,
     samkhyaGunas: { sattva, rajas, tamas },
-    ayurvedicQualities: { excess: remedy.qualities ?? [], deficient: [] },
+    ayurvedicQualities: { excess, deficient: [] },
     prakritiFromJyotish: prakriti,
     stateKey: remedy.state,
   };

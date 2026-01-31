@@ -11,6 +11,11 @@ export {
 } from "./diagnosisEngine";
 export { selectSacredText, getAllSacredEntries } from "./sacredSelector";
 export type { SelectSacredOptions } from "./sacredSelector";
+export {
+  getPracticeForQuality,
+  getFoodForQuality,
+  getActionsForQualities,
+} from "./ayurvedaActionSelector";
 export { composeInstantLight } from "./instantLightComposer";
 export type { ComposeInstantLightOptions } from "./instantLightComposer";
 export type {

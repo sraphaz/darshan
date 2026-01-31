@@ -298,5 +298,205 @@
     "practice": "contemplação silenciosa",
     "food": "fresco e leve",
     "question": "Como servir a partir da luz?"
+  },
+  {
+    "state": "burnout",
+    "klesha": "abhinivesha",
+    "samkhyaGuna": "tamas",
+    "qualities": ["guru", "mridu"],
+    "sacred": { "corpus": "purana", "id": "BP.rest", "verse": "O descanso é dharma; quem se entrega ao repouso se renova." },
+    "practice": "dormir cedo, sem telas",
+    "food": "nutritivo, quente",
+    "question": "O que você pode não fazer hoje?"
+  },
+  {
+    "state": "solitude",
+    "klesha": "raga",
+    "samkhyaGuna": "tamas",
+    "qualities": ["vishada", "laghu"],
+    "sacred": { "corpus": "upanishad", "id": "UP.isha_plenum", "verse": "Isto é pleno; aquilo é pleno. Do pleno nasce o pleno." },
+    "practice": "uma conexão genuína hoje (uma pessoa)",
+    "food": "quente e reconfortante",
+    "question": "Você está só ou em solidão?"
+  },
+  {
+    "state": "grief",
+    "klesha": "abhinivesha",
+    "samkhyaGuna": "tamas",
+    "qualities": ["guru", "mridu", "sandra"],
+    "sacred": { "corpus": "purana", "id": "BP.compassion", "verse": "A compaixão divina acolhe quem sofre; você pode ser sustentado." },
+    "practice": "banho quente, mão no coração",
+    "food": "leite morno com especiarias",
+    "question": "O que precisa ser chorado?"
+  },
+  {
+    "state": "jealousy",
+    "klesha": "dvesha",
+    "samkhyaGuna": "rajas",
+    "qualities": ["tikshna", "ushna"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.33", "verse": "Alegria pelo bem do outro acalma o coração; a comparação dissolve-se." },
+    "practice": "respiração refrescante, pausa",
+    "food": "coco, hortelã",
+    "question": "O que você tem que o outro não vê?"
+  },
+  {
+    "state": "numbness",
+    "klesha": "dvesha",
+    "samkhyaGuna": "tamas",
+    "qualities": ["sita", "sthira"],
+    "sacred": { "corpus": "purana", "id": "BP.heart", "verse": "Abrir o coração não é fraqueza; é coragem de sentir." },
+    "practice": "gesto de bondade, água morna nas mãos",
+    "food": "quente, especiarias leves",
+    "question": "O que pode derreter um pouco hoje?"
+  },
+  {
+    "state": "hypercontrol",
+    "klesha": "asmita",
+    "samkhyaGuna": "rajas",
+    "qualities": ["kathina", "sthira"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.2.1", "verse": "A prática constante e o desapego são os meios." },
+    "practice": "soltar um plano hoje, uma só decisão",
+    "food": "suavizante (óleos)",
+    "question": "O que acontece se você não controlar?"
+  },
+  {
+    "state": "shame",
+    "klesha": "asmita",
+    "samkhyaGuna": "tamas",
+    "qualities": ["guru", "picchila"],
+    "sacred": { "corpus": "upanishad", "id": "UP.forgiveness", "verse": "O perdão interno libera o peso; você pode recomeçar." },
+    "practice": "mão no coração, \"eu mereço paz\"",
+    "food": "leve, digestivo",
+    "question": "Você pode recomeçar?"
+  },
+  {
+    "state": "impatience",
+    "klesha": "raga",
+    "samkhyaGuna": "rajas",
+    "qualities": ["tikshna", "chala"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.12", "verse": "A prática e o desapego são o par que estabiliza a mente." },
+    "practice": "desacelerar a fala, 3 respirações antes de agir",
+    "food": "doce natural, quente",
+    "question": "Para onde você corre?"
+  },
+  {
+    "state": "despair",
+    "klesha": "abhinivesha",
+    "samkhyaGuna": "tamas",
+    "qualities": ["guru", "manda"],
+    "sacred": { "corpus": "upanishad", "id": "UP.brihadaranyaka", "verse": "Conduz-me do não-ser ao ser; conduz-me da escuridão à luz." },
+    "practice": "caminhada curta, luz do sol",
+    "food": "pimenta preta, calor",
+    "question": "Qual é o menor passo possível agora?"
+  },
+  {
+    "state": "envy",
+    "klesha": "dvesha",
+    "samkhyaGuna": "rajas",
+    "qualities": ["tikshna", "ushna"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.2.35", "verse": "Na presença de quem está firme na não-violência, a hostilidade cessa." },
+    "practice": "desejar bem a alguém em silêncio",
+    "food": "cooling",
+    "question": "O que você celebra no outro?"
+  },
+  {
+    "state": "restlessness",
+    "klesha": "raga",
+    "samkhyaGuna": "rajas",
+    "qualities": ["chala", "laghu"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.13", "verse": "O esforço constante para estabilizar a mente é a prática." },
+    "practice": "uma tarefa única por 10 min, pés no chão",
+    "food": "grounding (raiz)",
+    "question": "Onde está sua atenção?"
+  },
+  {
+    "state": "boredom",
+    "klesha": "avidya",
+    "samkhyaGuna": "tamas",
+    "qualities": ["manda", "guru"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.14", "verse": "A prática torna-se firme quando mantida por muito tempo, sem interrupção." },
+    "practice": "uma ação nova (mesmo pequena) agora",
+    "food": "pimenta preta, calor",
+    "question": "O que está pedindo sua atenção?"
+  },
+  {
+    "state": "overwhelm",
+    "klesha": "raga",
+    "samkhyaGuna": "rajas",
+    "qualities": ["chala", "sukshma"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.2", "verse": "Yoga é a cessação das flutuações da mente." },
+    "practice": "olhar fixo em um ponto 1 min, depois uma só tarefa",
+    "food": "comida densa e quente",
+    "question": "Qual é a única coisa agora?"
+  },
+  {
+    "state": "isolation",
+    "klesha": "dvesha",
+    "samkhyaGuna": "tamas",
+    "qualities": ["sita", "sthira"],
+    "sacred": { "corpus": "purana", "id": "BP.heart", "verse": "Abrir o coração não é fraqueza; é coragem de sentir." },
+    "practice": "um gesto de bondade (mesmo pequeno)",
+    "food": "quente",
+    "question": "Quem você pode deixar entrar um pouco?"
+  },
+  {
+    "state": "perfectionism",
+    "klesha": "asmita",
+    "samkhyaGuna": "rajas",
+    "qualities": ["tikshna", "kathina"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.2.6", "verse": "O ego é a identificação do que vê com o instrumento do ver." },
+    "practice": "fazer algo \"imperfeito\" de propósito",
+    "food": "simples, sem excessos",
+    "question": "Quem é você sem o resultado?"
+  },
+  {
+    "state": "avoidance",
+    "klesha": "abhinivesha",
+    "samkhyaGuna": "tamas",
+    "qualities": ["chala", "ruksha"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.2.9", "verse": "Observar o que se evita enfraquece seu poder." },
+    "practice": "um passo mínimo em direção ao que evita",
+    "food": "oleação, quente",
+    "question": "O que você está evitando sentir?"
+  },
+  {
+    "state": "irritability",
+    "klesha": "dvesha",
+    "samkhyaGuna": "rajas",
+    "qualities": ["tikshna", "ushna"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.33", "verse": "Compaixão em relação ao que dói acalma o coração." },
+    "practice": "água fria no rosto, pausa",
+    "food": "coco, hortelã",
+    "question": "O que está por baixo da irritação?"
+  },
+  {
+    "state": "self_doubt",
+    "klesha": "avidya",
+    "samkhyaGuna": "tamas",
+    "qualities": ["sukshma", "guru"],
+    "sacred": { "corpus": "upanishad", "id": "UP.tat_tvam_asi", "verse": "Isso és tu. O que você busca já é você." },
+    "practice": "escrever uma qualidade sua que é verdadeira",
+    "food": "nutritivo e quente",
+    "question": "O que você já sabe que é verdade?"
+  },
+  {
+    "state": "longing",
+    "klesha": "raga",
+    "samkhyaGuna": "rajas",
+    "qualities": ["snigdha", "sara"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.2.7", "verse": "O apego segue o prazer; o desapego nasce do discernimento." },
+    "practice": "ficar consigo 10 min, sem preencher",
+    "food": "leve digestivo",
+    "question": "O que você tem agora que é suficiente?"
+  },
+  {
+    "state": "acceptance",
+    "klesha": null,
+    "samkhyaGuna": "sattva",
+    "qualities": ["vishada", "mridu"],
+    "sacred": { "corpus": "yoga_sutras", "id": "YS.1.16", "verse": "Quando a consciência reconhece sua própria natureza, a aceitação nasce." },
+    "practice": "contemplação silenciosa",
+    "food": "fresco e leve",
+    "question": "O que você pode aceitar neste instante?"
   }
 ]
