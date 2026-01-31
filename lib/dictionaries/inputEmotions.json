@@ -1,0 +1,72 @@
+{
+  "anxiety": [
+    "ansioso", "ansiosa",
+    "nervoso", "nervosa",
+    "tô agoniado", "tô agoniada",
+    "tô surtando",
+    "mente não para",
+    "pânico"
+  ],
+  "burnout": [
+    "cansado", "cansada",
+    "exausto", "exausta",
+    "esgotado", "esgotada",
+    "tô no limite",
+    "não aguento mais",
+    "tô acabado", "tô acabada"
+  ],
+  "grief": [
+    "triste",
+    "tô na bad",
+    "deprimido", "deprimida",
+    "luto",
+    "coração pesado"
+  ],
+  "solitude": [
+    "sozinho", "sozinha",
+    "solidão",
+    "isolado", "isolada",
+    "me sinto sozinho", "me sinto sozinha"
+  ],
+  "isolation": [
+    "sozinho", "sozinha",
+    "solidão",
+    "isolado", "isolada"
+  ],
+  "anger": [
+    "raiva",
+    "irritado", "irritada",
+    "tô puto", "tô puta",
+    "frustrado", "frustrada"
+  ],
+  "confusion": [
+    "confuso", "confusa",
+    "perdido", "perdida",
+    "travado", "travada",
+    "não sei o que fazer",
+    "sla"
+  ],
+  "emotional_attachment": [
+    "apego",
+    "ciúmes",
+    "dependência",
+    "não consigo deixar ir"
+  ],
+  "relational_insecurity": [
+    "medo de perder",
+    "abandono",
+    "rejeição",
+    "medo que me deixem"
+  ],
+  "existential_fear": [
+    "medo de perder",
+    "abandono",
+    "rejeição"
+  ],
+  "lack_of_purpose": [
+    "sem propósito",
+    "sem sentido",
+    "pra que tudo isso",
+    "não sei meu caminho"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "feel": [
+    "estou",
+    "me sinto",
+    "ando",
+    "tenho me sentido",
+    "sinto"
+  ],
+  "seek": [
+    "quero",
+    "preciso",
+    "busco",
+    "gostaria",
+    "me ajude"
+  ],
+  "fear": [
+    "tenho medo",
+    "estou com medo",
+    "receio",
+    "me preocupa",
+    "inseguro",
+    "insegura"
+  ],
+  "conflict": [
+    "não aguento",
+    "estou irritado",
+    "estou irritada",
+    "sinto raiva",
+    "estou em conflito"
+  ],
+  "reflect": [
+    "o que significa",
+    "por que isso acontece",
+    "como lidar",
+    "qual é o sentido"
+  ]
+}

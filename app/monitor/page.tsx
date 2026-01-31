@@ -26,14 +26,13 @@ export default function MonitorPage() {
   const [autoRefresh, setAutoRefresh] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const headers = () => ({ "X-Config-Key": configKey });
-
   const fetchData = useCallback(async () => {
     if (!configKey) return;
     try {
+      const h = { "X-Config-Key": configKey };
       const [logsRes, statusRes] = await Promise.all([
-        fetch(`/api/admin/logs?source=both&lines=300`, { headers: headers() }),
-        fetch("/api/admin/status", { headers: headers() }),
+        fetch(`/api/admin/logs?source=both&lines=300`, { headers: h }),
+        fetch("/api/admin/status", { headers: h }),
       ]);
       if (logsRes.ok) {
         const data = (await logsRes.json()) as LogsResponse;

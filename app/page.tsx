@@ -8,7 +8,9 @@ import DarshanMessage from "./components/DarshanMessage";
 import TimeHeader, { TimeHeaderSunrise, TimeHeaderSunsetMoon } from "./components/TimeHeader";
 import ProfileIcon from "./components/ProfileIcon";
 import PersonalMapIcon from "./components/PersonalMapIcon";
+import HistoryIcon from "./components/HistoryIcon";
 import ProfilePanel from "./components/ProfilePanel";
+import HistoryModal from "./components/HistoryModal";
 import LoginModal from "./components/LoginModal";
 import SupportModal from "./components/SupportModal";
 import CreditsModal from "./components/CreditsModal";
@@ -70,6 +72,8 @@ function Home() {
   const [supportOpen, setSupportOpen] = useState(false);
   const [creditsModalOpen, setCreditsModalOpen] = useState(false);
   const [personalMapOpen, setPersonalMapOpen] = useState(false);
+  const [historyOpen, setHistoryOpen] = useState(false);
+  const [historyCount, setHistoryCount] = useState({ revelations: 0, readings: 0 });
   const [creditsPerRevelation, setCreditsPerRevelation] = useState(CREDITS_PER_AI_REQUEST);
   const [creditsPerReading, setCreditsPerReading] = useState(CREDITS_PER_PERSONAL_MAP);
   const [authError, setAuthError] = useState<string | null>(null);
@@ -184,6 +188,24 @@ function Home() {
     }
   }, []);
 
+  const refreshHistoryCount = useCallback(async () => {
+    try {
+      const res = await fetch("/api/history/count", { credentials: "include" });
+      const data = await res.json();
+      setHistoryCount({
+        revelations: typeof data.revelations === "number" ? data.revelations : 0,
+        readings: typeof data.readings === "number" ? data.readings : 0,
+      });
+    } catch {
+      setHistoryCount({ revelations: 0, readings: 0 });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (session) refreshHistoryCount();
+    else setHistoryCount({ revelations: 0, readings: 0 });
+  }, [session, refreshHistoryCount]);
+
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -246,7 +268,7 @@ function Home() {
       setMockMode(true);
       saveMockMode(true);
     }
-  }, [credits, mockMode]);
+  }, [credits, creditsPerRevelation, mockMode]);
 
   function toggleMockMode() {
     setMockMode((prev) => {
@@ -303,6 +325,7 @@ function Home() {
       ]);
       setUserInput("");
       if (typeof data.balance === "number") setCredits(data.balance);
+      refreshHistoryCount();
     } catch {
       setCurrentMessage(FALLBACK_MESSAGE);
     } finally {
@@ -376,7 +399,7 @@ function Home() {
   const showConfigError = aiReady === false && !mockMode;
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center bg-void text-mist px-6 pt-8 pb-10 relative">
+    <main className="min-h-dvh h-dvh flex flex-col items-center bg-void text-mist px-0 sm:px-6 relative overflow-hidden">
       <AnimatePresence mode="wait">
         {!introDone ? (
           <motion.div
@@ -409,38 +432,48 @@ function Home() {
       )}
       {introDone && (
         <>
-          <header className="fixed top-0 left-0 right-0 z-40 grid grid-cols-3 items-start gap-2 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5">
-            <div className="flex flex-col items-start gap-1 min-w-0">
-              <div className="flex items-center gap-4">
-                {session && (
-                  <div
-                    className="flex items-center gap-1.5 group/credits"
-                    onContextMenu={handleDevDecreaseCredits}
-                  >
-                    <Tooltip text="Adicionar créditos" groupName="credits">
-                      <button
-                        type="button"
-                        onClick={handleAddCredits}
-                        className="text-[10px] uppercase tracking-widest text-white/50 hover:text-white/55 transition border-0 bg-transparent outline-none focus:outline-none"
-                        aria-label="Adicionar créditos"
-                      >
-                        + Créditos
-                      </button>
-                    </Tooltip>
-                    <Tooltip
-                      text={
-                        process.env.NODE_ENV === "development"
-                          ? "Saldo de créditos. Modo dev: clique direito aqui para diminuir (1 revelação)."
-                          : "Saldo de créditos para IA"
-                      }
-                      groupName="saldo"
+          <header className="fixed top-0 left-0 right-0 z-40 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:grid-cols-3 gap-y-1.5 pt-3 pb-2.5 px-3 sm:px-6 overflow-visible border-b border-white/[0.06] [line-height:1.25]">
+            {/* Linha 1: créditos + nascer do sol | Luz do Tempo | pôr do sol + lua — mesma margem do topo */}
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+              {session && (
+                <div
+                  className="flex items-center gap-1.5 shrink-0 group/credits"
+                  onContextMenu={handleDevDecreaseCredits}
+                >
+                  <Tooltip text="Adicionar créditos" groupName="credits">
+                    <button
+                      type="button"
+                      onClick={handleAddCredits}
+                      className="text-[11px] uppercase tracking-widest text-white/50 hover:text-white/55 transition border-0 bg-transparent outline-none focus:outline-none whitespace-nowrap touch-manipulation flex items-center"
+                      aria-label="Adicionar créditos"
                     >
-                      <span className="text-white/40 text-xs">{credits}</span>
-                    </Tooltip>
-                  </div>
-                )}
+                      + Créditos
+                    </button>
+                  </Tooltip>
+                  <Tooltip
+                    text={
+                      process.env.NODE_ENV === "development"
+                        ? "Saldo de créditos. Modo dev: clique direito aqui para diminuir (1 revelação)."
+                        : "Saldo de créditos para IA"
+                    }
+                    groupName="saldo"
+                  >
+                    <span className="text-white/50 text-[11px] tabular-nums font-medium min-w-[1.5rem]">{credits}</span>
+                  </Tooltip>
+                </div>
+              )}
+              <span className="shrink-0 flex items-center">
                 <TimeHeaderSunrise sunrise={pulse.sunrise} />
-              </div>
+              </span>
+            </div>
+            <div className="flex items-center justify-center min-w-0 shrink-0">
+              <span className="text-white/50 text-[11px] sm:text-xs tracking-wide truncate max-w-full">Luz do Tempo</span>
+            </div>
+            <div className="flex items-center justify-end gap-2 sm:gap-3 min-w-0">
+              <TimeHeaderSunsetMoon sunset={pulse.sunset} moonPhase={pulse.moonPhase} />
+            </div>
+            {/* Linha 2: AI desligada | horário atual | (vazio) */}
+            <div className="flex items-center min-w-0">
               <Tooltip
                 text={mockMode ? "Clique para usar IA" : "Clique para modo mock"}
                 groupName="mock"
@@ -448,7 +481,7 @@ function Home() {
                 <button
                   type="button"
                   onClick={toggleMockMode}
-                  className={`mt-2 text-[10px] uppercase tracking-widest transition focus:outline-none text-left rounded px-1.5 py-0.5 ${
+                  className={`text-[11px] uppercase tracking-widest transition focus:outline-none rounded px-1.5 py-0.5 flex items-center shrink-0 ${
                     mockMode
                       ? "text-white/40 hover:text-white/50"
                       : "text-white/55 ring-1 ring-white/25 hover:text-white/60"
@@ -459,21 +492,19 @@ function Home() {
                 </button>
               </Tooltip>
             </div>
-            <div className="flex flex-col items-center justify-center gap-0.5 pointer-events-none min-w-0">
-              <p className="text-white/50 text-sm tracking-wide">Luz do Tempo</p>
+            <div className="flex items-center justify-center min-w-0 pointer-events-none shrink-0">
               {currentTime ? (
-                <p className="text-white/40 text-xs tabular-nums">{currentTime}</p>
+                <span className="text-white/40 text-[11px] tabular-nums">{currentTime}</span>
               ) : null}
             </div>
-            <div className="flex flex-col items-end gap-1 min-w-0">
-              <TimeHeaderSunsetMoon sunset={pulse.sunset} moonPhase={pulse.moonPhase} />
-            </div>
+            <div className="flex items-center justify-end min-w-0" aria-hidden />
           </header>
           <Tooltip
             text="Suporte e dúvidas"
             groupName="support"
             align="right"
-            wrapperClassName="fixed bottom-6 right-4 sm:right-6 z-40 w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center"
+            side="top"
+            wrapperClassName="fixed bottom-5 right-3 sm:bottom-6 sm:right-6 z-40 w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center"
           >
             <button
               type="button"
@@ -494,6 +525,9 @@ function Home() {
             )}
             {!isRevealing && mounted && session !== null && hasProfileData(profile) && aiReady === true && (
               <PersonalMapIcon key="personalMap" onClick={() => setPersonalMapOpen(true)} />
+            )}
+            {!isRevealing && mounted && session !== null && (historyCount.revelations + historyCount.readings > 0) && (
+              <HistoryIcon key="history" onClick={() => setHistoryOpen(true)} />
             )}
           </AnimatePresence>
           <ProfilePanel
@@ -525,7 +559,10 @@ function Home() {
           />
           <PersonalMapModal
             isOpen={personalMapOpen}
-            onClose={() => setPersonalMapOpen(false)}
+            onClose={() => {
+              setPersonalMapOpen(false);
+              refreshHistoryCount();
+            }}
             profile={profile}
             credits={credits}
             creditsPerReading={creditsPerReading}
@@ -533,15 +570,21 @@ function Home() {
             onBalanceUpdate={(newBalance) => setCredits(newBalance)}
             onOpenCredits={() => { setPersonalMapOpen(false); setCreditsModalOpen(true); }}
           />
+          <AnimatePresence>
+            {historyOpen && (
+              <HistoryModal onClose={() => setHistoryOpen(false)} />
+            )}
+          </AnimatePresence>
         </>
       )}
 
       <motion.div
-        className={`flex flex-col items-center w-full px-4 sm:px-6 pt-20 sm:pt-24 pb-8 sm:pb-10 min-h-screen ${isRevealing ? "max-w-2xl flex-1 justify-center" : "max-w-md"}`}
+        className={`flex-1 min-h-0 flex flex-col items-center w-full px-4 sm:px-6 pt-[4.25rem] sm:pt-24 pb-20 sm:pb-10 overflow-y-auto overflow-x-hidden ${isRevealing ? "max-w-2xl justify-center" : "max-w-md justify-center pt-[4.25rem] sm:pt-24"}`}
         initial={false}
         animate={{ opacity: introDone ? 1 : 0, pointerEvents: introDone ? "auto" : "none" }}
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       >
+        <div className="flex flex-col items-center w-full flex-1 min-h-0 justify-center mt-2 sm:mt-6">
         {introDone && (
           <CrystalOrb
             isRevealing={isRevealing}
@@ -621,7 +664,7 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-              className="w-full mt-20 pt-2"
+              className="w-full mt-10 sm:mt-20 pt-2 max-w-md"
             >
               <input
                 value={userInput}
@@ -639,6 +682,7 @@ function Home() {
             </motion.div>
           )}
         </AnimatePresence>
+          </div>
       </motion.div>
     </main>
   );

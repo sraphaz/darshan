@@ -5,6 +5,8 @@ type Props = {
   children: React.ReactNode;
   /** Alinhamento do tooltip em relação ao elemento. default: left */
   align?: "left" | "right" | "center";
+  /** Posição vertical: acima ou abaixo do elemento. default: bottom */
+  side?: "top" | "bottom";
   /** Nome do group para hover (deve ser único no mesmo pai). */
   groupName?: string;
   /** Quando definido, o wrapper usa esta classe (ex.: para botão fixo). */
@@ -12,15 +14,21 @@ type Props = {
 };
 
 const tooltipBase =
-  "absolute top-full mt-1 text-[10px] text-white/70 opacity-0 pointer-events-none transition-opacity duration-150 z-50 max-w-[200px] break-words ";
+  "absolute py-2 px-3 min-w-[140px] max-w-[260px] " +
+  "text-[11px] text-white/80 leading-snug text-left whitespace-normal " +
+  "bg-black/75 backdrop-blur-sm border border-white/10 rounded-md " +
+  "opacity-0 pointer-events-none transition-opacity duration-150 z-50 " +
+  "shadow-lg break-words";
 
 export default function Tooltip({
   text,
   children,
   align = "left",
+  side = "bottom",
   groupName = "tip",
   wrapperClassName,
 }: Props) {
+  const vertical = side === "top" ? "bottom-full mb-1.5" : "top-full mt-1.5";
   const position =
     align === "right"
       ? "right-0"
@@ -35,7 +43,7 @@ export default function Tooltip({
     <Wrapper className={wrapperClass}>
       {children}
       <span
-        className={`${tooltipBase} ${position} group-hover:opacity-100`}
+        className={`${tooltipBase} ${vertical} ${position} group-hover:opacity-100`}
         aria-hidden
       >
         {text}

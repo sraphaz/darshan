@@ -5,15 +5,10 @@
  */
 
 import type { UserProfileForOracle } from "./knowledge/types";
-import { computeVedicChartSimplified } from "./knowledge/vedic";
-import { extractKeywords } from "./knowledge/keywordMatch";
-import { getRandomFormulation } from "./knowledge/formulations";
-import { getRandomClassicTextForArchetype } from "./knowledge/classicTexts";
-import { getRandomArchetypePhrase } from "./knowledge/archetypeTraits";
-import { getJyotishPhraseForChart } from "./knowledge/jyotishMeanings";
-import { getRulingNumberFromName, getRandomPhraseForNumber } from "./knowledge/numerology";
+import { buildSymbolicMap } from "./engines/buildSymbolicMap";
+import { collectAllInsights } from "./insights/collectInsights";
+import { phraseFor } from "./dictionaries";
 
-const MAX_SEED_TRIES = 30;
 /** Número de blocos: na maioria 1, às vezes 2, raramente 3. */
 function getTargetBlockCount(seed4: number): number {
   const r = seed4 % 10;
@@ -78,17 +73,13 @@ function getRequestSalt(): number {
   return (Date.now() * 1000 + Math.floor(Math.random() * 1000)) >>> 0;
 }
 
-/** Gera uma mensagem de revelação a partir do perfil e do dicionário offline. */
-export function getOfflineRevelation(
+/** Gera uma mensagem de revelação a partir do SymbolicMap e insights (coerente com o mapa). */
+export async function getOfflineRevelation(
   profile: UserProfileForOracle,
-  userMessage?: string,
+  _userMessage?: string,
   recentlyUsedPhrases?: string[]
-): string {
+): Promise<string> {
   const salt = getRequestSalt();
-  const seedBase = (getSeedFromProfile(profile) + salt) >>> 0;
-  const seed1 = (getSeedFromProfile(profile, 1) + salt * 31) >>> 0;
-  const seed2 = (getSeedFromProfile(profile, 2) + salt * 37) >>> 0;
-  const seed3 = (getSeedFromProfile(profile, 3) + salt * 41) >>> 0;
   const seed4 = (getSeedFromProfile(profile, 4) + salt * 43) >>> 0;
 
   const recentSet = new Set(
@@ -97,73 +88,35 @@ export function getOfflineRevelation(
       .filter((n) => n.length > 0)
   );
 
-  const keywords = extractKeywords(userMessage);
-  const blocks: string[] = [];
-
-  const chart = computeVedicChartSimplified({
+  const coreProfile = {
     birthDate: profile.birthDate,
     birthTime: profile.birthTime,
-  });
-  const archetypeKey = chart.archetypeKeys[0];
-  const rulingNumber = getRulingNumberFromName(profile.fullName ?? "");
+    fullName: profile.fullName,
+  };
+  const map = await buildSymbolicMap(coreProfile);
+  const insights = collectAllInsights(map).filter((i) => i.topic === "general");
+  const sorted = [...insights].sort((a, b) => b.weight - a.weight);
+
+  const candidates: string[] = [];
+  const seenNormalized = new Set<string>();
+  for (const i of sorted) {
+    const phrase = phraseFor(i.key);
+    if (!phrase) continue;
+    const n = normalizeForCompare(phrase);
+    if (!n || seenNormalized.has(n) || recentSet.has(n)) continue;
+    seenNormalized.add(n);
+    candidates.push(phrase);
+  }
+
   const firstName = profile.fullName?.trim().split(/\s+/)[0];
-  const closing = firstName && (seed4 % 3 === 0)
+  const closing = firstName && seed4 % 3 === 0
     ? `${firstName}, o que em você já sabe?`
     : "O que em você já sabe?";
+  if (closing && !recentSet.has(normalizeForCompare(closing))) candidates.push(closing);
 
-  function pickPhrase(
-    getPhrase: (seed: number) => string | null,
-    baseSeed: number
-  ): string | null {
-    let phrase = getPhrase(baseSeed);
-    for (let k = 0; k < MAX_SEED_TRIES && phrase && !canUsePhrase(phrase, blocks, recentSet); k++) {
-      phrase = getPhrase(baseSeed + k + 1);
-    }
-    return phrase && !isDuplicate(phrase, blocks) ? phrase : null;
-  }
-
-  const formulationText = pickPhrase(
-    (s) => getRandomFormulation(archetypeKey, s, keywords)?.text ?? null,
-    seedBase
-  );
-
-  const archetypePhrase = pickPhrase(
-    (s) => getRandomArchetypePhrase(archetypeKey, s, keywords),
-    seed1
-  );
-  const classicText = pickPhrase(
-    (s) => getRandomClassicTextForArchetype(archetypeKey, s, keywords)?.text ?? null,
-    seed2
-  );
-  const jyotishPhrase = pickPhrase(
-    (s) => getJyotishPhraseForChart(chart, s, keywords),
-    seed2 + 1
-  );
-  const numberPhrase = pickPhrase(
-    (s) => getRandomPhraseForNumber(rulingNumber, s, keywords),
-    seed3
-  );
-
-  const typedPhrases: { phrase: string }[] = [];
-  const seenNormalized = new Set<string>();
-
-  function addIfNew(phrase: string | null): void {
-    if (!phrase) return;
-    const n = normalizeForCompare(phrase);
-    if (!n || seenNormalized.has(n)) return;
-    seenNormalized.add(n);
-    typedPhrases.push({ phrase });
-  }
-
-  addIfNew(formulationText);
-  addIfNew(archetypePhrase);
-  addIfNew(classicText);
-  addIfNew(jyotishPhrase);
-  addIfNew(numberPhrase);
-  if (closing && !isRecentlyUsed(closing, recentSet)) addIfNew(closing);
-
-  const shuffled = shuffleBySeed(typedPhrases, seed4);
+  const shuffled = shuffleBySeed(candidates.map((phrase) => ({ phrase })), seed4);
   const targetTotal = getTargetBlockCount(seed4);
+  const blocks: string[] = [];
 
   for (const { phrase } of shuffled) {
     if (phrase && !isDuplicate(phrase, blocks) && !isRecentlyUsed(phrase, recentSet)) {

@@ -23,6 +23,12 @@
 |-----------|-----------|
 | [FLUXO_E_REGRAS.md](./FLUXO_E_REGRAS.md) | Fluxo completo da aplicação e regras (validação IA, estados, créditos). |
 | [FLUXO_ORACULO_OFFLINE.md](./FLUXO_ORACULO_OFFLINE.md) | Modo oráculo offline (sem IA) e dicionário simbólico. |
+| [INSTANT_LIGHT_ENGINE.md](./INSTANT_LIGHT_ENGINE.md) | Instant Light híbrido: Sacred Library + Personal Insight (Universal vs Personal Light). |
+| [SYMBOLIC_MAP_ENGINE.md](./SYMBOLIC_MAP_ENGINE.md) | **Motor simbólico real**: engines (Jyotish, Numerologia, HD), SymbolicMap, readings modulares, Composer, APIs POST /api/map e POST /api/reading?theme=. |
+| [ENGINE_2.0.md](./ENGINE_2.0.md) | Engine 2.0: SymbolicMap canônico → Insights → Composer → Readings modulares (love/career/year/action). |
+| [OFFLINE_ENGINE_PIPELINE.md](./OFFLINE_ENGINE_PIPELINE.md) | Pipeline offline high-end: core, engines, SymbolicMap, insights, leituras modulares. |
+| [SWISS_EPHEMERIS_INTEGRATION.md](./SWISS_EPHEMERIS_INTEGRATION.md) | Como integrar Swiss Ephemeris (opcional) em `swissProvider.ts`. |
+| [ROADMAP_PARTE_2.md](./ROADMAP_PARTE_2.md) | Roadmap Parte 2: Human Design real, Year Engine, Ayurveda. |
 | [RITUAL_REVELATION_FLOW.md](./RITUAL_REVELATION_FLOW.md) | Fluxo do ritual de revelação. |
 | [DICIONARIO_OFFLINE.md](./DICIONARIO_OFFLINE.md) | Dicionário e significados usados no modo offline. |
 
@@ -54,6 +60,7 @@
 | Documento | Descrição |
 |-----------|-----------|
 | [AUTH_CREDITS_GOOGLE_PAY.md](./AUTH_CREDITS_GOOGLE_PAY.md) | Login (código por e-mail, Google), créditos, Stripe, Mercado Pago, Google Pay. |
+| [HISTORICO_RESPOSTAS_LEITURAS.md](./HISTORICO_RESPOSTAS_LEITURAS.md) | Armazenamento e UI de histórico (respostas do orb e leituras completas). |
 | [PRECIFICACAO_CREDITOS.md](./PRECIFICACAO_CREDITOS.md) | Preços dos pacotes de créditos e taxa da plataforma. |
 | [PAYMENTS_MERCADOPAGO.md](./PAYMENTS_MERCADOPAGO.md) | Integração Mercado Pago (Checkout Pro, webhook). |
 | [FINANCE_SYSTEM.md](./FINANCE_SYSTEM.md) | Sistema financeiro (ledger, uso de IA, export CSV). |

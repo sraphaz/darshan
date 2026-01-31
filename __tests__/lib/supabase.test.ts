@@ -2,16 +2,16 @@ jest.mock("@supabase/supabase-js", () => ({
   createClient: jest.fn(() => ({ mock: true })),
 }));
 
-const originalEnv = process.env;
+const supabaseTestEnv = process.env;
 
 describe("lib/supabase", () => {
   beforeEach(() => {
     jest.resetModules();
-    process.env = { ...originalEnv };
+    process.env = { ...supabaseTestEnv };
   });
 
   afterEach(() => {
-    process.env = originalEnv;
+    process.env = supabaseTestEnv;
   });
 
   describe("isSupabaseConfigured", () => {

@@ -12,7 +12,7 @@ type Props = {
   moonPhase: string;
 };
 
-const iconClass = "w-4 h-4 shrink-0 text-white/70";
+const iconClass = "w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-white/70";
 
 function IconSun() {
   return (
@@ -39,11 +39,11 @@ function IconCrescent() {
   );
 }
 
-const itemClass = "flex items-center gap-2 text-[11px] uppercase tracking-widest text-white/60";
+const itemClass = "flex items-center gap-1.5 sm:gap-2 text-[11px] uppercase tracking-widest text-white/60 whitespace-nowrap";
 
 export default function TimeHeader({ sunrise, sunset, moonPhase }: Props) {
   return (
-    <header className="flex items-center gap-6">
+    <header className="flex items-center gap-2 sm:gap-6 flex-wrap">
       <Tooltip text={HOVER_SUNRISE} groupName="sunrise">
         <span className={itemClass}>
           <IconSun />
@@ -79,14 +79,14 @@ export function TimeHeaderSunrise({ sunrise }: { sunrise: string }) {
 
 export function TimeHeaderSunsetMoon({ sunset, moonPhase }: { sunset: string; moonPhase: string }) {
   return (
-    <div className="flex items-center gap-6">
-      <Tooltip text={HOVER_SUNSET} groupName="sunset">
+    <div className="flex items-center gap-2 sm:gap-4 justify-end">
+      <Tooltip text={HOVER_SUNSET} groupName="sunset" align="right">
         <span className={itemClass}>
           <IconMoon />
           <span>{sunset}</span>
         </span>
       </Tooltip>
-      <Tooltip text={getMoonPhaseHover(moonPhase)} groupName="moon">
+      <Tooltip text={getMoonPhaseHover(moonPhase)} groupName="moon" align="right">
         <span className={`${itemClass} normal-case`}>
           <IconCrescent />
           <span className="tracking-normal">{moonPhase}</span>

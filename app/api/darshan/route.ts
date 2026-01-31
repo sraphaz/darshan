@@ -4,7 +4,7 @@ import { getConnector } from "@/lib/ai";
 import { loadMasterPrompt } from "@/lib/darshanPrompt";
 import { getConfig } from "@/lib/configStore";
 import { PHASE_NAMES } from "@/lib/darshan";
-import { getOfflineRevelation } from "@/lib/oracleOffline";
+import { composeInstantLight } from "@/lib/sacredRemedy";
 import { getSessionFromCookie } from "@/lib/auth";
 import {
   getCreditsFromCookie,
@@ -22,6 +22,8 @@ import {
 import { logger } from "@/lib/logger";
 import { checkAndRecordRateLimit, checkDailyLimit, recordDailyRequest } from "@/lib/usageLimits";
 import { isSupabaseConfigured } from "@/lib/supabase";
+import { saveRevelation } from "@/lib/historyStorage";
+import { getRecentSacredIds, getRecentStateKeys, recordInstantLight } from "@/lib/history/historyAdapter";
 
 export const dynamic = "force-dynamic";
 
@@ -107,6 +109,9 @@ export async function POST(req: Request) {
         birthTime: typeof body.userProfile.birthTime === "string" ? body.userProfile.birthTime : undefined,
       }
     : {};
+  const recentSacredIds = Array.isArray(body.recentSacredIds)
+    ? body.recentSacredIds.filter((id: unknown) => typeof id === "string")
+    : [];
 
   const config = getConfig();
   const mockMessages =
@@ -116,17 +121,46 @@ export async function POST(req: Request) {
         : [...MOCK_MESSAGES, ...config.mockMessagesOverride]
     : MOCK_MESSAGES;
 
-  // IA desativada (mock): 100% offline — NÃO chama getConnector() nem APIs externas.
+  // IA desativada (mock): Sacred Remedy Engine (único composer).
+  // Cooldown autônomo: se usuário logado, buscar recentSacredIds/recentStateKeys no servidor e registrar uso.
   if (useMock) {
-    const lastRevelations = history.slice(-5).map((t) => t.darshanMessage);
-    const phrases = lastRevelations.flatMap((msg) =>
-      msg.split(/\n\n/).map((s) => s.trim()).filter(Boolean)
-    );
-    const recentlyUsedPhrases = phrases.flatMap((p) =>
-      /o que em você já sabe/i.test(p) ? [p, "O que em você já sabe?"] : [p]
-    );
-    const message = getOfflineRevelation(userProfile, userMessage, recentlyUsedPhrases);
-    return NextResponse.json({ message: message || getMockMessage(mockMessages), phase: 1 } satisfies { message: string; phase: number });
+    const cookieStore = await cookies();
+    const session = getSessionFromCookie(cookieStore.toString());
+    let recentSacredIdsRes = recentSacredIds;
+    let recentStateKeysRes = Array.isArray(body.recentStateKeys)
+      ? body.recentStateKeys.filter((k: unknown) => typeof k === "string")
+      : [];
+    if (session?.email) {
+      const [sacredIds, stateKeys] = await Promise.all([
+        getRecentSacredIds(session.email, 7),
+        getRecentStateKeys(session.email, 7),
+      ]);
+      if (sacredIds.length) recentSacredIdsRes = sacredIds;
+      if (stateKeys.length) recentStateKeysRes = stateKeys;
+    }
+    const res = composeInstantLight(userProfile, {
+      recentSacredIds: recentSacredIdsRes,
+      recentStateKeys: recentStateKeysRes,
+    });
+    if (session?.email && res.sacred?.id) {
+      recordInstantLight(session.email, res).catch(() => {});
+    }
+    const parts: string[] = [];
+    if (res.sacredText?.trim()) parts.push(res.sacredText.trim());
+    if (res.insight?.trim()) parts.push(res.insight.trim());
+    const practiceStr = Array.isArray(res.practice?.steps) ? res.practice.steps.join("; ") : (res.practice as unknown as { title?: string })?.title ?? "";
+    if (practiceStr.trim()) parts.push(practiceStr.trim());
+    const foodStr = Array.isArray(res.food?.do) ? res.food.do.join(", ") : "";
+    if (foodStr.trim()) parts.push(foodStr.trim());
+    const questionStr = res.question?.text?.trim() ?? "";
+    if (questionStr) parts.push(questionStr);
+    const message = parts.length > 0 ? parts.join("\n\n") : getMockMessage(mockMessages);
+    return NextResponse.json({
+      message,
+      phase: 1,
+      sacredId: res.sacredId,
+      stateKey: res.stateKey,
+    } satisfies { message: string; phase: number; sacredId?: string; stateKey?: string });
   }
 
   const cookieStore = await cookies();
@@ -273,8 +307,15 @@ export async function POST(req: Request) {
     if (!isSupabaseConfigured()) {
       recordDailyRequest(session.email);
     }
+    const finalMessage = message || "Respire. O que em você já sabe?";
+    if (revelation) {
+      await saveRevelation(session.email, {
+        questionText: userMessage || null,
+        responseText: finalMessage,
+      });
+    }
     const res = NextResponse.json({
-      message: message || "Respire. O que em você já sabe?",
+      message: finalMessage,
       phase: revelation ? 1 : (parsed.phase ?? phase),
       creditsUsed: creditsPerRevelation,
       balance: debitResult.newBalance,

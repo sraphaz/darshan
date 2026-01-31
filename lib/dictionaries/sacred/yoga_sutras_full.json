@@ -1,0 +1,2872 @@
+[
+  {
+    "id": "YS.1.1",
+    "text": "Yoga é a cessação das flutuações da mente.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.2",
+    "text": "Quando a mente está em silêncio, o observador repousa em sua própria natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.3",
+    "text": "Então o observador repousa em sua própria natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.4",
+    "text": "No resto do tempo, o observador se identifica com as flutuações.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.5",
+    "text": "As flutuações são cinco: dolorosas e não dolorosas.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.6",
+    "text": "São: conhecimento correto, erro, imaginação, sono e memória.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.7",
+    "text": "O conhecimento correto é direto, inferência ou testemunho.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.8",
+    "text": "O erro é conhecimento falso, sem base no real.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "manda"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.9",
+    "text": "A imaginação segue a palavra, sem objeto real.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.10",
+    "text": "O sono é a flutuação sustentada pela ausência.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "tamas"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.11",
+    "text": "A memória é a retenção do experimentado.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.12",
+    "text": "A prática e o desapego são o par que estabiliza a mente.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "tikshna"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.13",
+    "text": "O esforço constante para estabilizar a mente é a prática.",
+    "kleshaTargets": [
+      "raga",
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.14",
+    "text": "A prática torna-se firme quando mantida por muito tempo, sem interrupção, com devoção.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "manda"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.15",
+    "text": "O desapego é o domínio de quem não deseja nem evita o que vê.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.16",
+    "text": "O ápice do desapego é quando a consciência reconhece sua própria natureza luminosa.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.17",
+    "text": "A consciência contemplativa acompanha raciocínio, reflexão, alegria e senso de ser.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.18",
+    "text": "A outra é o resíduo de prática; apenas sementes em repouso.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.19",
+    "text": "Para alguns, o estado sem nascimento vem da natureza; para outros, da entrega ao Absoluto.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.20",
+    "text": "Para os outros, a prática é fé, energia, memória, absorção e sabedoria.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "manda"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.21",
+    "text": "Para os intensos, o resultado é próximo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "tikshna"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.22",
+    "text": "Há diferença: suave, moderado ou intenso.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.23",
+    "text": "Ou pela entrega ao Absoluto.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.24",
+    "text": "O Absoluto é um ser especial, intacto pelo sofrimento, ato ou fruto.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.25",
+    "text": "Nele está a semente da onisciência.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.26",
+    "text": "Ele é o mestre dos antigos, não limitado pelo tempo.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.27",
+    "text": "Sua expressão é o som sagrado.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.28",
+    "text": "A repetição e a contemplação desse som conduzem.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.29",
+    "text": "Daí surge o voltar-se para dentro e o desaparecimento dos obstáculos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.30",
+    "text": "Os obstáculos são: doença, apatia, dúvida, negligência, preguiça, apego ao prazer, erro, não-estabilidade.",
+    "kleshaTargets": [
+      "avidya",
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "manda"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.31",
+    "text": "Sofrimento, tristeza, tremor do corpo e respiração irregular acompanham.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "ruksha"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.32",
+    "text": "Para removê-los, a prática sobre um único princípio.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.33",
+    "text": "Amizade, compaixão, alegria e equanimidade em relação ao que é agradável, doloroso, meritório ou não — acalmam a mente.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "chala",
+      "ruksha",
+      "tikshna",
+      "ushna",
+      "khara"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.34",
+    "text": "Ou pela expiração e retenção do sopro.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.35",
+    "text": "A atividade sensorial que fixa a mente surge e estabiliza.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.36",
+    "text": "Ou a luz interior, livre de tristeza.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.37",
+    "text": "Ou a mente que abandonou o apego.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.38",
+    "text": "Ou o conhecimento que surge no sono e no sonho.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.39",
+    "text": "Ou pela contemplação do que se deseja.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.40",
+    "text": "O domínio vai do infinitamente pequeno ao infinitamente grande.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.1",
+    "text": "A prática constante e o desapego são os meios.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.2",
+    "text": "Eles reduzem as impurezas e permitem a luz do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.3",
+    "text": "As impurezas são: ignorância, ego, apego, aversão e medo da morte.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita",
+      "raga",
+      "dvesha",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.4",
+    "text": "A ignorância é o campo dos outros; eles podem estar adormecidos, enfraquecidos, interrompidos ou ativos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "manda",
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.5",
+    "text": "A ignorância é tomar o impermanente pelo permanente, o impuro pelo puro, a dor pelo prazer, o não-eu pelo eu.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.6",
+    "text": "O ego é a identificação do que vê com o instrumento do ver; reconhecer isso dissolve o orgulho.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "kathina"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.7",
+    "text": "O apego segue o prazer; o desapego nasce do discernimento.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.8",
+    "text": "A aversão segue a dor.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna",
+      "khara"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.9",
+    "text": "O medo da morte habita mesmo no sábio; é inerente à natureza. Observá-lo enfraquece seu poder.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sandra"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.10",
+    "text": "Em estado sutil, eles se dissolvem pela volta à origem.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.11",
+    "text": "Em estado ativo, eles se dissolvem pela meditação.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "chala",
+      "tikshna"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.12",
+    "text": "O reservatório do karma tem a raiz nas impurezas e é experimentado no nascimento, na vida e no fruto.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.13",
+    "text": "Enquanto a raiz existir, ele amadurece em nascimento, vida e experiência.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.14",
+    "text": "Eles têm como fruto o prazer ou a dor, conforme a causa: virtude ou vício.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.15",
+    "text": "Para quem discerne, tudo é sofrimento por causa da mudança, da ansiedade e do conflito dos gunas.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "chala",
+      "tikshna"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.16",
+    "text": "O sofrimento que ainda não veio pode ser evitado.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.17",
+    "text": "A causa do evitável é a união do que vê com o visto.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.18",
+    "text": "O visto tem a natureza da luz, da atividade e da inércia; é feito de elemento e órgão; existe para experiência e liberação.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.19",
+    "text": "Os estágios dos gunas são o específico, o inespecífico, o diferenciado e o indiferenciado.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.20",
+    "text": "O que vê é apenas ver; puro, mas vê as imagens da mente.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.21",
+    "text": "O visto existe apenas para ele.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.22",
+    "text": "Para quem alcançou o fim, o visto desaparece; para outros permanece por ser comum a todos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.23",
+    "text": "A união é para conhecer a natureza e o poder de ambos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.24",
+    "text": "Sua causa é a ignorância.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "manda"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.25",
+    "text": "Com o desaparecimento da ignorância, a união desaparece; isso é liberação para o que vê.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.26",
+    "text": "O discernimento ininterrupto é o meio de liberação.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.27",
+    "text": "Para ele surge a sabedoria em sete estágios.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.28",
+    "text": "Pela prática dos membros do yoga, as impurezas se reduzem; surge a luz do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.29",
+    "text": "Os membros são: contenção, disciplina, postura, controle do sopro, retração dos sentidos, concentração, meditação e absorção.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.30",
+    "text": "A contenção é não violência, verdade, não roubo, continência e não cobiça.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.31",
+    "text": "Esses são universais, não limitados por condição, lugar, tempo ou voto.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.32",
+    "text": "A disciplina é pureza, contentamento, austeridade, autoestudo e entrega ao Absoluto.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.33",
+    "text": "Quando perturbado por pensamentos contrários, cultivar os contrários.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.34",
+    "text": "Pensamentos contrários são violência etc., feitos, provocados ou aprovados por cobiça, raiva ou ilusão.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.35",
+    "text": "Na presença de quem está firme na não-violência, a hostilidade cessa.",
+    "kleshaTargets": [
+      "dvesha",
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.36",
+    "text": "Para quem está firme na verdade, ação e fruto dependem dele.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.37",
+    "text": "Para quem está firme no não roubo, as joias vêm.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.38",
+    "text": "Para quem está firme na continência, vigor surge.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.39",
+    "text": "Para quem está firme no não cobiçar, surge o conhecimento do nascimento.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.40",
+    "text": "Pela pureza, surge o desgosto pelo próprio corpo e a não união com outros.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.41",
+    "text": "E também pureza da mente, contentamento, concentração, domínio dos sentidos e aptidão para ver o Ser.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.42",
+    "text": "Do contentamento surge felicidade suprema.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.43",
+    "text": "Pela austeridade, as impurezas do corpo se reduzem; surgem poderes dos sentidos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "manda"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.44",
+    "text": "Pelo autoestudo, união com a divindade desejada.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.45",
+    "text": "Pela entrega ao Absoluto, a absorção.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.46",
+    "text": "A postura é estável e confortável.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala",
+      "sthira"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.47",
+    "text": "Pelo relaxamento do esforço e pela contemplação do infinito.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.48",
+    "text": "Daí não ser perturbado pelos pares de opostos.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.49",
+    "text": "A partir disso, o controle da inspiração e da expiração.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.50",
+    "text": "O sopro é externo, interno ou suspenso; regulado por lugar, tempo e número; longo ou sutil.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.51",
+    "text": "O quarto transcende o externo e o interno.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.52",
+    "text": "Daí a dissipação do véu que cobre a luz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.53",
+    "text": "E a aptidão da mente para a concentração.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala",
+      "sthira"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.54",
+    "text": "A retração dos sentidos é como a tartaruga que recolhe os membros.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "snigdha"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.2.55",
+    "text": "Daí surge o domínio supremo dos sentidos.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.1",
+    "text": "A concentração é a fixação da mente em um único ponto.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala",
+      "sthira"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.2",
+    "text": "A meditação é o fluxo ininterrupto de conhecimento sobre esse ponto.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.3",
+    "text": "Quando apenas o objeto brilha, como se a mente estivesse vazia de si — isso é absorção.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.4",
+    "text": "Os três juntos formam a restrição.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.5",
+    "text": "Por seu domínio surge a luz do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.6",
+    "text": "Sua aplicação é por estágios.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "manda",
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.7",
+    "text": "Os três são mais internos que os anteriores.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.8",
+    "text": "Mas mesmo eles são externos em relação ao estado sem semente.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.9",
+    "text": "O momento de dissolução e o de surgimento dominam a transformação.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.10",
+    "text": "O fluxo tranquilo dessa restrição remove o véu.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga",
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.41",
+    "text": "Quando a mente se torna como cristal, há união do conhecedor, do conhecido e do ato de conhecer.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "mente",
+      "concentração"
+    ]
+  },
+  {
+    "id": "YS.1.42",
+    "text": "A absorção com reflexão é a que mistura palavra, significado e conhecimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "meditação"
+    ]
+  },
+  {
+    "id": "YS.1.43",
+    "text": "Quando a memória é purificada, a absorção sem reflexão surge; o objeto brilha sozinho.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "mente",
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.44",
+    "text": "O mesmo se aplica à absorção com e sem semente.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.1.45",
+    "text": "O estado sem semente tem como objeto o indiferenciado.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "liberação"
+    ]
+  },
+  {
+    "id": "YS.1.46",
+    "text": "Essas são as absorções com semente.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.1.47",
+    "text": "Na clareza da absorção sem semente surge a paz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.1.48",
+    "text": "O conhecimento que nasce ali é portador da verdade.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "discernimento"
+    ]
+  },
+  {
+    "id": "YS.1.49",
+    "text": "Diferente do que vem de testemunho ou inferência, pois tem por objeto o particular.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "conhecimento"
+    ]
+  },
+  {
+    "id": "YS.1.50",
+    "text": "A impressão nascida dele obstrui as outras impressões.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "mente"
+    ]
+  },
+  {
+    "id": "YS.1.51",
+    "text": "Com a obstrução também dessa, surge a absorção sem semente.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "liberação"
+    ]
+  },
+  {
+    "id": "YS.3.11",
+    "text": "O desaparecimento de toda dispersão e o surgimento da concentração única é o estado de samādhi.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala",
+      "sthira"
+    ],
+    "themes": [
+      "concentração"
+    ]
+  },
+  {
+    "id": "YS.3.12",
+    "text": "Quando o passado e o presente são iguais, surge o fluxo único da mente.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "presença"
+    ]
+  },
+  {
+    "id": "YS.3.13",
+    "text": "Com isso se explicam a transformação das formas, do tempo e do estado.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "transformação"
+    ]
+  },
+  {
+    "id": "YS.3.14",
+    "text": "O substrato é o que possui as qualidades latentes, manifestas ou não manifestas.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "natureza"
+    ]
+  },
+  {
+    "id": "YS.3.15",
+    "text": "A sucessão das transformações é a causa da sequência.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "tempo"
+    ]
+  },
+  {
+    "id": "YS.3.16",
+    "text": "Pela restrição sobre as três transformações surge o conhecimento do passado e do futuro.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "conhecimento"
+    ]
+  },
+  {
+    "id": "YS.3.17",
+    "text": "A palavra, o objeto e a ideia se confundem; pela restrição sobre eles surge o conhecimento do som de todos os seres.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "escuta"
+    ]
+  },
+  {
+    "id": "YS.3.18",
+    "text": "Pela percepção direta das impressões surge o conhecimento das vidas anteriores.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "memória"
+    ]
+  },
+  {
+    "id": "YS.3.19",
+    "text": "Pela restrição sobre as marcas mentais surge o conhecimento das mentes de outros.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "empatia"
+    ]
+  },
+  {
+    "id": "YS.3.20",
+    "text": "Não sobre o suporte, pois não é objeto dessa restrição.",
+    "kleshaTargets": [],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.3.21",
+    "text": "Pela restrição sobre a forma do corpo, cortando a luz e o poder de ser visto, surge o desaparecimento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "sukshma"
+    ],
+    "themes": [
+      "corpo"
+    ]
+  },
+  {
+    "id": "YS.3.22",
+    "text": "O karma é rápido ou lento; pela restrição sobre ele surge o conhecimento da morte.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "tempo"
+    ]
+  },
+  {
+    "id": "YS.3.23",
+    "text": "Pela restrição sobre a amizade e outras forças surge o poder delas.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "snigdha"
+    ],
+    "themes": [
+      "relação"
+    ]
+  },
+  {
+    "id": "YS.3.24",
+    "text": "Pela restrição sobre a força do elefante e outras surge essa força.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "sthira"
+    ],
+    "themes": [
+      "poder"
+    ]
+  },
+  {
+    "id": "YS.3.25",
+    "text": "O conhecimento do sutil, do oculto e do distante surge pela luz da percepção.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "conhecimento"
+    ]
+  },
+  {
+    "id": "YS.3.26",
+    "text": "Pela restrição sobre o sol surge o conhecimento do cosmos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "cosmos"
+    ]
+  },
+  {
+    "id": "YS.3.27",
+    "text": "Sobre a lua surge o conhecimento da disposição das estrelas.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "tempo"
+    ]
+  },
+  {
+    "id": "YS.3.28",
+    "text": "Sobre a Estrela Polar surge o conhecimento do movimento das estrelas.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "orientação"
+    ]
+  },
+  {
+    "id": "YS.3.29",
+    "text": "Sobre o umbigo surge o conhecimento da constituição do corpo.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "corpo"
+    ]
+  },
+  {
+    "id": "YS.3.30",
+    "text": "Sobre a garganta surge a cessação da fome e da sede.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha"
+    ],
+    "themes": [
+      "corpo"
+    ]
+  },
+  {
+    "id": "YS.3.31",
+    "text": "Sobre o tubo curvo surge a estabilidade.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "sthira"
+    ],
+    "themes": [
+      "postura"
+    ]
+  },
+  {
+    "id": "YS.3.32",
+    "text": "Sobre a luz da coroa surge a visão dos Siddhas.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "luz"
+    ]
+  },
+  {
+    "id": "YS.3.33",
+    "text": "Ou por intuição surge todo conhecimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "conhecimento"
+    ]
+  },
+  {
+    "id": "YS.3.34",
+    "text": "Sobre o coração surge o conhecimento da mente.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "mente"
+    ]
+  },
+  {
+    "id": "YS.3.35",
+    "text": "A experiência e o Ser não se distinguem; a restrição sobre o que existe por si surge conhecimento do Ser.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "ser"
+    ]
+  },
+  {
+    "id": "YS.3.36",
+    "text": "Daí surgem intuição, audição, tato, visão, paladar e olfato.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "sentidos"
+    ]
+  },
+  {
+    "id": "YS.3.37",
+    "text": "São obstáculos à absorção; poderes na vida dispersa.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.3.38",
+    "text": "Pelo relaxamento do vínculo e pelo conhecimento do fluxo surge a entrada em outro corpo.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma"
+    ],
+    "themes": [
+      "transformação"
+    ]
+  },
+  {
+    "id": "YS.3.39",
+    "text": "Pelo domínio do sopro ascendente surge a não aderência à água, ao lodo e às espinas.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "laghu"
+    ],
+    "themes": [
+      "pranayama"
+    ]
+  },
+  {
+    "id": "YS.3.40",
+    "text": "Pelo domínio do sopro mediano surge o brilho.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "luz"
+    ]
+  },
+  {
+    "id": "YS.3.41",
+    "text": "Pela restrição sobre a relação ouvido-espaço surge o ouvido divino.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "escuta"
+    ]
+  },
+  {
+    "id": "YS.3.42",
+    "text": "Pela restrição sobre a relação corpo-espaço e pela leveza do algodão surge a passagem pelo espaço.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "laghu"
+    ],
+    "themes": [
+      "corpo"
+    ]
+  },
+  {
+    "id": "YS.3.43",
+    "text": "A atividade fora do corpo, não iluminada pela mente, é o véu grande; daí o desaparecimento do véu sobre a luz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "mente"
+    ]
+  },
+  {
+    "id": "YS.3.44",
+    "text": "Pela restrição sobre o grosseiro, a forma, o sutil, a conexão e o propósito surge o domínio dos elementos.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "elementos"
+    ]
+  },
+  {
+    "id": "YS.3.45",
+    "text": "Daí surgem a minúcia, a perfeição do corpo e a não obstrução das funções.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "corpo"
+    ]
+  },
+  {
+    "id": "YS.3.46",
+    "text": "Perfeição do corpo é beleza, graça, força e firmeza de diamante.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "sthira"
+    ],
+    "themes": [
+      "corpo"
+    ]
+  },
+  {
+    "id": "YS.3.47",
+    "text": "Pela restrição sobre a percepção, a natureza essencial, o eu e a conexão surge o domínio dos órgãos.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "sentidos"
+    ]
+  },
+  {
+    "id": "YS.3.48",
+    "text": "Daí surgem velocidade como a da mente, ação sem órgãos e domínio da matéria de origem.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "ação"
+    ]
+  },
+  {
+    "id": "YS.3.49",
+    "text": "Só para quem discerne a distinção entre sattva e Ser surge a soberania sobre todos os estados e sobre todo conhecimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "discernimento"
+    ]
+  },
+  {
+    "id": "YS.3.50",
+    "text": "Pelo desapego até a isso surge a semente do defeito destruída; isso é kaivalya.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação"
+    ]
+  },
+  {
+    "id": "YS.3.51",
+    "text": "Não haver atração pelos poderes quando convidados pelos guardiões dos mundos seria apego; seria o renascimento.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha"
+    ],
+    "themes": [
+      "desapego"
+    ]
+  },
+  {
+    "id": "YS.3.52",
+    "text": "Pela restrição sobre o momento e sua sucessão surge o conhecimento nascido do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "tempo"
+    ]
+  },
+  {
+    "id": "YS.3.53",
+    "text": "Daí surge o discernimento do que é igual em espécie, caráter e lugar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "conhecimento"
+    ]
+  },
+  {
+    "id": "YS.3.54",
+    "text": "O conhecimento nascido do discernimento é portador de tudo, em todo tempo, sem sucessão.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "conhecimento"
+    ]
+  },
+  {
+    "id": "YS.3.55",
+    "text": "Quando a pureza de sattva e do Ser é igual, surge kaivalya.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação"
+    ]
+  },
+  {
+    "id": "YS.3.56",
+    "text": "Kaivalya é estabelecido quando os três gunas esgotaram seu propósito para o que vê.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação"
+    ]
+  },
+  {
+    "id": "YS.4.1",
+    "text": "Os poderes nascem do nascimento, de ervas, de mantra, de austeridade ou de absorção.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.2",
+    "text": "A transformação em outra espécie é pelo preenchimento da natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.3",
+    "text": "O obstáculo não é causa; ele apenas remove o obstáculo, como o agricultor.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.4",
+    "text": "Só a mente criada é o nascimento dos mundos criados.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.5",
+    "text": "Mentes diversas têm um único objeto de concentração.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.6",
+    "text": "A que tem meditação como semente é a que não nasce de outra.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.7",
+    "text": "A ação do yogi não é branca nem negra; a dos outros é de três tipos.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.8",
+    "text": "Delas surgem apenas as impressões para o fruto a ser experimentado.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.9",
+    "text": "Memória e impressão têm a mesma forma; mesmo com separação de nascimento, lugar e tempo há continuidade.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.10",
+    "text": "Não têm começo; o desejo de permanência é inato.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.11",
+    "text": "Sendo sustentadas por causa, efeito, suporte e objeto, elas desaparecem quando elas desaparecem.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.12",
+    "text": "O passado e o futuro existem em sua própria natureza; a diferença está nos caminhos da característica.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.13",
+    "text": "Elas são manifestas ou sutis; têm a natureza dos gunas.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.14",
+    "text": "A realidade do objeto está na unicidade da transformação.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.15",
+    "text": "O objeto sendo o mesmo, a diferença das mentes é a diferença dos dois.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.16",
+    "text": "E o objeto não depende de uma única mente; o que aconteceria quando não fosse percebido?",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.17",
+    "text": "O objeto é conhecido ou não pela mente que ele tinge.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.18",
+    "text": "Sempre conhecida a mente que governa; ela não é tingida, pois é estável.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.19",
+    "text": "Ela não se vê a si mesma.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.20",
+    "text": "Não há dupla apresentação ao mesmo tempo.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.21",
+    "text": "Se a outra fosse vista por outra mente, haveria regressão ao infinito e confusão de memória.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.22",
+    "text": "Quando a natureza da consciência assume a forma, surge a consciência de si.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.23",
+    "text": "A mente, tingida pelo que vê e pelo que vê, percebe todos os objetos.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.24",
+    "text": "Ela existe para outro, pois é composta de inúmeras impressões.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.25",
+    "text": "Para quem vê a distinção, cessa a reflexão sobre a própria natureza.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.26",
+    "text": "Então a mente inclina para o discernimento e caminha para kaivalya.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.27",
+    "text": "No meio surgem as impressões da distinção por causa das falhas.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.28",
+    "text": "A remoção delas é como a dos kleshas.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.29",
+    "text": "Quem, mesmo no fruto do discernimento, permanece em desapego total, surge o samādhi da nuvem de dharma.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.30",
+    "text": " Daí cessa o sofrimento e a ação.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.31",
+    "text": "Então o conhecimento livre de impurezas e de cobertura é infinito; o conhecível é pouco.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.32",
+    "text": " Com isso os gunas esgotaram sua sequência de fins; a transformação cessa.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.33",
+    "text": "A sequência é o momento; percebido no último instante.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  },
+  {
+    "id": "YS.4.34",
+    "text": "Kaivalya é a reversão dos gunas, sem propósito para o que vê; o estabelecimento do poder do que vê em sua própria natureza.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "liberação",
+      "mente",
+      "yoga"
+    ]
+  }
+]

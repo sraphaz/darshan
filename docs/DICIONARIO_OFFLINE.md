@@ -42,7 +42,7 @@ lib/
 
 ## Uso na API
 
-Quando a requisição vem com `mock: true`, a rota `/api/darshan` usa `getOfflineRevelation(perfil, pergunta)` em vez da IA. A resposta tem o mesmo formato (`message`, `phase`), então o frontend não precisa mudar.
+Quando a requisição vem com `mock: true`, a rota `/api/darshan` usa o **Instant Light Engine** (`composeInstantLight(perfil, { recentSacredIds })`) em vez da IA: texto sagrado + (se houver perfil) insight e prática do mapa + pergunta. A resposta tem o mesmo formato (`message`, `phase`) e opcionalmente `sacredId` para o cliente enviar em `recentSacredIds` e reduzir repetição. Ver [INSTANT_LIGHT_ENGINE.md](./INSTANT_LIGHT_ENGINE.md).
 
 ## Limitações atuais
 
