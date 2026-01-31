@@ -268,7 +268,7 @@ function Home() {
       setMockMode(true);
       saveMockMode(true);
     }
-  }, [credits, mockMode]);
+  }, [credits, creditsPerRevelation, mockMode]);
 
   function toggleMockMode() {
     setMockMode((prev) => {

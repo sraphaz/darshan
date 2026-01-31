@@ -98,7 +98,7 @@ export default function ConfigPage() {
     try {
       const res = await fetch("/api/config", {
         method: "PUT",
-        headers: { "Content-Type": "application/json", ...headers() },
+        headers: { "Content-Type": "application/json", "X-Config-Key": configKey },
         body: JSON.stringify({
           masterPromptOverride: config.masterPromptOverride ?? null,
           masterPromptMode: config.masterPromptMode ?? "complement",
