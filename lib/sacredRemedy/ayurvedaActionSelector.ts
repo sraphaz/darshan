@@ -26,8 +26,8 @@ export const QUALITY_TO_PRACTICE: Record<string, string> = {
   sandra: "fluir: especiarias, movimento, fluido",
   drava: "estabilizar: raiz assada, rotina",
   sara: "estabilizar: quente e oleoso, respiração alternada",
-  shlakshna: "—",
-  sthula: "—",
+  shlakshna: "ancorar: textura (caminhar descalço, toque em superfícies), firmeza no corpo",
+  sthula: "refinar: respiração sutil, escuta interna, leveza na comida",
 };
 
 /** Qualidade em excesso → sugestão alimentar simples (antídoto) */
@@ -51,8 +51,8 @@ export const QUALITY_TO_FOOD: Record<string, string> = {
   sandra: "especiarias, fluido",
   drava: "raiz assada, estável",
   sara: "quente e oleoso",
-  shlakshna: "—",
-  sthula: "—",
+  shlakshna: "alimento com textura (raiz, fibra), quente e estável",
+  sthula: "leve, digestivo, especiarias suaves",
 };
 
 /**

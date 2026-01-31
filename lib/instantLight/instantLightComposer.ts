@@ -1,6 +1,7 @@
 /**
  * Instant Light — re-export do Sacred Remedy Engine (único composer).
- * Mantido para compatibilidade; novo código deve usar @/lib/sacredRemedy.
+ *
+ * @deprecated Use @/lib/sacredRemedy. Wrapper de compatibilidade; pipeline oficial é sacredRemedy.
  */
 
 import { composeInstantLight as composeSacredRemedy } from "@/lib/sacredRemedy";

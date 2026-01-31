@@ -1,8 +1,8 @@
 /**
- * Instant Light Engine híbrido — Sacred Library + Personal Insight (quando houver mapa).
- * Universal Light (sem perfil) = texto sagrado + prática + pergunta.
- * Personal Light (com perfil) = texto sagrado + insight do mapa + prática do mapa + pergunta.
+ * Instant Light — re-export do Sacred Remedy Engine (único composer).
+ *
+ * @deprecated Use @/lib/sacredRemedy. Este módulo é apenas wrapper de compatibilidade;
+ * todos os endpoints (darshan mock, instant-light) já usam sacredRemedy.
  */
-
 export { composeInstantLight } from "./instantLightComposer";
 export type { InstantLightProfile, ComposeInstantLightOptions } from "./instantLightComposer";
