@@ -10,6 +10,8 @@ import {
   getRulingNumberFromName,
   getLifePathNumber,
   getExpressionNumber,
+  getSoulUrgeNumber,
+  getPersonalityNumber,
 } from "@/lib/knowledge/numerology";
 import type { SymbolicMap } from "./types";
 
@@ -21,6 +23,8 @@ export function buildSymbolicMap(profile: UserProfileForOracle): SymbolicMap {
   const rulingNumber = getRulingNumberFromName(profile.fullName ?? "");
   const lifePathNumber = getLifePathNumber(profile.birthDate ?? "");
   const expressionNumber = getExpressionNumber(profile.fullName ?? "");
+  const soulUrgeNumber = getSoulUrgeNumber(profile.fullName ?? "");
+  const personalityNumber = getPersonalityNumber(profile.fullName ?? "");
 
   const archetypeKeys = chart.archetypeKeys ?? ["dissolvente"];
   const primary = archetypeKeys[0] ?? "dissolvente";
@@ -35,6 +39,8 @@ export function buildSymbolicMap(profile: UserProfileForOracle): SymbolicMap {
       rulingNumber: rulingNumber as number,
       lifePathNumber: lifePathNumber as number,
       expressionNumber: expressionNumber as number,
+      soulUrgeNumber: soulUrgeNumber as number,
+      personalityNumber: personalityNumber as number,
     },
     archetypes: {
       primary,

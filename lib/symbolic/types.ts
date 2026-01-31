@@ -17,6 +17,10 @@ export type SymbolicMap = {
     lifePathNumber?: number;
     /** Expression/Destiny — nome completo (1–9, 11, 22). */
     expressionNumber?: number;
+    /** Soul Urge — vogais do nome (desejo interior). */
+    soulUrgeNumber?: number;
+    /** Personality — consoantes do nome (máscara social). */
+    personalityNumber?: number;
   };
   /** Arquétipos derivados do chart (primary = primeiro; keys = lista completa). */
   archetypes: {

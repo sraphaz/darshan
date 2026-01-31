@@ -4,7 +4,7 @@ import { getConnector } from "@/lib/ai";
 import { loadMasterPrompt } from "@/lib/darshanPrompt";
 import { getConfig } from "@/lib/configStore";
 import { PHASE_NAMES } from "@/lib/darshan";
-import { composeInstantLight } from "@/lib/instantLight/instantLightComposer";
+import { composeInstantLight } from "@/lib/sacredRemedy";
 import { getSessionFromCookie } from "@/lib/auth";
 import {
   getCreditsFromCookie,
@@ -22,7 +22,7 @@ import {
 import { logger } from "@/lib/logger";
 import { checkAndRecordRateLimit, checkDailyLimit, recordDailyRequest } from "@/lib/usageLimits";
 import { isSupabaseConfigured } from "@/lib/supabase";
-import { saveRevelation } from "@/lib/historyStorage";
+import { saveRevelation, getRecentInstantLightIds, recordInstantLightUse } from "@/lib/historyStorage";
 
 export const dynamic = "force-dynamic";
 
@@ -120,17 +120,42 @@ export async function POST(req: Request) {
         : [...MOCK_MESSAGES, ...config.mockMessagesOverride]
     : MOCK_MESSAGES;
 
-  // IA desativada (mock): Instant Light híbrido — Sacred Library + Personal Insight (se houver mapa).
-  // Sem perfil → Universal Light (texto sagrado + prática + pergunta). Com perfil → Personal Light (+ insight e prática do mapa).
+  // IA desativada (mock): Sacred Remedy Engine (único composer).
+  // Cooldown autônomo: se usuário logado, buscar recentSacredIds/recentStateKeys no servidor e registrar uso.
   if (useMock) {
-    const { message, sacredId } = composeInstantLight(userProfile, {
-      recentSacredIds,
+    const cookieStore = await cookies();
+    const session = getSessionFromCookie(cookieStore.toString());
+    let recentSacredIdsRes = recentSacredIds;
+    let recentStateKeysRes = Array.isArray(body.recentStateKeys)
+      ? body.recentStateKeys.filter((k: unknown) => typeof k === "string")
+      : [];
+    if (session?.email) {
+      const recent = await getRecentInstantLightIds(session.email, 20);
+      if (recent.sacredIds.length || recent.stateKeys.length) {
+        recentSacredIdsRes = recent.sacredIds.length ? recent.sacredIds : recentSacredIdsRes;
+        recentStateKeysRes = recent.stateKeys.length ? recent.stateKeys : recentStateKeysRes;
+      }
+    }
+    const res = composeInstantLight(userProfile, {
+      recentSacredIds: recentSacredIdsRes,
+      recentStateKeys: recentStateKeysRes,
     });
+    if (session?.email && res.sacredId) {
+      recordInstantLightUse(session.email, { sacredId: res.sacredId, stateKey: res.stateKey ?? undefined }).catch(() => {});
+    }
+    const parts: string[] = [];
+    if (res.sacredText?.trim()) parts.push(res.sacredText.trim());
+    if (res.insight?.trim()) parts.push(res.insight.trim());
+    if (res.practice?.trim()) parts.push(res.practice.trim());
+    if (res.food?.trim()) parts.push(res.food.trim());
+    if (res.question?.trim()) parts.push(res.question.trim());
+    const message = parts.length > 0 ? parts.join("\n\n") : getMockMessage(mockMessages);
     return NextResponse.json({
-      message: message || getMockMessage(mockMessages),
+      message,
       phase: 1,
-      sacredId,
-    } satisfies { message: string; phase: number; sacredId?: string });
+      sacredId: res.sacredId,
+      stateKey: res.stateKey,
+    } satisfies { message: string; phase: number; sacredId?: string; stateKey?: string });
   }
 
   const cookieStore = await cookies();

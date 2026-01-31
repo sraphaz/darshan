@@ -70,6 +70,53 @@ export function getExpressionNumber(fullName: string): RulingNumber {
   return getRulingNumberFromName(fullName);
 }
 
+/** Vogais (Pitágoras): A, E, I, O, U (e equivalentes acentuados). */
+const VOWELS = new Set(["A", "E", "I", "O", "U"]);
+
+/**
+ * Soul Urge Number (vogais do nome) — desejo interior, motivação profunda.
+ * Soma apenas as vogais do nome completo; reduz a 1–9 ou 11/22.
+ */
+export function getSoulUrgeNumber(fullName: string): RulingNumber {
+  const name = (fullName || "").toUpperCase().replace(/\s+/g, "").replace(/[^A-ZÀ-Ú]/g, "");
+  if (!name.length) return 7;
+  let sum = 0;
+  for (const char of name) {
+    const n = char.normalize("NFD").replace(/\p{Diacritic}/gu, "").toUpperCase();
+    if (!VOWELS.has(n)) continue;
+    const v = LETTER_VALUES[n] ?? LETTER_VALUES[char.toUpperCase()];
+    if (v) sum += v;
+  }
+  if (sum === 0) return 7;
+  while (sum > 99) {
+    sum = String(sum).split("").reduce((s, d) => s + parseInt(d, 10), 0);
+  }
+  if (sum === 11 || sum === 22) return sum as 11 | 22;
+  return reduceToDigit(sum) as RulingNumber;
+}
+
+/**
+ * Personality Number (consoantes do nome) — como os outros te veem, máscara social.
+ * Soma apenas as consoantes do nome completo; reduz a 1–9 ou 11/22.
+ */
+export function getPersonalityNumber(fullName: string): RulingNumber {
+  const name = (fullName || "").toUpperCase().replace(/\s+/g, "").replace(/[^A-ZÀ-Ú]/g, "");
+  if (!name.length) return 7;
+  let sum = 0;
+  for (const char of name) {
+    const n = char.normalize("NFD").replace(/\p{Diacritic}/gu, "").toUpperCase();
+    if (VOWELS.has(n)) continue;
+    const v = LETTER_VALUES[n] ?? LETTER_VALUES[char.toUpperCase()];
+    if (v) sum += v;
+  }
+  if (sum === 0) return 7;
+  while (sum > 99) {
+    sum = String(sum).split("").reduce((s, d) => s + parseInt(d, 10), 0);
+  }
+  if (sum === 11 || sum === 22) return sum as 11 | 22;
+  return reduceToDigit(sum) as RulingNumber;
+}
+
 /** Entrada do dicionário por número: tendências e frases para o oráculo */
 export type NumberTraitsEntry = {
   number: RulingNumber;

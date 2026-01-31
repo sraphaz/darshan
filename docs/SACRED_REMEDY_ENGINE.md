@@ -100,7 +100,15 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 - **remedyMatrix.json**: 50 estados (incl. burnout, solitude, grief, jealousy, numbness, hypercontrol, shame, impatience, despair, envy, restlessness, boredom, overwhelm, isolation, perfectionism, avoidance, irritability, self_doubt, longing, acceptance).
 - **Corpus sagrado**: yoga_sutras ~60 entradas, puranas ~40, upanishads ~30, todas com `kleshaTargets` e `qualities`.
 
-## 8. Próximos passos (editorial)
+## 8. Engine 2.1 — Unificação e cooldown (pós-PR #3)
+
+- **P0 — Engine único:** `/api/darshan` (mock) e GET `/api/instant-light` usam apenas `lib/sacredRemedy`. `lib/instantLight` virou re-export/adaptador para compatibilidade.
+- **P1 — Cooldown autônomo:** Quando o usuário está logado, o servidor busca `recentSacredIds` e `recentStateKeys` em `getRecentInstantLightIds(userEmail)` e registra uso em `recordInstantLightUse(userEmail, { sacredId, stateKey })`. Tabela `instant_light_uses` (migração `20250129110000_instant_light_uses.sql`).
+- **P2 — Numerologia completa:** `getSoulUrgeNumber(fullName)` (vogais) e `getPersonalityNumber(fullName)` (consoantes) em `lib/knowledge/numerology.ts`. SymbolicMap inclui `soulUrgeNumber` e `personalityNumber`.
+
+## 9. Próximos passos (editorial)
 
 - Refinar mapeamento Nakshatra → tendência → klesha provável (para diagnóstico personal mais fino).
+- P3: Ayurveda action selector high-end (múltiplas qualities, prioridade por dosha).
+- P4: Corpus premium (Yoga Sutras 100+, Puranas 80+, Upanishads 50+).
 - Testes automatizados para `diagnosisEngine`, `sacredSelector`, `ayurvedaActionSelector`, `composeInstantLight` e GET `/api/instant-light`.

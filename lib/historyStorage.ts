@@ -127,3 +127,42 @@ export async function getHistoryCounts(userEmail: string): Promise<{ revelations
     readings: read.count ?? 0,
   };
 }
+
+/** Cooldown server-side: retorna sacredIds e stateKeys recentes do usuário (evitar repetição). */
+export async function getRecentInstantLightIds(
+  userEmail: string,
+  limit: number = 20
+): Promise<{ sacredIds: string[]; stateKeys: string[] }> {
+  const supabase = getSupabase();
+  if (!supabase || !isSupabaseConfigured()) return { sacredIds: [], stateKeys: [] };
+  const userId = await getUserIdByEmail(userEmail);
+  if (!userId) return { sacredIds: [], stateKeys: [] };
+  const cap = Math.min(Math.max(1, limit), 50);
+  const { data } = await supabase
+    .from("instant_light_uses")
+    .select("sacred_id, state_key")
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false })
+    .limit(cap);
+  const rows = (data ?? []) as { sacred_id: string; state_key: string | null }[];
+  return {
+    sacredIds: rows.map((r) => r.sacred_id).filter(Boolean),
+    stateKeys: rows.map((r) => r.state_key).filter((k): k is string => Boolean(k)),
+  };
+}
+
+/** Cooldown server-side: registra uso de sacredId/stateKey para o usuário (recordUse automático). */
+export async function recordInstantLightUse(
+  userEmail: string,
+  payload: { sacredId: string; stateKey?: string }
+): Promise<void> {
+  const supabase = getSupabase();
+  if (!supabase || !isSupabaseConfigured()) return;
+  const userId = await getUserIdByEmail(userEmail);
+  if (!userId) return;
+  await supabase.from("instant_light_uses").insert({
+    user_id: userId,
+    sacred_id: payload.sacredId?.trim() || "",
+    state_key: payload.stateKey?.trim() || null,
+  });
+}
