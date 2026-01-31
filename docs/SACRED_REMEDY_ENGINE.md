@@ -109,7 +109,7 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 ## 8. Engine 2.1 — Unificação e cooldown (pós-PR #3)
 
 - **P0 — Engine único:** `/api/darshan` (mock) e GET `/api/instant-light` usam apenas `lib/sacredRemedy`. `lib/instantLight`, `lib/sacred` e `lib/diagnosis` foram removidos.
-- **P1 — Cooldown autônomo:** Quando o usuário está logado, o servidor busca `recentSacredIds` e `recentStateKeys` em `getRecentInstantLightIds(userEmail)` e registra uso em `recordInstantLightUse(userEmail, { sacredId, stateKey })`. Tabela `instant_light_uses` (migração `20250129110000_instant_light_uses.sql`).
+- **P1 — Cooldown autônomo:** Quando o usuário está logado, o servidor busca `recentSacredIds` e `recentStateKeys` em `getRecentInstantLightIds(userEmail, 50, 7)` (últimos 7 dias) e registra uso em `recordInstantLightUse`. Cliente não controla; cooldown de 7 dias por sacredId. Tabela `instant_light_uses` (migração `20250129110000_instant_light_uses.sql`).
 - **P2 — Numerologia completa:** `getSoulUrgeNumber(fullName)` (vogais) e `getPersonalityNumber(fullName)` (consoantes) em `lib/knowledge/numerology.ts`. SymbolicMap inclui `soulUrgeNumber` e `personalityNumber`.
 
 ## 9. Engine 2.1 — Concluído (P3, P4, numerologia, cooldown instant-light)
@@ -135,7 +135,11 @@ Cada entrada em `yoga_sutras.json`, `puranas.json`, `upanishads.json`:
 
 ---
 
-## 13. O que falta (resumo)
+## 13. Status dos críticos (Engine 2.1 Premium)
+
+Ver **`docs/ENGINE_21_PREMIUM_STATUS.md`** para verificação dos bloqueadores e estratégicos: CRÍTICO 1 (numerologia), CRÍTICO 2 (cooldown 7 dias server-side), CRÍTICO 3 (pipeline único), P1 (Ayurveda premium), P2 (corpus). Cooldown de 7 dias: `getRecentInstantLightIds(userEmail, 50, 7)` retorna só usos dos últimos 7 dias; selector evita repetir sacredIds/stateKeys nesse período.
+
+## 14. O que falta (resumo)
 
 | Área | Item | Status |
 |------|------|--------|

@@ -1,106 +1,6002 @@
 [
-  { "id": "BP.bhakti", "text": "A entrega ao divino dissolve o apego; quem oferece o coração encontra leveza.", "kleshaTargets": ["raga"], "qualities": ["snigdha", "guru"], "themes": ["entrega", "devoção"] },
-  { "id": "BP.forgiveness", "text": "O perdão é libertação; quem solta o ressentimento abre a porta do coração.", "kleshaTargets": ["dvesha"], "qualities": ["picchila", "sthira"], "themes": ["perdão", "libertação"] },
-  { "id": "BP.compassion", "text": "A compaixão divina acolhe quem sofre; você pode ser sustentado.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["compaixão", "sustento"] },
-  { "id": "BP.protection", "text": "Proteger o coração não é fechar; é escolher o que entra.", "kleshaTargets": ["abhinivesha"], "qualities": ["sukshma", "chala"], "themes": ["proteção", "limites"] },
-  { "id": "BP.rest", "text": "O descanso é dharma; quem se entrega ao repouso se renova.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["descanso", "renovação"] },
-  { "id": "BP.heart", "text": "Abrir o coração não é fraqueza; é coragem de sentir.", "kleshaTargets": ["dvesha"], "qualities": ["sita", "kathina"], "themes": ["coração", "coragem"] },
-  { "id": "BP.surrender1", "text": "Quem entrega o fruto da ação ao divino não carrega o peso do resultado.", "kleshaTargets": ["raga"], "qualities": ["guru", "snigdha"], "themes": ["entrega", "ação"] },
-  { "id": "BP.surrender2", "text": "A entrega dissolve o medo; o que é oferecido não pode ser perdido.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru"], "themes": ["entrega", "medo"] },
-  { "id": "BP.peace1", "text": "A paz que nasce da devoção não depende do mundo.", "kleshaTargets": ["raga", "dvesha"], "qualities": ["vishada", "laghu"], "themes": ["paz", "devoção"] },
-  { "id": "BP.peace2", "text": "Quem canta o nome do divino encontra refúgio no próprio coração.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["refúgio", "coração"] },
-  { "id": "BP.grace1", "text": "A graça não escolhe merecimento; ela escolhe o momento.", "kleshaTargets": ["asmita"], "qualities": ["kathina"], "themes": ["graça", "humildade"] },
-  { "id": "BP.grace2", "text": "Quando o coração está quebrado, a luz entra por onde não havia porta.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["graça", "luz"] },
-  { "id": "BP.service1", "text": "Servir sem esperar retorno libera o coração do peso do resultado.", "kleshaTargets": ["raga", "asmita"], "qualities": ["snigdha", "guru"], "themes": ["serviço", "entrega"] },
-  { "id": "BP.service2", "text": "O serviço ao outro é oração em movimento.", "kleshaTargets": ["asmita"], "qualities": ["vishada"], "themes": ["serviço", "oração"] },
-  { "id": "BP.trust1", "text": "Confiar no fluxo da vida não é passividade; é coragem.", "kleshaTargets": ["abhinivesha"], "qualities": ["chala", "ruksha"], "themes": ["confiança", "coragem"] },
-  { "id": "BP.trust2", "text": "O divino habita no coração de quem confia.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru"], "themes": ["confiança", "coração"] },
-  { "id": "BP.silence1", "text": "No silêncio da devoção, a resposta já está.", "kleshaTargets": ["avidya"], "qualities": ["chala", "sukshma"], "themes": ["silêncio", "resposta"] },
-  { "id": "BP.silence2", "text": "Quem cala a mente ouve o que as palavras não dizem.", "kleshaTargets": ["raga"], "qualities": ["chala"], "themes": ["silêncio", "mente"] },
-  { "id": "BP.love1", "text": "Amar sem posse é a única forma de não perder.", "kleshaTargets": ["raga"], "qualities": ["snigdha", "guru"], "themes": ["amor", "desapego"] },
-  { "id": "BP.love2", "text": "O amor divino não exige reciprocidade; ele simplesmente flui.", "kleshaTargets": ["dvesha"], "qualities": ["sita", "kathina"], "themes": ["amor", "fluir"] },
-  { "id": "BP.release1", "text": "Soltar não é desistir; é deixar o rio correr.", "kleshaTargets": ["raga"], "qualities": ["picchila", "sthira"], "themes": ["soltar", "fluir"] },
-  { "id": "BP.release2", "text": "O que você libera libera você.", "kleshaTargets": ["dvesha"], "qualities": ["guru", "picchila"], "themes": ["libertação", "perdão"] },
-  { "id": "BP.presence1", "text": "O divino está no agora; quem habita o passado ou o futuro o perde.", "kleshaTargets": ["abhinivesha"], "qualities": ["chala"], "themes": ["presença", "agora"] },
-  { "id": "BP.presence2", "text": "Uma só respiração consciente é uma oração.", "kleshaTargets": ["avidya"], "qualities": ["chala", "laghu"], "themes": ["respiração", "oração"] },
-  { "id": "BP.witness1", "text": "Quem observa sem julgar encontra paz.", "kleshaTargets": ["dvesha", "asmita"], "qualities": ["tikshna", "khara"], "themes": ["testemunha", "paz"] },
-  { "id": "BP.witness2", "text": "O testemunho compassivo dissolve a raiva.", "kleshaTargets": ["dvesha"], "qualities": ["ushna", "tikshna"], "themes": ["compaixão", "raiva"] },
-  { "id": "BP.humility1", "text": "A humildade não diminui; ela abre espaço para o infinito.", "kleshaTargets": ["asmita"], "qualities": ["tikshna", "kathina"], "themes": ["humildade", "espaço"] },
-  { "id": "BP.humility2", "text": "Quem se esvazia é preenchido.", "kleshaTargets": ["raga"], "qualities": ["vishada", "laghu"], "themes": ["humildade", "entrega"] },
-  { "id": "BP.grief1", "text": "Chorar é permitir que o rio do coração encontre o mar.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["luto", "corpo"] },
-  { "id": "BP.grief2", "text": "A tristeza honrada se transforma em compaixão.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "sandra"], "themes": ["luto", "compaixão"] },
-  { "id": "BP.joy1", "text": "A alegria que não depende do externo é estável.", "kleshaTargets": ["raga"], "qualities": ["chala", "laghu"], "themes": ["alegria", "estabilidade"] },
-  { "id": "BP.joy2", "text": "Celebrar o bem do outro é antídoto para a inveja.", "kleshaTargets": ["dvesha"], "qualities": ["tikshna", "ushna"], "themes": ["alegria", "inveja"] },
-  { "id": "BP.patience1", "text": "A paciência é força; a pressa é medo disfarçado.", "kleshaTargets": ["raga", "abhinivesha"], "qualities": ["tikshna", "chala"], "themes": ["paciência", "medo"] },
-  { "id": "BP.patience2", "text": "O que amadurece no tempo certo não apodrece.", "kleshaTargets": ["raga"], "qualities": ["chala"], "themes": ["paciência", "tempo"] },
-  { "id": "BP.simplicity1", "text": "A simplicidade desfaz o nó da cobiça.", "kleshaTargets": ["raga"], "qualities": ["guru", "snigdha"], "themes": ["simplicidade", "cobiça"] },
-  { "id": "BP.simplicity2", "text": "Menos é o caminho para mais.", "kleshaTargets": ["raga"], "qualities": ["vishada"], "themes": ["simplicidade", "suficiência"] },
-  { "id": "BP.truth1", "text": "A verdade libera; a mentira aprisiona.", "kleshaTargets": ["avidya"], "qualities": ["vishada"], "themes": ["verdade", "liberdade"] },
-  { "id": "BP.truth2", "text": "Falar a verdade com amor é arte.", "kleshaTargets": ["dvesha"], "qualities": ["khara", "tikshna"], "themes": ["verdade", "amor"] },
-  { "id": "BP.rebirth1", "text": "Cada respiração é chance de recomeçar.", "kleshaTargets": ["avidya"], "qualities": ["guru", "picchila"], "themes": ["recomeço", "respiração"] },
-  { "id": "BP.rebirth2", "text": "O perdão é o único modo de nascer de novo sem morrer.", "kleshaTargets": ["dvesha"], "qualities": ["picchila"], "themes": ["perdão", "renascimento"] },
-  { "id": "BP.union1", "text": "Quem vê o divino em todos não está nunca só.", "kleshaTargets": ["abhinivesha"], "qualities": ["sita", "sthira"], "themes": ["unidade", "companhia"] },
-  { "id": "BP.union2", "text": "A separação é ilusão; a união é a natureza do ser.", "kleshaTargets": ["avidya"], "qualities": ["vishada"], "themes": ["unidade", "identidade"] },
-  { "id": "BP.grounding1", "text": "Quem pisa a terra com consciência não cai.", "kleshaTargets": ["chala"], "qualities": ["chala", "laghu"], "themes": ["grounding", "consciência"] },
-  { "id": "BP.grounding2", "text": "A raiz que sustenta não se vê; ela apenas nutre.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "sthira"], "themes": ["grounding", "sustento"] },
-  { "id": "BP.breath1", "text": "Uma respiração consciente une corpo e espírito.", "kleshaTargets": ["avidya"], "qualities": ["chala"], "themes": ["respiração", "corpo"] },
-  { "id": "BP.breath2", "text": "O sopro que entra e sai já é oração.", "kleshaTargets": ["raga"], "qualities": ["laghu", "vishada"], "themes": ["respiração", "oração"] },
-  { "id": "BP.acceptance1", "text": "Aceitar o que é não é resignação; é clareza.", "kleshaTargets": ["dvesha"], "qualities": ["picchila", "mridu"], "themes": ["aceitação", "clareza"] },
-  { "id": "BP.acceptance2", "text": "O que você aceita deixa de pesar.", "kleshaTargets": ["raga"], "qualities": ["guru", "snigdha"], "themes": ["aceitação", "leveza"] },
-  { "id": "BP.grief1", "text": "A dor que é chorada não fica presa no corpo.", "kleshaTargets": ["abhinivesha"], "qualities": ["drava", "mridu"], "themes": ["luto", "corpo"] },
-  { "id": "BP.grief2", "text": "O coração que se abre ao luto aprende a abrir-se à alegria.", "kleshaTargets": ["dvesha"], "qualities": ["sita", "kathina"], "themes": ["luto", "alegria"] },
-  { "id": "BP.solitude1", "text": "Na solidão voluntária, o ruído interno se acalma.", "kleshaTargets": ["raga"], "qualities": ["chala", "vishada"], "themes": ["solidão", "silêncio"] },
-  { "id": "BP.solitude2", "text": "Quem se encontra sozinho não está só.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru"], "themes": ["solidão", "presença"] },
-  { "id": "BP.burnout1", "text": "Parar não é falhar; é permitir que a força volte.", "kleshaTargets": ["raga"], "qualities": ["tikshna", "ushna"], "themes": ["descanso", "força"] },
-  { "id": "BP.burnout2", "text": "O repouso é parte do caminho, não desvio.", "kleshaTargets": ["asmita"], "qualities": ["manda", "mridu"], "themes": ["repouso", "caminho"] },
-  { "id": "BP.anger1", "text": "A raiva que é vista com compaixão perde o fogo.", "kleshaTargets": ["dvesha"], "qualities": ["ushna", "tikshna"], "themes": ["raiva", "compaixão"] },
-  { "id": "BP.anger2", "text": "Não apague a chama com mais chama; respire e deixe esfriar.", "kleshaTargets": ["dvesha"], "qualities": ["tikshna", "khara"], "themes": ["raiva", "resfriar"] },
-  { "id": "BP.fear1", "text": "O medo que é nomeado perde metade do poder.", "kleshaTargets": ["abhinivesha"], "qualities": ["sukshma", "chala"], "themes": ["medo", "nomear"] },
-  { "id": "BP.fear2", "text": "Quem aceita o medo não é governado por ele.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["medo", "aceitação"] },
-  { "id": "BP.doubt1", "text": "A dúvida honesta é o início do discernimento.", "kleshaTargets": ["avidya"], "qualities": ["vishada"], "themes": ["dúvida", "discernimento"] },
-  { "id": "BP.doubt2", "text": "Não exija certeza de si; exija presença.", "kleshaTargets": ["asmita"], "qualities": ["chala", "laghu"], "themes": ["dúvida", "presença"] },
-  { "id": "BP.joy1", "text": "A alegria que não depende do outro é inesgotável.", "kleshaTargets": ["raga"], "qualities": ["snigdha", "laghu"], "themes": ["alegria", "interior"] },
-  { "id": "BP.joy2", "text": "Celebrar o pequeno é cultivar o grande.", "kleshaTargets": ["avidya"], "qualities": ["vishada"], "themes": ["alegria", "gratidão"] },
-  { "id": "BP.boundaries1", "text": "Dizer não é dizer sim a si mesmo.", "kleshaTargets": ["asmita", "raga"], "qualities": ["kathina", "sthira"], "themes": ["limites", "autocuidado"] },
-  { "id": "BP.boundaries2", "text": "Quem respeita os próprios limites pode expandir sem quebrar.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru"], "themes": ["limites", "expansão"] },
-  { "id": "BP.nature1", "text": "O céu e a terra não têm pressa; eles apenas são.", "kleshaTargets": ["chala"], "qualities": ["sthira", "manda"], "themes": ["natureza", "ritmo"] },
-  { "id": "BP.nature2", "text": "Caminhar na natureza é voltar à própria natureza.", "kleshaTargets": ["avidya"], "qualities": ["vishada", "laghu"], "themes": ["natureza", "identidade"] },
-  { "id": "BP.water1", "text": "A água que flui não se prende; ela contorna e segue.", "kleshaTargets": ["sthira"], "qualities": ["sthira", "drava"], "themes": ["fluir", "flexibilidade"] },
-  { "id": "BP.water2", "text": "Beber um gole de água com consciência é um ato de gratidão.", "kleshaTargets": ["raga"], "qualities": ["sita", "vishada"], "themes": ["gratidão", "consciência"] },
-  { "id": "BP.speech1", "text": "Antes de falar, pergunte: é verdadeiro, necessário e bondoso?", "kleshaTargets": ["dvesha"], "qualities": ["tikshna", "khara"], "themes": ["palavra", "verdade"] },
-  { "id": "BP.speech2", "text": "O silêncio que escolhemos é mais eloqüente que as palavras.", "kleshaTargets": ["raga"], "qualities": ["chala"], "themes": ["silêncio", "palavra"] },
-  { "id": "BP.body1", "text": "O corpo não é inimigo; é o veículo da alma.", "kleshaTargets": ["asmita"], "qualities": ["guru", "snigdha"], "themes": ["corpo", "alma"] },
-  { "id": "BP.body2", "text": "Honrar o cansaço do corpo é honrar a vida.", "kleshaTargets": ["abhinivesha"], "qualities": ["manda", "mridu"], "themes": ["corpo", "descanso"] },
-  { "id": "BP.dream1", "text": "O que você sonha à noite o dia pode realizar.", "kleshaTargets": ["avidya"], "qualities": ["vishada", "sukshma"], "themes": ["sonho", "realização"] },
-  { "id": "BP.dream2", "text": "Não despreze o sonho; ele fala a linguagem do coração.", "kleshaTargets": ["raga"], "qualities": ["picchila", "guru"], "themes": ["sonho", "coração"] },
-  { "id": "BP.ancestors1", "text": "Quem honra os que vieram antes não caminha sozinho.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "sthira"], "themes": ["ancestrais", "linhagem"] },
-  { "id": "BP.ancestors2", "text": "A linhagem não é peso; é raiz.", "kleshaTargets": ["avidya"], "qualities": ["vishada"], "themes": ["linhagem", "raiz"] },
-  { "id": "BP.child1", "text": "O olhar de uma criança lembra: o presente é agora.", "kleshaTargets": ["abhinivesha"], "qualities": ["chala", "laghu"], "themes": ["presença", "agora"] },
-  { "id": "BP.child2", "text": "Brincar não é fuga; é o modo do espírito respirar.", "kleshaTargets": ["raga"], "qualities": ["drava", "mridu"], "themes": ["brincar", "leveza"] },
-  { "id": "BP.death1", "text": "Lembrar a morte não é morrer; é viver com mais presença.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru"], "themes": ["presença", "morte"] },
-  { "id": "BP.death2", "text": "O que é impermanente merece cuidado, não apego.", "kleshaTargets": ["raga"], "qualities": ["vishada", "snigdha"], "themes": ["impermanência", "desapego"] },
-  { "id": "BP.gratitude1", "text": "A gratidão desloca o centro do que falta para o que já é.", "kleshaTargets": ["raga", "abhinivesha"], "qualities": ["vishada", "laghu"], "themes": ["gratidão", "presença"] },
-  { "id": "BP.gratitude2", "text": "Agradecer ao corpo é o primeiro passo para habitá-lo.", "kleshaTargets": ["asmita"], "qualities": ["guru", "snigdha"], "themes": ["corpo", "gratidão"] },
-  { "id": "BP.breath3", "text": "O sopro que você não controla lembra: algo maior respira em você.", "kleshaTargets": ["avidya"], "qualities": ["chala", "sukshma"], "themes": ["respiração", "presença"] },
-  { "id": "BP.grounding3", "text": "Pés no chão, coração no céu; o meio é onde a vida acontece.", "kleshaTargets": ["chala", "abhinivesha"], "qualities": ["laghu", "sthira"], "themes": ["grounding", "presença"] },
-  { "id": "BP.silence3", "text": "No espaço entre dois pensamentos está o silêncio que cura.", "kleshaTargets": ["raga"], "qualities": ["vishada", "manda"], "themes": ["silêncio", "mente"] },
-  { "id": "BP.boundaries3", "text": "Quem diz sim a tudo diz não a si mesmo.", "kleshaTargets": ["asmita", "raga"], "qualities": ["kathina", "vishada"], "themes": ["limites", "autocuidado"] },
-  { "id": "BP.anger3", "text": "A raiva é mensageira; ouça o que ela traz antes de reagir.", "kleshaTargets": ["dvesha"], "qualities": ["tikshna", "ushna"], "themes": ["raiva", "escuta"] },
-  { "id": "BP.fear3", "text": "O medo que você nomeia perde a sombra; o que você esconde cresce.", "kleshaTargets": ["abhinivesha"], "qualities": ["guru", "mridu"], "themes": ["medo", "presença"] },
-  { "id": "BP.trust3", "text": "Confiar não é não duvidar; é seguir mesmo quando a dúvida vem.", "kleshaTargets": ["abhinivesha", "avidya"], "qualities": ["chala", "vishada"], "themes": ["confiança", "dúvida"] },
-  { "id": "BP.body3", "text": "O corpo guarda o que a mente esquece; honre os dois.", "kleshaTargets": ["asmita", "abhinivesha"], "qualities": ["guru", "snigdha"], "themes": ["corpo", "memória"] },
-  { "id": "BP.nature3", "text": "A natureza não tem pressa; quem anda nela aprende o ritmo certo.", "kleshaTargets": ["chala", "raga"], "qualities": ["manda", "sthira"], "themes": ["natureza", "ritmo"] },
-  { "id": "BP.speech3", "text": "Antes de falar, pergunte: isso cura ou fere?", "kleshaTargets": ["dvesha"], "qualities": ["tikshna", "mridu"], "themes": ["palavra", "verdade"] },
-  { "id": "BP.rest2", "text": "O repouso não é tempo perdido; é o tempo em que o corpo se refaz.", "kleshaTargets": ["raga", "asmita"], "qualities": ["manda", "mridu"], "themes": ["descanso", "corpo"] },
-  { "id": "BP.union3", "text": "Quem vê o divino no outro não precisa que o outro mude.", "kleshaTargets": ["dvesha", "asmita"], "qualities": ["vishada", "mridu"], "themes": ["unidade", "aceitação"] },
-  { "id": "BP.presence3", "text": "O agora é o único tempo em que você pode agir; o resto é história ou fantasia.", "kleshaTargets": ["abhinivesha", "raga"], "qualities": ["chala", "laghu"], "themes": ["presença", "agora"] },
-  { "id": "BP.release3", "text": "Soltar o resultado não é desistir; é fazer o que cabe a você e deixar o resto.", "kleshaTargets": ["raga"], "qualities": ["picchila", "vishada"], "themes": ["entrega", "ação"] },
-  { "id": "BP.doubt3", "text": "A dúvida honesta abre porta; a certeza cega fecha.", "kleshaTargets": ["avidya", "asmita"], "qualities": ["vishada", "tikshna"], "themes": ["dúvida", "discernimento"] },
-  { "id": "BP.joy3", "text": "A alegria que nasce de dentro não depende do que vem de fora.", "kleshaTargets": ["raga"], "qualities": ["laghu", "vishada"], "themes": ["alegria", "interior"] },
-  { "id": "BP.grief3", "text": "Chorar é deixar a dor sair pelo único caminho que ela conhece.", "kleshaTargets": ["abhinivesha", "dvesha"], "qualities": ["drava", "mridu"], "themes": ["luto", "corpo"] },
-  { "id": "BP.humility3", "text": "A humildade não é pensar menos de si; é pensar em si menos.", "kleshaTargets": ["asmita"], "qualities": ["vishada", "laghu"], "themes": ["humildade", "ego"] },
-  { "id": "BP.witness3", "text": "Quem observa a mente sem se identificar com ela encontra espaço.", "kleshaTargets": ["avidya", "asmita"], "qualities": ["vishada", "sukshma"], "themes": ["testemunha", "mente"] },
-  { "id": "BP.acceptance3", "text": "Aceitar o que é não é passividade; é ver com clareza para agir com sabedoria.", "kleshaTargets": ["dvesha", "raga"], "qualities": ["picchila", "mridu"], "themes": ["aceitação", "clareza"] },
-  { "id": "BP.simplicity3", "text": "A simplicidade é o luxo de quem não precisa provar nada.", "kleshaTargets": ["raga", "asmita"], "qualities": ["vishada", "laghu"], "themes": ["simplicidade", "suficiência"] },
-  { "id": "BP.truth3", "text": "A verdade que libera pode doer no início; a mentira que conforta aprisiona no fim.", "kleshaTargets": ["avidya"], "qualities": ["vishada", "tikshna"], "themes": ["verdade", "liberdade"] }
+  {
+    "id": "BP.bhakti",
+    "text": "A entrega ao divino dissolve o apego; quem oferece o coração encontra leveza.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "entrega",
+      "devoção"
+    ]
+  },
+  {
+    "id": "BP.forgiveness",
+    "text": "O perdão é libertação; quem solta o ressentimento abre a porta do coração.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "sthira"
+    ],
+    "themes": [
+      "perdão",
+      "libertação"
+    ]
+  },
+  {
+    "id": "BP.compassion",
+    "text": "A compaixão divina acolhe quem sofre; você pode ser sustentado.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "compaixão",
+      "sustento"
+    ]
+  },
+  {
+    "id": "BP.protection",
+    "text": "Proteger o coração não é fechar; é escolher o que entra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "proteção",
+      "limites"
+    ]
+  },
+  {
+    "id": "BP.rest",
+    "text": "O descanso é dharma; quem se entrega ao repouso se renova.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "renovação"
+    ]
+  },
+  {
+    "id": "BP.heart",
+    "text": "Abrir o coração não é fraqueza; é coragem de sentir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "coração",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.surrender1",
+    "text": "Quem entrega o fruto da ação ao divino não carrega o peso do resultado.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.surrender2",
+    "text": "A entrega dissolve o medo; o que é oferecido não pode ser perdido.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "entrega",
+      "medo"
+    ]
+  },
+  {
+    "id": "BP.peace1",
+    "text": "A paz que nasce da devoção não depende do mundo.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "paz",
+      "devoção"
+    ]
+  },
+  {
+    "id": "BP.peace2",
+    "text": "Quem canta o nome do divino encontra refúgio no próprio coração.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "refúgio",
+      "coração"
+    ]
+  },
+  {
+    "id": "BP.grace1",
+    "text": "A graça não escolhe merecimento; ela escolhe o momento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "kathina"
+    ],
+    "themes": [
+      "graça",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.grace2",
+    "text": "Quando o coração está quebrado, a luz entra por onde não havia porta.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "graça",
+      "luz"
+    ]
+  },
+  {
+    "id": "BP.service1",
+    "text": "Servir sem esperar retorno libera o coração do peso do resultado.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "serviço",
+      "entrega"
+    ]
+  },
+  {
+    "id": "BP.service2",
+    "text": "O serviço ao outro é oração em movimento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "serviço",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.trust1",
+    "text": "Confiar no fluxo da vida não é passividade; é coragem.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "ruksha"
+    ],
+    "themes": [
+      "confiança",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.trust2",
+    "text": "O divino habita no coração de quem confia.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "confiança",
+      "coração"
+    ]
+  },
+  {
+    "id": "BP.silence1",
+    "text": "No silêncio da devoção, a resposta já está.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "silêncio",
+      "resposta"
+    ]
+  },
+  {
+    "id": "BP.silence2",
+    "text": "Quem cala a mente ouve o que as palavras não dizem.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.love1",
+    "text": "Amar sem posse é a única forma de não perder.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "amor",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.love2",
+    "text": "O amor divino não exige reciprocidade; ele simplesmente flui.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "amor",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.release1",
+    "text": "Soltar não é desistir; é deixar o rio correr.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "sthira"
+    ],
+    "themes": [
+      "soltar",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.release2",
+    "text": "O que você libera libera você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "libertação",
+      "perdão"
+    ]
+  },
+  {
+    "id": "BP.presence1",
+    "text": "O divino está no agora; quem habita o passado ou o futuro o perde.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.presence2",
+    "text": "Uma só respiração consciente é uma oração.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "respiração",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.witness1",
+    "text": "Quem observa sem julgar encontra paz.",
+    "kleshaTargets": [
+      "dvesha",
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "testemunha",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.witness2",
+    "text": "O testemunho compassivo dissolve a raiva.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "compaixão",
+      "raiva"
+    ]
+  },
+  {
+    "id": "BP.humility1",
+    "text": "A humildade não diminui; ela abre espaço para o infinito.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "kathina"
+    ],
+    "themes": [
+      "humildade",
+      "espaço"
+    ]
+  },
+  {
+    "id": "BP.humility2",
+    "text": "Quem se esvazia é preenchido.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "entrega"
+    ]
+  },
+  {
+    "id": "BP.grief1",
+    "text": "Chorar é permitir que o rio do coração encontre o mar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.grief2",
+    "text": "A tristeza honrada se transforma em compaixão.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sandra"
+    ],
+    "themes": [
+      "luto",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.joy1",
+    "text": "A alegria que não depende do externo é estável.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "alegria",
+      "estabilidade"
+    ]
+  },
+  {
+    "id": "BP.joy2",
+    "text": "Celebrar o bem do outro é antídoto para a inveja.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "alegria",
+      "inveja"
+    ]
+  },
+  {
+    "id": "BP.patience1",
+    "text": "A paciência é força; a pressa é medo disfarçado.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "medo"
+    ]
+  },
+  {
+    "id": "BP.patience2",
+    "text": "O que amadurece no tempo certo não apodrece.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.simplicity1",
+    "text": "A simplicidade desfaz o nó da cobiça.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "simplicidade",
+      "cobiça"
+    ]
+  },
+  {
+    "id": "BP.simplicity2",
+    "text": "Menos é o caminho para mais.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.truth1",
+    "text": "A verdade libera; a mentira aprisiona.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.truth2",
+    "text": "Falar a verdade com amor é arte.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "khara",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "amor"
+    ]
+  },
+  {
+    "id": "BP.rebirth1",
+    "text": "Cada respiração é chance de recomeçar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "recomeço",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.rebirth2",
+    "text": "O perdão é o único modo de nascer de novo sem morrer.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "perdão",
+      "renascimento"
+    ]
+  },
+  {
+    "id": "BP.union1",
+    "text": "Quem vê o divino em todos não está nunca só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sita",
+      "sthira"
+    ],
+    "themes": [
+      "unidade",
+      "companhia"
+    ]
+  },
+  {
+    "id": "BP.union2",
+    "text": "A separação é ilusão; a união é a natureza do ser.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "unidade",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.grounding1",
+    "text": "Quem pisa a terra com consciência não cai.",
+    "kleshaTargets": [
+      "chala"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.grounding2",
+    "text": "A raiz que sustenta não se vê; ela apenas nutre.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sthira"
+    ],
+    "themes": [
+      "grounding",
+      "sustento"
+    ]
+  },
+  {
+    "id": "BP.breath1",
+    "text": "Uma respiração consciente une corpo e espírito.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "respiração",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.breath2",
+    "text": "O sopro que entra e sai já é oração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "respiração",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.acceptance1",
+    "text": "Aceitar o que é não é resignação; é clareza.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.acceptance2",
+    "text": "O que você aceita deixa de pesar.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "aceitação",
+      "leveza"
+    ]
+  },
+  {
+    "id": "BP.grief_body",
+    "text": "A dor que é chorada não fica presa no corpo.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.grief_heart",
+    "text": "O coração que se abre ao luto aprende a abrir-se à alegria.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "luto",
+      "alegria"
+    ]
+  },
+  {
+    "id": "BP.solitude1",
+    "text": "Na solidão voluntária, o ruído interno se acalma.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "solidão",
+      "silêncio"
+    ]
+  },
+  {
+    "id": "BP.solitude2",
+    "text": "Quem se encontra sozinho não está só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "solidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.burnout1",
+    "text": "Parar não é falhar; é permitir que a força volte.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "descanso",
+      "força"
+    ]
+  },
+  {
+    "id": "BP.burnout2",
+    "text": "O repouso é parte do caminho, não desvio.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "repouso",
+      "caminho"
+    ]
+  },
+  {
+    "id": "BP.anger1",
+    "text": "A raiva que é vista com compaixão perde o fogo.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.anger2",
+    "text": "Não apague a chama com mais chama; respire e deixe esfriar.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "raiva",
+      "resfriar"
+    ]
+  },
+  {
+    "id": "BP.fear1",
+    "text": "O medo que é nomeado perde metade do poder.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "medo",
+      "nomear"
+    ]
+  },
+  {
+    "id": "BP.fear2",
+    "text": "Quem aceita o medo não é governado por ele.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.doubt1",
+    "text": "A dúvida honesta é o início do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.doubt2",
+    "text": "Não exija certeza de si; exija presença.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "dúvida",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.joy_inside",
+    "text": "A alegria que não depende do outro é inesgotável.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "laghu"
+    ],
+    "themes": [
+      "alegria",
+      "interior"
+    ]
+  },
+  {
+    "id": "BP.joy_small",
+    "text": "Celebrar o pequeno é cultivar o grande.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "alegria",
+      "gratidão"
+    ]
+  },
+  {
+    "id": "BP.boundaries1",
+    "text": "Dizer não é dizer sim a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.boundaries2",
+    "text": "Quem respeita os próprios limites pode expandir sem quebrar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "limites",
+      "expansão"
+    ]
+  },
+  {
+    "id": "BP.nature1",
+    "text": "O céu e a terra não têm pressa; eles apenas são.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sthira",
+      "manda"
+    ],
+    "themes": [
+      "natureza",
+      "ritmo"
+    ]
+  },
+  {
+    "id": "BP.nature2",
+    "text": "Caminhar na natureza é voltar à própria natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "natureza",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.water1",
+    "text": "A água que flui não se prende; ela contorna e segue.",
+    "kleshaTargets": [
+      "sthira"
+    ],
+    "qualities": [
+      "sthira",
+      "drava"
+    ],
+    "themes": [
+      "fluir",
+      "flexibilidade"
+    ]
+  },
+  {
+    "id": "BP.water2",
+    "text": "Beber um gole de água com consciência é um ato de gratidão.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "gratidão",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.speech1",
+    "text": "Antes de falar, pergunte: é verdadeiro, necessário e bondoso?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.speech2",
+    "text": "O silêncio que escolhemos é mais eloqüente que as palavras.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "palavra"
+    ]
+  },
+  {
+    "id": "BP.body1",
+    "text": "O corpo não é inimigo; é o veículo da alma.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "alma"
+    ]
+  },
+  {
+    "id": "BP.body2",
+    "text": "Honrar o cansaço do corpo é honrar a vida.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.dream1",
+    "text": "O que você sonha à noite o dia pode realizar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "sonho",
+      "realização"
+    ]
+  },
+  {
+    "id": "BP.dream2",
+    "text": "Não despreze o sonho; ele fala a linguagem do coração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "sonho",
+      "coração"
+    ]
+  },
+  {
+    "id": "BP.ancestors1",
+    "text": "Quem honra os que vieram antes não caminha sozinho.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sthira"
+    ],
+    "themes": [
+      "ancestrais",
+      "linhagem"
+    ]
+  },
+  {
+    "id": "BP.ancestors2",
+    "text": "A linhagem não é peso; é raiz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "linhagem",
+      "raiz"
+    ]
+  },
+  {
+    "id": "BP.child1",
+    "text": "O olhar de uma criança lembra: o presente é agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.child2",
+    "text": "Brincar não é fuga; é o modo do espírito respirar.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "brincar",
+      "leveza"
+    ]
+  },
+  {
+    "id": "BP.death1",
+    "text": "Lembrar a morte não é morrer; é viver com mais presença.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "presença",
+      "morte"
+    ]
+  },
+  {
+    "id": "BP.death2",
+    "text": "O que é impermanente merece cuidado, não apego.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "impermanência",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.gratitude1",
+    "text": "A gratidão desloca o centro do que falta para o que já é.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "gratidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.gratitude2",
+    "text": "Agradecer ao corpo é o primeiro passo para habitá-lo.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "gratidão"
+    ]
+  },
+  {
+    "id": "BP.breath3",
+    "text": "O sopro que você não controla lembra: algo maior respira em você.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "respiração",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.grounding3",
+    "text": "Pés no chão, coração no céu; o meio é onde a vida acontece.",
+    "kleshaTargets": [
+      "chala",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "laghu",
+      "sthira"
+    ],
+    "themes": [
+      "grounding",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.silence3",
+    "text": "No espaço entre dois pensamentos está o silêncio que cura.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "manda"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.boundaries3",
+    "text": "Quem diz sim a tudo diz não a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "vishada"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.anger3",
+    "text": "A raiva é mensageira; ouça o que ela traz antes de reagir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "raiva",
+      "escuta"
+    ]
+  },
+  {
+    "id": "BP.fear3",
+    "text": "O medo que você nomeia perde a sombra; o que você esconde cresce.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.trust3",
+    "text": "Confiar não é não duvidar; é seguir mesmo quando a dúvida vem.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "confiança",
+      "dúvida"
+    ]
+  },
+  {
+    "id": "BP.body3",
+    "text": "O corpo guarda o que a mente esquece; honre os dois.",
+    "kleshaTargets": [
+      "asmita",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "memória"
+    ]
+  },
+  {
+    "id": "BP.nature3",
+    "text": "A natureza não tem pressa; quem anda nela aprende o ritmo certo.",
+    "kleshaTargets": [
+      "chala",
+      "raga"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "natureza",
+      "ritmo"
+    ]
+  },
+  {
+    "id": "BP.speech3",
+    "text": "Antes de falar, pergunte: isso cura ou fere?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "mridu"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.rest2",
+    "text": "O repouso não é tempo perdido; é o tempo em que o corpo se refaz.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.union3",
+    "text": "Quem vê o divino no outro não precisa que o outro mude.",
+    "kleshaTargets": [
+      "dvesha",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "mridu"
+    ],
+    "themes": [
+      "unidade",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.presence3",
+    "text": "O agora é o único tempo em que você pode agir; o resto é história ou fantasia.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.release3",
+    "text": "Soltar o resultado não é desistir; é fazer o que cabe a você e deixar o resto.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "vishada"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.doubt3",
+    "text": "A dúvida honesta abre porta; a certeza cega fecha.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.joy3",
+    "text": "A alegria que nasce de dentro não depende do que vem de fora.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "alegria",
+      "interior"
+    ]
+  },
+  {
+    "id": "BP.grief3",
+    "text": "Chorar é deixar a dor sair pelo único caminho que ela conhece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "dvesha"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.humility3",
+    "text": "A humildade não é pensar menos de si; é pensar em si menos.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.witness3",
+    "text": "Quem observa a mente sem se identificar com ela encontra espaço.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "testemunha",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.acceptance3",
+    "text": "Aceitar o que é não é passividade; é ver com clareza para agir com sabedoria.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.simplicity3",
+    "text": "A simplicidade é o luxo de quem não precisa provar nada.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.truth3",
+    "text": "A verdade que libera pode doer no início; a mentira que conforta aprisiona no fim.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med105",
+    "text": "O que você oferece ao divino deixa de pesar em você.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med106",
+    "text": "Quem honra o ritmo do corpo não adoece de pressa.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "corpo",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.med107",
+    "text": "A palavra que acalma é mais forte que a que fere.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "mridu",
+      "tikshna"
+    ],
+    "themes": [
+      "palavra",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med108",
+    "text": "O silêncio após a oração é onde a resposta habita.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "silêncio",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med109",
+    "text": "Aceitar a impermanência é o primeiro passo para a paz.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.med110",
+    "text": "Servir sem esperar reconhecimento libera o ego.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "serviço",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.med111",
+    "text": "A raiva que é respirada perde o controle sobre você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.med112",
+    "text": "O corpo que descansa se renova; o que não para se quebra.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "sono"
+    ]
+  },
+  {
+    "id": "BP.med113",
+    "text": "Quem vê o divino no outro não precisa que o outro mude.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "mridu"
+    ],
+    "themes": [
+      "unidade",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.med114",
+    "text": "A gratidão desloca o foco do que falta para o que já é.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "gratidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med115",
+    "text": "O medo nomeado perde metade da sombra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med116",
+    "text": "A humildade não diminui; abre espaço para o infinito.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "kathina"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.med117",
+    "text": "Caminhar descalço na terra ancora a mente no agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sthira",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "natureza"
+    ]
+  },
+  {
+    "id": "BP.med118",
+    "text": "O perdão que você dá a si mesmo é o que libera.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "perdão",
+      "liberação"
+    ]
+  },
+  {
+    "id": "BP.med119",
+    "text": "Comer com consciência é oração que nutre o corpo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "alimentação",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med120",
+    "text": "Dizer não é dizer sim a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.med121",
+    "text": "A dúvida honesta é o início do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.med122",
+    "text": "O amor que não exige reciprocidade simplesmente flui.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "amor",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.med123",
+    "text": "Lembrar a morte não é morrer; é viver com mais presença.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "presença",
+      "morte"
+    ]
+  },
+  {
+    "id": "BP.med124",
+    "text": "O repouso é parte do caminho, não desvio.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "rotina",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.med125",
+    "text": "A verdade que libera pode doer no início.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med126",
+    "text": "Quem observa a mente sem se identificar encontra espaço.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "testemunha",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med127",
+    "text": "A alegria que nasce de dentro não depende do externo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "alegria",
+      "interior"
+    ]
+  },
+  {
+    "id": "BP.med128",
+    "text": "Chorar é deixar a dor sair pelo único caminho que ela conhece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "dvesha"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med129",
+    "text": "Confiar no fluxo não é passividade; é coragem.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "ruksha"
+    ],
+    "themes": [
+      "confiança",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.med130",
+    "text": "O sopro que entra e sai já é oração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "respiração",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med131",
+    "text": "A natureza não tem pressa; quem anda nela aprende o ritmo.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "natureza",
+      "ritmo"
+    ]
+  },
+  {
+    "id": "BP.med132",
+    "text": "Antes de falar, pergunte: é verdadeiro, necessário e bondoso?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.med133",
+    "text": "O corpo guarda o que a mente esquece; honre os dois.",
+    "kleshaTargets": [
+      "asmita",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "memória"
+    ]
+  },
+  {
+    "id": "BP.med134",
+    "text": "A simplicidade é o luxo de quem não precisa provar nada.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.med135",
+    "text": "Quem se esvazia é preenchido.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "entrega"
+    ]
+  },
+  {
+    "id": "BP.med136",
+    "text": "A paz que nasce da devoção não depende do mundo.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "paz",
+      "devoção"
+    ]
+  },
+  {
+    "id": "BP.med137",
+    "text": "Proteger o coração não é fechar; é escolher o que entra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "proteção",
+      "limites"
+    ]
+  },
+  {
+    "id": "BP.med138",
+    "text": "O descanso é dharma; quem se entrega ao repouso se renova.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "renovação"
+    ]
+  },
+  {
+    "id": "BP.med139",
+    "text": "Abrir o coração não é fraqueza; é coragem de sentir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "coração",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.med140",
+    "text": "A graça não escolhe merecimento; ela escolhe o momento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "kathina"
+    ],
+    "themes": [
+      "graça",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.med141",
+    "text": "Quando o coração está quebrado, a luz entra por onde não havia porta.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "graça",
+      "luz"
+    ]
+  },
+  {
+    "id": "BP.med142",
+    "text": "O serviço ao outro é oração em movimento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "serviço",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med143",
+    "text": "No silêncio da devoção, a resposta já está.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "silêncio",
+      "resposta"
+    ]
+  },
+  {
+    "id": "BP.med144",
+    "text": "Quem cala a mente ouve o que as palavras não dizem.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med145",
+    "text": "Amar sem posse é a única forma de não perder.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "amor",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.med146",
+    "text": "Soltar não é desistir; é deixar o rio correr.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "sthira"
+    ],
+    "themes": [
+      "soltar",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.med147",
+    "text": "O que você libera libera você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "libertação",
+      "perdão"
+    ]
+  },
+  {
+    "id": "BP.med148",
+    "text": "O divino está no agora; quem habita o passado ou o futuro o perde.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.med149",
+    "text": "Quem observa sem julgar encontra paz.",
+    "kleshaTargets": [
+      "dvesha",
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "testemunha",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.med150",
+    "text": "O testemunho compassivo dissolve a raiva.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "compaixão",
+      "raiva"
+    ]
+  },
+  {
+    "id": "BP.med151",
+    "text": "Chorar é permitir que o rio do coração encontre o mar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med152",
+    "text": "A tristeza honrada se transforma em compaixão.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sandra"
+    ],
+    "themes": [
+      "luto",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med153",
+    "text": "A alegria que não depende do externo é estável.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "alegria",
+      "estabilidade"
+    ]
+  },
+  {
+    "id": "BP.med154",
+    "text": "Celebrar o bem do outro é antídoto para a inveja.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "alegria",
+      "inveja"
+    ]
+  },
+  {
+    "id": "BP.med155",
+    "text": "A paciência é força; a pressa é medo disfarçado.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "medo"
+    ]
+  },
+  {
+    "id": "BP.med156",
+    "text": "O que amadurece no tempo certo não apodrece.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.med157",
+    "text": "A simplicidade desfaz o nó da cobiça.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "simplicidade",
+      "cobiça"
+    ]
+  },
+  {
+    "id": "BP.med158",
+    "text": "Menos é o caminho para mais.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.med159",
+    "text": "A verdade libera; a mentira aprisiona.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med160",
+    "text": "Falar a verdade com amor é arte.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "khara",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "amor"
+    ]
+  },
+  {
+    "id": "BP.med161",
+    "text": "Cada respiração é chance de recomeçar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "recomeço",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.med162",
+    "text": "O perdão é o único modo de nascer de novo sem morrer.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "perdão",
+      "renascimento"
+    ]
+  },
+  {
+    "id": "BP.med163",
+    "text": "Quem vê o divino em todos não está nunca só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sita",
+      "sthira"
+    ],
+    "themes": [
+      "unidade",
+      "companhia"
+    ]
+  },
+  {
+    "id": "BP.med164",
+    "text": "A separação é ilusão; a união é a natureza do ser.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "unidade",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.med165",
+    "text": "Quem pisa a terra com consciência não cai.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med166",
+    "text": "Uma respiração consciente une corpo e espírito.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "respiração",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med167",
+    "text": "Aceitar o que é não é resignação; é clareza.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.med168",
+    "text": "Na solidão voluntária, o ruído interno se acalma.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "solidão",
+      "silêncio"
+    ]
+  },
+  {
+    "id": "BP.med169",
+    "text": "Quem se encontra sozinho não está só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "solidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med170",
+    "text": "Parar não é falhar; é permitir que a força volte.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "descanso",
+      "força"
+    ]
+  },
+  {
+    "id": "BP.med171",
+    "text": "A raiva que é vista com compaixão perde o fogo.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med172",
+    "text": "Não apague a chama com mais chama; respire e deixe esfriar.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "raiva",
+      "resfriar"
+    ]
+  },
+  {
+    "id": "BP.med173",
+    "text": "Quem aceita o medo não é governado por ele.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.med174",
+    "text": "Não exija certeza de si; exija presença.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "dúvida",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med175",
+    "text": "Quem respeita os próprios limites pode expandir sem quebrar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "limites",
+      "expansão"
+    ]
+  },
+  {
+    "id": "BP.med176",
+    "text": "Caminhar na natureza é voltar à própria natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "natureza",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.med177",
+    "text": "A água que flui não se prende; ela contorna e segue.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sthira",
+      "drava"
+    ],
+    "themes": [
+      "fluir",
+      "flexibilidade"
+    ]
+  },
+  {
+    "id": "BP.med178",
+    "text": "Beber um gole de água com consciência é um ato de gratidão.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "gratidão",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med179",
+    "text": "O silêncio que escolhemos é mais eloqüente que as palavras.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "palavra"
+    ]
+  },
+  {
+    "id": "BP.med180",
+    "text": "O corpo não é inimigo; é o veículo da alma.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "alma"
+    ]
+  },
+  {
+    "id": "BP.med181",
+    "text": "Honrar o cansaço do corpo é honrar a vida.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.med182",
+    "text": "O que você sonha à noite o dia pode realizar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "sonho",
+      "realização"
+    ]
+  },
+  {
+    "id": "BP.med183",
+    "text": "Não despreze o sonho; ele fala a linguagem do coração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "sonho",
+      "coração"
+    ]
+  },
+  {
+    "id": "BP.med184",
+    "text": "Quem honra os que vieram antes não caminha sozinho.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sthira"
+    ],
+    "themes": [
+      "ancestrais",
+      "linhagem"
+    ]
+  },
+  {
+    "id": "BP.med185",
+    "text": "A linhagem não é peso; é raiz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "linhagem",
+      "raiz"
+    ]
+  },
+  {
+    "id": "BP.med186",
+    "text": "O olhar de uma criança lembra: o presente é agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.med187",
+    "text": "Brincar não é fuga; é o modo do espírito respirar.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "brincar",
+      "leveza"
+    ]
+  },
+  {
+    "id": "BP.med188",
+    "text": "O que é impermanente merece cuidado, não apego.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "impermanência",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.med189",
+    "text": "Agradecer ao corpo é o primeiro passo para habitá-lo.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "gratidão"
+    ]
+  },
+  {
+    "id": "BP.med190",
+    "text": "O sopro que você não controla lembra: algo maior respira em você.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "respiração",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med191",
+    "text": "Pés no chão, coração no céu; o meio é onde a vida acontece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "sthira"
+    ],
+    "themes": [
+      "grounding",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med192",
+    "text": "No espaço entre dois pensamentos está o silêncio que cura.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "manda"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med193",
+    "text": "Quem diz sim a tudo diz não a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "vishada"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.med194",
+    "text": "A raiva é mensageira; ouça o que ela traz antes de reagir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "raiva",
+      "escuta"
+    ]
+  },
+  {
+    "id": "BP.med195",
+    "text": "O medo que você nomeia perde a sombra; o que você esconde cresce.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med196",
+    "text": "Confiar não é não duvidar; é seguir mesmo quando a dúvida vem.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "confiança",
+      "dúvida"
+    ]
+  },
+  {
+    "id": "BP.med197",
+    "text": "Antes de falar, pergunte: isso cura ou fere?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "mridu"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.med198",
+    "text": "O repouso não é tempo perdido; é o tempo em que o corpo se refaz.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med199",
+    "text": "Soltar o resultado não é desistir; é fazer o que cabe a você e deixar o resto.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "vishada"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med200",
+    "text": "A dúvida honesta abre porta; a certeza cega fecha.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.med201",
+    "text": "A humildade não é pensar menos de si; é pensar em si menos.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.med202",
+    "text": "Aceitar o que é não é passividade; é ver com clareza para agir com sabedoria.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.med203",
+    "text": "O que você oferece ao divino deixa de pesar em você.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med204",
+    "text": "Quem honra o ritmo do corpo não adoece de pressa.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "corpo",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.med205",
+    "text": "A palavra que acalma é mais forte que a que fere.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "mridu",
+      "tikshna"
+    ],
+    "themes": [
+      "palavra",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med206",
+    "text": "O silêncio após a oração é onde a resposta habita.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "silêncio",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med207",
+    "text": "Aceitar a impermanência é o primeiro passo para a paz.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.med208",
+    "text": "Servir sem esperar reconhecimento libera o ego.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "serviço",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.med209",
+    "text": "A raiva que é respirada perde o controle sobre você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.med210",
+    "text": "O corpo que descansa se renova; o que não para se quebra.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "sono"
+    ]
+  },
+  {
+    "id": "BP.med211",
+    "text": "Quem vê o divino no outro não precisa que o outro mude.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "mridu"
+    ],
+    "themes": [
+      "unidade",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.med212",
+    "text": "A gratidão desloca o foco do que falta para o que já é.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "gratidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med213",
+    "text": "O medo nomeado perde metade da sombra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med214",
+    "text": "A humildade não diminui; abre espaço para o infinito.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "kathina"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.med215",
+    "text": "Caminhar descalço na terra ancora a mente no agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sthira",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "natureza"
+    ]
+  },
+  {
+    "id": "BP.med216",
+    "text": "O perdão que você dá a si mesmo é o que libera.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "perdão",
+      "liberação"
+    ]
+  },
+  {
+    "id": "BP.med217",
+    "text": "Comer com consciência é oração que nutre o corpo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "alimentação",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med218",
+    "text": "Dizer não é dizer sim a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.med219",
+    "text": "A dúvida honesta é o início do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.med220",
+    "text": "O amor que não exige reciprocidade simplesmente flui.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "amor",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.med221",
+    "text": "Lembrar a morte não é morrer; é viver com mais presença.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "presença",
+      "morte"
+    ]
+  },
+  {
+    "id": "BP.med222",
+    "text": "O repouso é parte do caminho, não desvio.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "rotina",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.med223",
+    "text": "A verdade que libera pode doer no início.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med224",
+    "text": "Quem observa a mente sem se identificar encontra espaço.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "testemunha",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med225",
+    "text": "A alegria que nasce de dentro não depende do externo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "alegria",
+      "interior"
+    ]
+  },
+  {
+    "id": "BP.med226",
+    "text": "Chorar é deixar a dor sair pelo único caminho que ela conhece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "dvesha"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med227",
+    "text": "Confiar no fluxo não é passividade; é coragem.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "ruksha"
+    ],
+    "themes": [
+      "confiança",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.med228",
+    "text": "O sopro que entra e sai já é oração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "respiração",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med229",
+    "text": "A natureza não tem pressa; quem anda nela aprende o ritmo.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "natureza",
+      "ritmo"
+    ]
+  },
+  {
+    "id": "BP.med230",
+    "text": "Antes de falar, pergunte: é verdadeiro, necessário e bondoso?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.med231",
+    "text": "O corpo guarda o que a mente esquece; honre os dois.",
+    "kleshaTargets": [
+      "asmita",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "memória"
+    ]
+  },
+  {
+    "id": "BP.med232",
+    "text": "A simplicidade é o luxo de quem não precisa provar nada.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.med233",
+    "text": "Quem se esvazia é preenchido.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "entrega"
+    ]
+  },
+  {
+    "id": "BP.med234",
+    "text": "A paz que nasce da devoção não depende do mundo.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "paz",
+      "devoção"
+    ]
+  },
+  {
+    "id": "BP.med235",
+    "text": "Proteger o coração não é fechar; é escolher o que entra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "proteção",
+      "limites"
+    ]
+  },
+  {
+    "id": "BP.med236",
+    "text": "O descanso é dharma; quem se entrega ao repouso se renova.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "renovação"
+    ]
+  },
+  {
+    "id": "BP.med237",
+    "text": "Abrir o coração não é fraqueza; é coragem de sentir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "coração",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.med238",
+    "text": "A graça não escolhe merecimento; ela escolhe o momento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "kathina"
+    ],
+    "themes": [
+      "graça",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.med239",
+    "text": "Quando o coração está quebrado, a luz entra por onde não havia porta.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "graça",
+      "luz"
+    ]
+  },
+  {
+    "id": "BP.med240",
+    "text": "O serviço ao outro é oração em movimento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "serviço",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med241",
+    "text": "No silêncio da devoção, a resposta já está.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "silêncio",
+      "resposta"
+    ]
+  },
+  {
+    "id": "BP.med242",
+    "text": "Quem cala a mente ouve o que as palavras não dizem.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med243",
+    "text": "Amar sem posse é a única forma de não perder.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "amor",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.med244",
+    "text": "Soltar não é desistir; é deixar o rio correr.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "sthira"
+    ],
+    "themes": [
+      "soltar",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.med245",
+    "text": "O que você libera libera você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "libertação",
+      "perdão"
+    ]
+  },
+  {
+    "id": "BP.med246",
+    "text": "O divino está no agora; quem habita o passado ou o futuro o perde.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.med247",
+    "text": "Quem observa sem julgar encontra paz.",
+    "kleshaTargets": [
+      "dvesha",
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "testemunha",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.med248",
+    "text": "O testemunho compassivo dissolve a raiva.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "compaixão",
+      "raiva"
+    ]
+  },
+  {
+    "id": "BP.med249",
+    "text": "Chorar é permitir que o rio do coração encontre o mar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med250",
+    "text": "A tristeza honrada se transforma em compaixão.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sandra"
+    ],
+    "themes": [
+      "luto",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med251",
+    "text": "A alegria que não depende do externo é estável.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "alegria",
+      "estabilidade"
+    ]
+  },
+  {
+    "id": "BP.med252",
+    "text": "Celebrar o bem do outro é antídoto para a inveja.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "alegria",
+      "inveja"
+    ]
+  },
+  {
+    "id": "BP.med253",
+    "text": "A paciência é força; a pressa é medo disfarçado.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "medo"
+    ]
+  },
+  {
+    "id": "BP.med254",
+    "text": "O que amadurece no tempo certo não apodrece.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.med255",
+    "text": "A simplicidade desfaz o nó da cobiça.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "simplicidade",
+      "cobiça"
+    ]
+  },
+  {
+    "id": "BP.med256",
+    "text": "Menos é o caminho para mais.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.med257",
+    "text": "A verdade libera; a mentira aprisiona.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med258",
+    "text": "Falar a verdade com amor é arte.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "khara",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "amor"
+    ]
+  },
+  {
+    "id": "BP.med259",
+    "text": "Cada respiração é chance de recomeçar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "recomeço",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.med260",
+    "text": "O perdão é o único modo de nascer de novo sem morrer.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "perdão",
+      "renascimento"
+    ]
+  },
+  {
+    "id": "BP.med261",
+    "text": "Quem vê o divino em todos não está nunca só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sita",
+      "sthira"
+    ],
+    "themes": [
+      "unidade",
+      "companhia"
+    ]
+  },
+  {
+    "id": "BP.med262",
+    "text": "A separação é ilusão; a união é a natureza do ser.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "unidade",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.med263",
+    "text": "Quem pisa a terra com consciência não cai.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med264",
+    "text": "Uma respiração consciente une corpo e espírito.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "respiração",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med265",
+    "text": "Aceitar o que é não é resignação; é clareza.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.med266",
+    "text": "Na solidão voluntária, o ruído interno se acalma.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "solidão",
+      "silêncio"
+    ]
+  },
+  {
+    "id": "BP.med267",
+    "text": "Quem se encontra sozinho não está só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "solidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med268",
+    "text": "Parar não é falhar; é permitir que a força volte.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "descanso",
+      "força"
+    ]
+  },
+  {
+    "id": "BP.med269",
+    "text": "A raiva que é vista com compaixão perde o fogo.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med270",
+    "text": "Não apague a chama com mais chama; respire e deixe esfriar.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "raiva",
+      "resfriar"
+    ]
+  },
+  {
+    "id": "BP.med271",
+    "text": "Quem aceita o medo não é governado por ele.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.med272",
+    "text": "Não exija certeza de si; exija presença.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "dúvida",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med273",
+    "text": "Quem respeita os próprios limites pode expandir sem quebrar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "limites",
+      "expansão"
+    ]
+  },
+  {
+    "id": "BP.med274",
+    "text": "Caminhar na natureza é voltar à própria natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "natureza",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.med275",
+    "text": "A água que flui não se prende; ela contorna e segue.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sthira",
+      "drava"
+    ],
+    "themes": [
+      "fluir",
+      "flexibilidade"
+    ]
+  },
+  {
+    "id": "BP.med276",
+    "text": "Beber um gole de água com consciência é um ato de gratidão.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "gratidão",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med277",
+    "text": "O silêncio que escolhemos é mais eloqüente que as palavras.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "palavra"
+    ]
+  },
+  {
+    "id": "BP.med278",
+    "text": "O corpo não é inimigo; é o veículo da alma.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "alma"
+    ]
+  },
+  {
+    "id": "BP.med279",
+    "text": "Honrar o cansaço do corpo é honrar a vida.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.med280",
+    "text": "O que você sonha à noite o dia pode realizar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "sonho",
+      "realização"
+    ]
+  },
+  {
+    "id": "BP.med281",
+    "text": "Não despreze o sonho; ele fala a linguagem do coração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "sonho",
+      "coração"
+    ]
+  },
+  {
+    "id": "BP.med282",
+    "text": "Quem honra os que vieram antes não caminha sozinho.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sthira"
+    ],
+    "themes": [
+      "ancestrais",
+      "linhagem"
+    ]
+  },
+  {
+    "id": "BP.med283",
+    "text": "A linhagem não é peso; é raiz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "linhagem",
+      "raiz"
+    ]
+  },
+  {
+    "id": "BP.med284",
+    "text": "O olhar de uma criança lembra: o presente é agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.med285",
+    "text": "Brincar não é fuga; é o modo do espírito respirar.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "brincar",
+      "leveza"
+    ]
+  },
+  {
+    "id": "BP.med286",
+    "text": "O que é impermanente merece cuidado, não apego.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "impermanência",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.med287",
+    "text": "Agradecer ao corpo é o primeiro passo para habitá-lo.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "gratidão"
+    ]
+  },
+  {
+    "id": "BP.med288",
+    "text": "O sopro que você não controla lembra: algo maior respira em você.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "respiração",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med289",
+    "text": "Pés no chão, coração no céu; o meio é onde a vida acontece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "sthira"
+    ],
+    "themes": [
+      "grounding",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med290",
+    "text": "No espaço entre dois pensamentos está o silêncio que cura.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "manda"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med291",
+    "text": "Quem diz sim a tudo diz não a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "vishada"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.med292",
+    "text": "A raiva é mensageira; ouça o que ela traz antes de reagir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "raiva",
+      "escuta"
+    ]
+  },
+  {
+    "id": "BP.med293",
+    "text": "O medo que você nomeia perde a sombra; o que você esconde cresce.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med294",
+    "text": "Confiar não é não duvidar; é seguir mesmo quando a dúvida vem.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "confiança",
+      "dúvida"
+    ]
+  },
+  {
+    "id": "BP.med295",
+    "text": "Antes de falar, pergunte: isso cura ou fere?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "mridu"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.med296",
+    "text": "O repouso não é tempo perdido; é o tempo em que o corpo se refaz.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med297",
+    "text": "Soltar o resultado não é desistir; é fazer o que cabe a você e deixar o resto.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "vishada"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med298",
+    "text": "A dúvida honesta abre porta; a certeza cega fecha.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.med299",
+    "text": "A humildade não é pensar menos de si; é pensar em si menos.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.med300",
+    "text": "Aceitar o que é não é passividade; é ver com clareza para agir com sabedoria.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.med301",
+    "text": "O que você oferece ao divino deixa de pesar em você.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med302",
+    "text": "Quem honra o ritmo do corpo não adoece de pressa.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "corpo",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.med303",
+    "text": "A palavra que acalma é mais forte que a que fere.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "mridu",
+      "tikshna"
+    ],
+    "themes": [
+      "palavra",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med304",
+    "text": "O silêncio após a oração é onde a resposta habita.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "silêncio",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med305",
+    "text": "Aceitar a impermanência é o primeiro passo para a paz.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.med306",
+    "text": "Servir sem esperar reconhecimento libera o ego.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "serviço",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.med307",
+    "text": "A raiva que é respirada perde o controle sobre você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.med308",
+    "text": "O corpo que descansa se renova; o que não para se quebra.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "sono"
+    ]
+  },
+  {
+    "id": "BP.med309",
+    "text": "Quem vê o divino no outro não precisa que o outro mude.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "mridu"
+    ],
+    "themes": [
+      "unidade",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.med310",
+    "text": "A gratidão desloca o foco do que falta para o que já é.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "gratidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med311",
+    "text": "O medo nomeado perde metade da sombra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med312",
+    "text": "A humildade não diminui; abre espaço para o infinito.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "kathina"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.med313",
+    "text": "Caminhar descalço na terra ancora a mente no agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sthira",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "natureza"
+    ]
+  },
+  {
+    "id": "BP.med314",
+    "text": "O perdão que você dá a si mesmo é o que libera.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "perdão",
+      "liberação"
+    ]
+  },
+  {
+    "id": "BP.med315",
+    "text": "Comer com consciência é oração que nutre o corpo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "alimentação",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med316",
+    "text": "Dizer não é dizer sim a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "sthira"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.med317",
+    "text": "A dúvida honesta é o início do discernimento.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.med318",
+    "text": "O amor que não exige reciprocidade simplesmente flui.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "amor",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.med319",
+    "text": "Lembrar a morte não é morrer; é viver com mais presença.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "presença",
+      "morte"
+    ]
+  },
+  {
+    "id": "BP.med320",
+    "text": "O repouso é parte do caminho, não desvio.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "rotina",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.med321",
+    "text": "A verdade que libera pode doer no início.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med322",
+    "text": "Quem observa a mente sem se identificar encontra espaço.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "testemunha",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med323",
+    "text": "A alegria que nasce de dentro não depende do externo.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "alegria",
+      "interior"
+    ]
+  },
+  {
+    "id": "BP.med324",
+    "text": "Chorar é deixar a dor sair pelo único caminho que ela conhece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "dvesha"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med325",
+    "text": "Confiar no fluxo não é passividade; é coragem.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "ruksha"
+    ],
+    "themes": [
+      "confiança",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.med326",
+    "text": "O sopro que entra e sai já é oração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "vishada"
+    ],
+    "themes": [
+      "respiração",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med327",
+    "text": "A natureza não tem pressa; quem anda nela aprende o ritmo.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "natureza",
+      "ritmo"
+    ]
+  },
+  {
+    "id": "BP.med328",
+    "text": "Antes de falar, pergunte: é verdadeiro, necessário e bondoso?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.med329",
+    "text": "O corpo guarda o que a mente esquece; honre os dois.",
+    "kleshaTargets": [
+      "asmita",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "memória"
+    ]
+  },
+  {
+    "id": "BP.med330",
+    "text": "A simplicidade é o luxo de quem não precisa provar nada.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.med331",
+    "text": "Quem se esvazia é preenchido.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "entrega"
+    ]
+  },
+  {
+    "id": "BP.med332",
+    "text": "A paz que nasce da devoção não depende do mundo.",
+    "kleshaTargets": [
+      "raga",
+      "dvesha"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "paz",
+      "devoção"
+    ]
+  },
+  {
+    "id": "BP.med333",
+    "text": "Proteger o coração não é fechar; é escolher o que entra.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sukshma",
+      "chala"
+    ],
+    "themes": [
+      "proteção",
+      "limites"
+    ]
+  },
+  {
+    "id": "BP.med334",
+    "text": "O descanso é dharma; quem se entrega ao repouso se renova.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "renovação"
+    ]
+  },
+  {
+    "id": "BP.med335",
+    "text": "Abrir o coração não é fraqueza; é coragem de sentir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "sita",
+      "kathina"
+    ],
+    "themes": [
+      "coração",
+      "coragem"
+    ]
+  },
+  {
+    "id": "BP.med336",
+    "text": "A graça não escolhe merecimento; ela escolhe o momento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "kathina"
+    ],
+    "themes": [
+      "graça",
+      "humildade"
+    ]
+  },
+  {
+    "id": "BP.med337",
+    "text": "Quando o coração está quebrado, a luz entra por onde não havia porta.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "graça",
+      "luz"
+    ]
+  },
+  {
+    "id": "BP.med338",
+    "text": "O serviço ao outro é oração em movimento.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "serviço",
+      "oração"
+    ]
+  },
+  {
+    "id": "BP.med339",
+    "text": "No silêncio da devoção, a resposta já está.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "silêncio",
+      "resposta"
+    ]
+  },
+  {
+    "id": "BP.med340",
+    "text": "Quem cala a mente ouve o que as palavras não dizem.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med341",
+    "text": "Amar sem posse é a única forma de não perder.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "snigdha",
+      "guru"
+    ],
+    "themes": [
+      "amor",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.med342",
+    "text": "Soltar não é desistir; é deixar o rio correr.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "sthira"
+    ],
+    "themes": [
+      "soltar",
+      "fluir"
+    ]
+  },
+  {
+    "id": "BP.med343",
+    "text": "O que você libera libera você.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "libertação",
+      "perdão"
+    ]
+  },
+  {
+    "id": "BP.med344",
+    "text": "O divino está no agora; quem habita o passado ou o futuro o perde.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.med345",
+    "text": "Quem observa sem julgar encontra paz.",
+    "kleshaTargets": [
+      "dvesha",
+      "asmita"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "testemunha",
+      "paz"
+    ]
+  },
+  {
+    "id": "BP.med346",
+    "text": "O testemunho compassivo dissolve a raiva.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "compaixão",
+      "raiva"
+    ]
+  },
+  {
+    "id": "BP.med347",
+    "text": "Chorar é permitir que o rio do coração encontre o mar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "luto",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med348",
+    "text": "A tristeza honrada se transforma em compaixão.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sandra"
+    ],
+    "themes": [
+      "luto",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med349",
+    "text": "A alegria que não depende do externo é estável.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "alegria",
+      "estabilidade"
+    ]
+  },
+  {
+    "id": "BP.med350",
+    "text": "Celebrar o bem do outro é antídoto para a inveja.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "alegria",
+      "inveja"
+    ]
+  },
+  {
+    "id": "BP.med351",
+    "text": "A paciência é força; a pressa é medo disfarçado.",
+    "kleshaTargets": [
+      "raga",
+      "abhinivesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "medo"
+    ]
+  },
+  {
+    "id": "BP.med352",
+    "text": "O que amadurece no tempo certo não apodrece.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "paciência",
+      "tempo"
+    ]
+  },
+  {
+    "id": "BP.med353",
+    "text": "A simplicidade desfaz o nó da cobiça.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "simplicidade",
+      "cobiça"
+    ]
+  },
+  {
+    "id": "BP.med354",
+    "text": "Menos é o caminho para mais.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "simplicidade",
+      "suficiência"
+    ]
+  },
+  {
+    "id": "BP.med355",
+    "text": "A verdade libera; a mentira aprisiona.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "verdade",
+      "liberdade"
+    ]
+  },
+  {
+    "id": "BP.med356",
+    "text": "Falar a verdade com amor é arte.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "khara",
+      "tikshna"
+    ],
+    "themes": [
+      "verdade",
+      "amor"
+    ]
+  },
+  {
+    "id": "BP.med357",
+    "text": "Cada respiração é chance de recomeçar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "guru",
+      "picchila"
+    ],
+    "themes": [
+      "recomeço",
+      "respiração"
+    ]
+  },
+  {
+    "id": "BP.med358",
+    "text": "O perdão é o único modo de nascer de novo sem morrer.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila"
+    ],
+    "themes": [
+      "perdão",
+      "renascimento"
+    ]
+  },
+  {
+    "id": "BP.med359",
+    "text": "Quem vê o divino em todos não está nunca só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "sita",
+      "sthira"
+    ],
+    "themes": [
+      "unidade",
+      "companhia"
+    ]
+  },
+  {
+    "id": "BP.med360",
+    "text": "A separação é ilusão; a união é a natureza do ser.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "unidade",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.med361",
+    "text": "Quem pisa a terra com consciência não cai.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "grounding",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med362",
+    "text": "Uma respiração consciente une corpo e espírito.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "respiração",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med363",
+    "text": "Aceitar o que é não é resignação; é clareza.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.med364",
+    "text": "Na solidão voluntária, o ruído interno se acalma.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "solidão",
+      "silêncio"
+    ]
+  },
+  {
+    "id": "BP.med365",
+    "text": "Quem se encontra sozinho não está só.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "solidão",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med366",
+    "text": "Parar não é falhar; é permitir que a força volte.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "descanso",
+      "força"
+    ]
+  },
+  {
+    "id": "BP.med367",
+    "text": "A raiva que é vista com compaixão perde o fogo.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "ushna",
+      "tikshna"
+    ],
+    "themes": [
+      "raiva",
+      "compaixão"
+    ]
+  },
+  {
+    "id": "BP.med368",
+    "text": "Não apague a chama com mais chama; respire e deixe esfriar.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "khara"
+    ],
+    "themes": [
+      "raiva",
+      "resfriar"
+    ]
+  },
+  {
+    "id": "BP.med369",
+    "text": "Quem aceita o medo não é governado por ele.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "aceitação"
+    ]
+  },
+  {
+    "id": "BP.med370",
+    "text": "Não exija certeza de si; exija presença.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "dúvida",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med371",
+    "text": "Quem respeita os próprios limites pode expandir sem quebrar.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru"
+    ],
+    "themes": [
+      "limites",
+      "expansão"
+    ]
+  },
+  {
+    "id": "BP.med372",
+    "text": "Caminhar na natureza é voltar à própria natureza.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "natureza",
+      "identidade"
+    ]
+  },
+  {
+    "id": "BP.med373",
+    "text": "A água que flui não se prende; ela contorna e segue.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sthira",
+      "drava"
+    ],
+    "themes": [
+      "fluir",
+      "flexibilidade"
+    ]
+  },
+  {
+    "id": "BP.med374",
+    "text": "Beber um gole de água com consciência é um ato de gratidão.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "sita",
+      "vishada"
+    ],
+    "themes": [
+      "gratidão",
+      "consciência"
+    ]
+  },
+  {
+    "id": "BP.med375",
+    "text": "O silêncio que escolhemos é mais eloqüente que as palavras.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "chala"
+    ],
+    "themes": [
+      "silêncio",
+      "palavra"
+    ]
+  },
+  {
+    "id": "BP.med376",
+    "text": "O corpo não é inimigo; é o veículo da alma.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "alma"
+    ]
+  },
+  {
+    "id": "BP.med377",
+    "text": "Honrar o cansaço do corpo é honrar a vida.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "corpo",
+      "descanso"
+    ]
+  },
+  {
+    "id": "BP.med378",
+    "text": "O que você sonha à noite o dia pode realizar.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada",
+      "sukshma"
+    ],
+    "themes": [
+      "sonho",
+      "realização"
+    ]
+  },
+  {
+    "id": "BP.med379",
+    "text": "Não despreze o sonho; ele fala a linguagem do coração.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "guru"
+    ],
+    "themes": [
+      "sonho",
+      "coração"
+    ]
+  },
+  {
+    "id": "BP.med380",
+    "text": "Quem honra os que vieram antes não caminha sozinho.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "sthira"
+    ],
+    "themes": [
+      "ancestrais",
+      "linhagem"
+    ]
+  },
+  {
+    "id": "BP.med381",
+    "text": "A linhagem não é peso; é raiz.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "vishada"
+    ],
+    "themes": [
+      "linhagem",
+      "raiz"
+    ]
+  },
+  {
+    "id": "BP.med382",
+    "text": "O olhar de uma criança lembra: o presente é agora.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "chala",
+      "laghu"
+    ],
+    "themes": [
+      "presença",
+      "agora"
+    ]
+  },
+  {
+    "id": "BP.med383",
+    "text": "Brincar não é fuga; é o modo do espírito respirar.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "drava",
+      "mridu"
+    ],
+    "themes": [
+      "brincar",
+      "leveza"
+    ]
+  },
+  {
+    "id": "BP.med384",
+    "text": "O que é impermanente merece cuidado, não apego.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "snigdha"
+    ],
+    "themes": [
+      "impermanência",
+      "desapego"
+    ]
+  },
+  {
+    "id": "BP.med385",
+    "text": "Agradecer ao corpo é o primeiro passo para habitá-lo.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "corpo",
+      "gratidão"
+    ]
+  },
+  {
+    "id": "BP.med386",
+    "text": "O sopro que você não controla lembra: algo maior respira em você.",
+    "kleshaTargets": [
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "sukshma"
+    ],
+    "themes": [
+      "respiração",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med387",
+    "text": "Pés no chão, coração no céu; o meio é onde a vida acontece.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "raga"
+    ],
+    "qualities": [
+      "laghu",
+      "sthira"
+    ],
+    "themes": [
+      "grounding",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med388",
+    "text": "No espaço entre dois pensamentos está o silêncio que cura.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "vishada",
+      "manda"
+    ],
+    "themes": [
+      "silêncio",
+      "mente"
+    ]
+  },
+  {
+    "id": "BP.med389",
+    "text": "Quem diz sim a tudo diz não a si mesmo.",
+    "kleshaTargets": [
+      "asmita",
+      "raga"
+    ],
+    "qualities": [
+      "kathina",
+      "vishada"
+    ],
+    "themes": [
+      "limites",
+      "autocuidado"
+    ]
+  },
+  {
+    "id": "BP.med390",
+    "text": "A raiva é mensageira; ouça o que ela traz antes de reagir.",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "ushna"
+    ],
+    "themes": [
+      "raiva",
+      "escuta"
+    ]
+  },
+  {
+    "id": "BP.med391",
+    "text": "O medo que você nomeia perde a sombra; o que você esconde cresce.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "guru",
+      "mridu"
+    ],
+    "themes": [
+      "medo",
+      "presença"
+    ]
+  },
+  {
+    "id": "BP.med392",
+    "text": "Confiar não é não duvidar; é seguir mesmo quando a dúvida vem.",
+    "kleshaTargets": [
+      "abhinivesha",
+      "avidya"
+    ],
+    "qualities": [
+      "chala",
+      "vishada"
+    ],
+    "themes": [
+      "confiança",
+      "dúvida"
+    ]
+  },
+  {
+    "id": "BP.med393",
+    "text": "Antes de falar, pergunte: isso cura ou fere?",
+    "kleshaTargets": [
+      "dvesha"
+    ],
+    "qualities": [
+      "tikshna",
+      "mridu"
+    ],
+    "themes": [
+      "palavra",
+      "verdade"
+    ]
+  },
+  {
+    "id": "BP.med394",
+    "text": "O repouso não é tempo perdido; é o tempo em que o corpo se refaz.",
+    "kleshaTargets": [
+      "raga",
+      "asmita"
+    ],
+    "qualities": [
+      "manda",
+      "mridu"
+    ],
+    "themes": [
+      "descanso",
+      "corpo"
+    ]
+  },
+  {
+    "id": "BP.med395",
+    "text": "Soltar o resultado não é desistir; é fazer o que cabe a você e deixar o resto.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "vishada"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med396",
+    "text": "A dúvida honesta abre porta; a certeza cega fecha.",
+    "kleshaTargets": [
+      "avidya",
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "tikshna"
+    ],
+    "themes": [
+      "dúvida",
+      "discernimento"
+    ]
+  },
+  {
+    "id": "BP.med397",
+    "text": "A humildade não é pensar menos de si; é pensar em si menos.",
+    "kleshaTargets": [
+      "asmita"
+    ],
+    "qualities": [
+      "vishada",
+      "laghu"
+    ],
+    "themes": [
+      "humildade",
+      "ego"
+    ]
+  },
+  {
+    "id": "BP.med398",
+    "text": "Aceitar o que é não é passividade; é ver com clareza para agir com sabedoria.",
+    "kleshaTargets": [
+      "dvesha",
+      "raga"
+    ],
+    "qualities": [
+      "picchila",
+      "mridu"
+    ],
+    "themes": [
+      "aceitação",
+      "clareza"
+    ]
+  },
+  {
+    "id": "BP.med399",
+    "text": "O que você oferece ao divino deixa de pesar em você.",
+    "kleshaTargets": [
+      "raga"
+    ],
+    "qualities": [
+      "guru",
+      "snigdha"
+    ],
+    "themes": [
+      "entrega",
+      "ação"
+    ]
+  },
+  {
+    "id": "BP.med400",
+    "text": "Quem honra o ritmo do corpo não adoece de pressa.",
+    "kleshaTargets": [
+      "abhinivesha"
+    ],
+    "qualities": [
+      "manda",
+      "sthira"
+    ],
+    "themes": [
+      "corpo",
+      "tempo"
+    ]
+  }
 ]
